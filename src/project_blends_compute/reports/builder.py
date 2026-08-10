@@ -15,6 +15,7 @@ class ReportBuilder:
         profiles: dict[str, Any],
         provenance: dict[str, Any],
         reactions: dict[str, Any],
+        storage_evidence: dict[str, Any],
         supporting: dict[str, Any],
         molecular_screening: dict[str, Any],
         quantum: dict[str, Any],
@@ -23,13 +24,14 @@ class ReportBuilder:
         warnings: list[str],
     ) -> dict[str, Any]:
         return {
-            "schema_version": "project_blends_integrated_report.v2",
+            "schema_version": "project_blends_integrated_report.v3",
             "run_id": run_id,
             "generated_at_utc": utc_now_iso(),
             "scientific_contract": {
                 "observational_foundation": "reported initial and four-week GC-MS relative-area profiles",
                 "authoritative_identity": "PubChem-led cross-source registry with manual-review abstention",
                 "authoritative_reaction_curation": "reaction_curation storage-reaction evidence",
+                "storage_evidence_role": "curated storage literature, non-reaction explanations, analytical alternatives and condition-bounded transformation precedents",
                 "authoritative_food_provenance": "pipeline_fooddb documented occurrence",
                 "rxn_bridge_role": "analogous mapped reaction/template evidence",
                 "foodchem_ml_role": "exploratory candidate ranking only; never occurrence evidence",
@@ -43,6 +45,7 @@ class ReportBuilder:
             "profiles": profiles,
             "provenance": provenance,
             "reactions": reactions,
+            "storage_evidence": storage_evidence,
             "supporting_evidence": supporting,
             "molecular_screening": molecular_screening,
             "quantum": quantum,
@@ -54,7 +57,7 @@ class ReportBuilder:
     def rag_export(self, report: dict[str, Any]) -> dict[str, Any]:
         """Compact lane-oriented export compatible with ChemRAG ingestion."""
         return {
-            "schema_version": "project_blends_chemrag_export.v2",
+            "schema_version": "project_blends_chemrag_export.v3",
             "run_id": report["run_id"],
             "generated_at_utc": report["generated_at_utc"],
             "sections": {
@@ -62,6 +65,7 @@ class ReportBuilder:
                 "profile_analysis": report["profiles"],
                 "food_provenance": report["provenance"],
                 "reaction_intelligence": report["reactions"],
+                "storage_evidence": report["storage_evidence"],
                 "supporting_evidence": report["supporting_evidence"],
                 "molecular_screening": report["molecular_screening"],
                 "quantum_chemistry": report["quantum"],
@@ -104,6 +108,19 @@ class ReportBuilder:
                 f"- Screened pairs: {screening.get('screened_pairs', 0)}; "
                 f"retained candidates: {screening.get('candidate_pairs', 0)}; "
                 f"rejected before evidence retrieval: {screening.get('rejected_pre_evidence', 0)}."
+            )
+        storage = report.get("storage_evidence", {})
+        if storage:
+            counts = storage.get("counts", {})
+            lines.extend(["", "## Curated storage evidence", ""])
+            lines.append(
+                f"- Dataset `{storage.get('dataset_name')}` version `{storage.get('version')}`: "
+                f"{counts.get('sources', 0)} literature sources, "
+                f"{counts.get('nonreaction_explanations', 0)} non-reaction/analytical records, and "
+                f"{counts.get('transformation_precedents', 0)} condition-bounded transformation precedents."
+            )
+            lines.append(
+                "- Storage evidence is interpretive support only: it does not convert relative GC-MS peak-area changes into causal precursor-to-product reactions."
             )
         lines.extend(["", "## Warnings", ""])
         warnings = report.get("warnings") or ["None"]

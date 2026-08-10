@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.7 - 2026-08-10
+
+- Added `StorageEvidenceService` to consume the complete active `storage_reaction_evidence` artifact family independently of causal reaction-candidate generation.
+- Resolves the active curation version through `reaction_curation_registry`, requires a passing curation QC report, and verifies all manifest-listed artifacts by SHA-256 before use.
+- Consumes literature sources, non-reaction/analytical explanations, transformation precedents, reaction-specific condition context and canonical identity linkage.
+- Added runtime linkage QC against the frozen 49-entity canonical registry plus source, compound and sample-reference validation.
+- Enriched non-reaction records with exact before/after Project Blends relative-area observations where a sample/compound link exists.
+- Added first-class `storage_evidence/*` artifacts: source evidence, non-reaction evidence, transformation precedents, condition compatibility, sample evidence, compound evidence and a summary.
+- Added storage evidence to the integrated report, uncertainty summary and ChemRAG export even when the conservative reaction gate yields zero causal candidates.
+- Added evidence packets for 27 non-reaction/analytical records and 2 transformation precedents with source IDs/DOIs, directness, condition compatibility, claim class, support/contradiction role and explicit claim boundaries.
+- Literature evidence is not assigned invented numerical confidence; unsourced contamination/carryover/misidentification alternatives remain hypotheses rather than literature-supported facts.
+- Strict release validation now requires the `storage_evidence` lane, passing storage linkage QC and emitted storage-evidence packets.
+- Bundled the corrected `storage_reaction_evidence v1.0.1` curation source and documented its runtime contract.
+- Actual v0.1.6 run/profile acceptance confirmed 13/13 sources referenced, 27 non-reaction records, 2 transformation precedents, 2 condition records, 49/49 identity links, zero source/compound/sample linkage failures, and the corrected caryophyllene trajectories.
+- Test suite: 43 passed.
+
 ## 0.1.6 - 2026-08-09
 
 - Split the frozen identity layer into 53 source-reported GC-MS labels and 49 unique canonical molecular entities. Downstream DESS, COCONUT taxonomy and RDKit screening now execute once per canonical entity.

@@ -1,0 +1,60 @@
+{
+  "schema_version": "project_blends_validation.v1",
+  "service_version": "0.1.7",
+  "date": "2026-08-10",
+  "code_validation": {
+    "compileall": "passed",
+    "pytest": {"passed": 43, "failed": 0},
+    "git_diff_check": "passed"
+  },
+  "wheel": {
+    "filename": "project_blends_compute-0.1.7-py3-none-any.whl",
+    "sha256": "7fd4bea9e9236a9a3822fa3021b5fff4faae6296270e8e6a181acd654cde74a9",
+    "build": "passed",
+    "zip_integrity": "passed",
+    "isolated_target_import": "passed"
+  },
+  "storage_evidence_consumer": {
+    "dataset_name": "storage_reaction_evidence",
+    "version": "v1.0.1",
+    "manifest_verification": "matched",
+    "quality_count_verification": "matched",
+    "sources": 13,
+    "referenced_sources": 13,
+    "nonreaction_explanations": 27,
+    "transformation_precedents": 2,
+    "condition_records": 2,
+    "identity_linkage_rows": 49,
+    "storage_evidence_packets": 29,
+    "linkage_qc": {
+      "pass": true,
+      "missing_source_links": 0,
+      "missing_compound_links": 0,
+      "missing_sample_links": 0,
+      "missing_canonical_identity_links": 0,
+      "unexpected_identity_links": 0,
+      "duplicate_source_ids": 0,
+      "duplicate_nonreaction_ids": 0,
+      "duplicate_identity_linkage_ids": 0,
+      "unused_sources": 0
+    }
+  },
+  "actual_v016_profile_linkage_acceptance": {
+    "source_run": "pb-20260810T150036-46ad3516dd",
+    "status": "passed",
+    "lemongrass_citral": {"before_area_percent": 13.10, "after_area_percent": 0.0},
+    "lemongrass_eugenol": {"before_area_percent": 0.0, "after_area_percent": 64.13},
+    "blend_b_caryophyllene": {"before_area_percent": 11.67, "after_area_percent": 4.74, "compound_id": "cmp-dc8d031a631106c2"},
+    "blend_c_caryophyllene": {"before_area_percent": 13.74, "after_area_percent": 6.43, "compound_id": "cmp-dc8d031a631106c2"}
+  },
+  "v017_full_smoke": {
+    "run_id": "pb-20260810T152903-66034ea86f",
+    "identity": {"reported_labels": 53, "canonical_entities": 49, "unresolved_pending": 0},
+    "reactions": {"causal_candidates": 0, "evaluations": 0},
+    "molecular_screening": {"rdkit_results": 49},
+    "storage_evidence": {"status": "available", "linkage_qc_pass": true, "packets": 29},
+    "strict_release": "not evaluated as a full target-runtime pass because pipeline_fooddb and rxn_bridge were intentionally unconfigured in the sandbox; storage_evidence_consumption check passed"
+  },
+  "claim_boundary": "Storage evidence remains literature/analytical support and does not establish a causal precursor-to-product conversion in Project Blends.",
+  "next_target_runtime_check": "rerun v0.1.7 on the Windows path manifest where FoodDB, rxn_bridge, reaction_curation, DESS and taxonomy are already available"
+}

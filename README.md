@@ -40,6 +40,7 @@ project_blends_compute/
 ├── provenance/           deterministic FoodDB and optional FoodChem ML
 ├── reactions/            pre-evidence gating, rxn_bridge and curation evidence
 ├── storage_curation/     storage_reaction_evidence artifact builder
+├── storage_evidence/     full storage-evidence artifact consumer and linkage QC
 ├── supporting/           DESS and authoritative COCONUT taxonomy adapters
 ├── quantum/              xTB/ORCA engines and persistent jobs
 ├── uncertainty/          descriptive evidence-completeness aggregation
@@ -69,7 +70,7 @@ Copy the path-manifest template and replace paths with the actual local paths:
 cp config/path_manifest.example.json config/path_manifest.local.json
 ```
 
-The COCONUT taxonomy artifact is resolved through the configured `rxn_artifact_registry`. v0.1.6 deliberately has no separate COCO-classifier runtime: the uploaded v1 artifact is the taxonomy model itself. `/ready` reports whether each provider can actually be constructed, not merely whether a directory exists.
+The COCONUT taxonomy artifact is resolved through the configured `rxn_artifact_registry`. There is no separate COCO-classifier runtime: the uploaded v1 artifact is the taxonomy model itself. `/ready` reports whether each provider can actually be constructed, not merely whether a directory exists. v0.1.7 also reports the full `storage_evidence` consumer separately from the reaction-candidate lookup lane.
 
 ## Canonical Project Blends dataset
 
@@ -194,25 +195,59 @@ project-blends-run ... run --no-molecular-screening
 
 `--no-quantum` remains a deprecated compatibility alias for that old behavior.
 
-## Storage-reaction evidence curation
+## Storage evidence consumption — v0.1.7
 
-The remaining core evidence dependency is `storage_reaction_evidence`. Apply the included reaction_curation dataset-kind patch or make the equivalent change, then curate primary literature around storage-relevant transformation families **and the non-reaction alternatives surfaced by the experiment**. Because the v0.1.6 pre-evidence gate currently promotes zero causal pairs, the corpus must not be reverse-engineered merely to validate a preferred conversion.
+`storage_reaction_evidence v1.0.1` is now a first-class runtime evidence source rather than only a registry prerequisite for reaction-candidate lookup. The consumer resolves the active dataset version from `reaction_curation_registry`, verifies the immutable artifact manifest by SHA-256, requires a passing curation QC report, and consumes all five artifact families:
+
+```text
+storage_reactions.*
+storage_condition_context.*
+storage_evidence_sources.*
+nonreaction_explanations.*
+identity_linkage.*
+```
+
+For the frozen v1.0.1 corpus the expected counts are **13 literature sources, 27 non-reaction/analytical records, 2 transformation precedents, 2 reaction-specific condition records and 49 canonical identity links**. Runtime linkage QC requires the 49 curated identities to match the frozen Project Blends canonical registry and checks every source, compound and sample reference before evidence packets are emitted.
+
+The consumer runs even when pre-reaction gating yields zero causal candidates. This is intentional: volatility, degradation to unobserved products, analytical non-detection, contamination/carryover, library ambiguity and relative-area redistribution remain scientifically meaningful evidence without a precursor→product hypothesis. Transformation precedents retain condition compatibility and cannot override the conservative reaction gate.
+
+The integrated run now writes:
+
+```text
+storage_evidence/source_evidence.*
+storage_evidence/nonreaction_evidence.*
+storage_evidence/transformation_precedents.*
+storage_evidence/condition_compatibility.*
+storage_evidence/sample_evidence.*
+storage_evidence/compound_evidence.*
+storage_evidence/storage_evidence_summary.json
+```
+
+Storage evidence also enters `reports/evidence_packets.json` and the ChemRAG export with source IDs/DOIs, sample and compound linkage, evidence type, directness, condition compatibility, claim class, support/contradiction role and an explicit claim boundary. No numerical confidence is invented for literature records that were not probabilistically calibrated.
+
+The curation source used to build the current artifact is retained at:
+
+```text
+data/curation/storage_reaction_evidence_v1_0_1.source.json
+```
+
+To build a future immutable version, use:
 
 ```bash
 project-blends-curate-storage \
-  --input data/examples/storage_reaction_evidence.example.json \
-  --output-root /path/to/reaction_curation/artifacts \
-  --registry /path/to/reaction_curation/benchmark_registry.json \
-  --reaction-curation-project-root /path/to/reaction_curation-main
+  --input-json data/curation/storage_reaction_evidence_v1_0_1.source.json \
+  --output-root /path/to/reaction_curation/data/rxn_artifacts/reaction_curation/curated \
+  --registry /path/to/reaction_curation/data/rxn_artifacts/reaction_curation/benchmark_registry.json \
+  --reaction-curation-project-root /path/to/reaction_curation
 ```
 
-The included example is schema demonstration data only and must not be promoted as scientific evidence. Reaction-specific condition retrieval remains primary; signature-level context is broader support only.
+Reaction-specific condition context remains primary. Signature-level condition context is broader support only. See `docs/STORAGE_EVIDENCE_V1_0_1.md`.
 
 ## API and release
 
 Principal endpoints remain under `/v1/*`; OpenAPI is available at `/docs`. Each finalized run is immutable and SHA-256 registered under `artifacts/runs/<run_id>/`.
 
-Strict release validation requires an identity freeze with no `unresolved_pending` identities or blocking cross-source identity conflicts, the core FoodDB/rxn_bridge/reaction_curation evidence lanes, reaction claim boundaries and evidence packets. `--require-quantum` additionally requires **completed** quantum results; queued jobs do not satisfy the gate.
+Strict release validation requires an identity freeze with no `unresolved_pending` identities or blocking cross-source identity conflicts; the core FoodDB, rxn_bridge, reaction_curation **and storage_evidence** lanes; a consumed storage-evidence corpus with passing linkage QC and emitted storage evidence packets; reaction claim boundaries; and evidence packets. `--require-quantum` additionally requires **completed** quantum results; queued jobs do not satisfy the gate.
 
 ```bash
 project-blends-run validate <run_id>
@@ -225,4 +260,4 @@ project-blends-run release <run_id>
 pytest -q
 ```
 
-v0.1.6 adds tests for 53-label→49-entity canonicalization, strict taxonomy-artifact contract verification, probability-weighted taxonomy aggregation, duplicate-free supporting inference, structured RDKit QC, positional-isomer redirection, large-scaffold oxidation rejection, and separation of molecular screening from quantum chemistry.
+v0.1.7 adds acceptance tests for full `storage_reaction_evidence v1.0.1` artifact consumption, manifest SHA-256 verification, 49-entity linkage QC, non-causal evidence-packet boundaries, corrected caryophyllene semantic linkage, ChemRAG propagation and strict release consumption checks. The complete suite contains 43 tests.

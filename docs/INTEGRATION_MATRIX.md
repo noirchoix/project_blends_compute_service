@@ -9,7 +9,8 @@
 | `provenance.FoodDBAdapter` | pipeline_fooddb | DuckDB views or Parquet/CSV exports | Lane unavailable; no inferred occurrence evidence |
 | `provenance.FoodChemMLAdapter` | foodchem_ml | `/api/v1/link-predictions` | Disabled unless URL configured; outputs remain exploratory |
 | `reactions.RxnBridgeAdapter` | rxn_bridge | artifact registry / template store | Lane unavailable; no template support claimed |
-| `reactions.ReactionCurationAdapter` | reaction_curation | benchmark registry + reaction-specific conditions | Lane unavailable; no curated support claimed |
+| `reactions.ReactionCurationAdapter` | reaction_curation | benchmark registry + reaction-specific conditions | Lane unavailable; no reaction-candidate curation support claimed |
+| `storage_evidence.StorageEvidenceService` | `storage_reaction_evidence` active artifact | manifest-verified reactions + conditions + sources + non-reaction explanations + identity linkage | Fail-closed on manifest/QC mismatch; linkage failures are surfaced and block strict release |
 | `supporting.DESSRuntimeLane` | rxn_bridge DESS provider | precomputed `dess_physics` lookup | `runtime_unavailable`/`executed_no_match`; sparse coverage remains explicit |
 | `supporting.TaxonomyRuntimeLane` | uploaded COCONUT v1 via rxn_bridge | strict SHA-256 verification → upstream feature builder → LightGBM hierarchy | artifact mismatch fails lane construction; unknown/failed inference is surfaced |
 | `supporting.aggregate_taxonomy_profiles` | taxonomy probabilities + GC-MS profile | area × probability aggregation | uncovered area and low-confidence predictions remain explicit |
@@ -25,7 +26,7 @@
 - FoodDB documents occurrence; FoodChem ML cannot promote a prediction to occurrence evidence.
 - Pre-reaction screening reduces implausible cross-products but does not establish chemistry.
 - Same-formula positional-isomer matches are routed to analytical ambiguity, not causal reaction inference, without direct evidence.
-- rxn_bridge supplies analogies; reaction_curation supplies direct/condition-linked evidence.
+- rxn_bridge supplies analogies; reaction_curation supplies reaction-specific evidence; the storage-evidence consumer independently supplies source-backed non-reaction and condition-context evidence even when no causal reaction candidate survives gating.
 - DESS and COCONUT taxonomy support interpretation but cannot prove a structure or transformation.
-- There is no separate COCO classifier lane in Project Blends v0.1.6; the screened uploaded artifact is the COCONUT taxonomy model itself.
+- There is no separate COCO classifier lane in Project Blends; the screened uploaded artifact is the COCONUT taxonomy model itself.
 - RDKit molecular screening is not quantum chemistry. Completed xTB/ORCA calculations can support plausibility but still cannot prove storage conversion.

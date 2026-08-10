@@ -29,7 +29,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app = FastAPI(
         title="Project Blends Compute Service",
         version=__version__,
-        description="Artifact-backed identity, compositional-profile, provenance, gated reaction-intelligence, molecular-screening and quantum-chemistry service.",
+        description="Artifact-backed identity, compositional-profile, provenance, storage-evidence, gated reaction-intelligence, molecular-screening and quantum-chemistry service.",
     )
     app.state.settings = config
     app.state.manager = manager

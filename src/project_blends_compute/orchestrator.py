@@ -24,6 +24,7 @@ from project_blends_compute.schemas.runs import RunRequest, RunStatus, RunSummar
 from project_blends_compute.settings import Settings
 from project_blends_compute.supporting import SupportingEvidenceService
 from project_blends_compute.supporting.taxonomy_aggregation import aggregate_taxonomy_profiles
+from project_blends_compute.storage_evidence import StorageEvidenceService
 from project_blends_compute.uncertainty import UncertaintyService
 from project_blends_compute.utils import canonical_json_bytes, dedupe_keep_order, normalize_name, stable_hash, utc_now_iso
 
@@ -45,6 +46,7 @@ class RunManager:
         self.reactions = ReactionService(self.rxn_bridge, self.reaction_curation)
         self.quantum = QuantumService(settings)
         self.supporting = SupportingEvidenceService(settings)
+        self.storage_evidence = StorageEvidenceService(settings)
         self.uncertainty = UncertaintyService()
         self.reporter = ReportBuilder()
 
@@ -111,6 +113,16 @@ class RunManager:
                 warnings.extend(reaction_payload.get("warnings", []))
             stages["reactions"] = {"status": "complete", "candidates": sum(len(v.get("candidates", [])) for v in reaction_payload["samples"].values()), "evaluations": len(reaction_payload["evaluations"])}
 
+            storage_evidence_payload = self.storage_evidence.evaluate(records, canonical_entities)
+            warnings.extend(storage_evidence_payload.get("warnings", []))
+            stages["storage_evidence"] = {
+                "status": storage_evidence_payload.get("status", "unavailable"),
+                "dataset_name": storage_evidence_payload.get("dataset_name"),
+                "version": storage_evidence_payload.get("version"),
+                **storage_evidence_payload.get("counts", {}),
+                "linkage_qc_pass": storage_evidence_payload.get("linkage_qc", {}).get("pass", False),
+            }
+
             supporting_payload = self.supporting.evaluate(canonical_entities)
             taxonomy_aggregation = aggregate_taxonomy_profiles(
                 [record.model_dump(mode="json") for record in records],
@@ -157,6 +169,7 @@ class RunManager:
                 "pipeline_fooddb": provenance_payload["lane_status"].get("pipeline_fooddb", "disabled"),
                 "foodchem_ml": provenance_payload["lane_status"].get("foodchem_ml", "disabled"),
                 **reaction_payload.get("lane_status", {}),
+                **storage_evidence_payload.get("lane_status", {}),
                 **supporting_payload.get("lane_status", {}),
                 **molecular_screening_payload.get("lane_status", {}),
                 **quantum_payload.get("lane_status", {}),
@@ -167,6 +180,7 @@ class RunManager:
                 occurrences=provenance_payload["occurrences"],
                 unresolved_provenance=provenance_payload["unresolved_queries"],
                 reaction_evaluations=reaction_payload["evaluations"],
+                storage_evidence=storage_evidence_payload,
                 lane_status=lane_status,
             )
             evidence_packets = build_evidence_packets(
@@ -174,6 +188,7 @@ class RunManager:
                 reaction_evaluations=reaction_payload["evaluations"],
                 occurrences=provenance_payload["occurrences"],
                 identity_compounds=identity_payload["compounds"],
+                storage_evidence=storage_evidence_payload,
             )
             report = self.reporter.integrated_report(
                 run_id=run_id,
@@ -182,6 +197,7 @@ class RunManager:
                 profiles=profile_payload,
                 provenance=provenance_payload,
                 reactions=reaction_payload,
+                storage_evidence=storage_evidence_payload,
                 supporting=supporting_payload,
                 molecular_screening=molecular_screening_payload,
                 quantum=quantum_payload,
@@ -318,6 +334,13 @@ class RunManager:
                 self._write_table_bundle(bundle, "reactions/reaction_analytical_ambiguities", reaction_payload.get("analytical_ambiguities", []), "reaction_analytical_ambiguities")
                 self._write_table_bundle(bundle, "reactions/reaction_evaluations", reaction_payload["evaluations"], "reaction_evaluations")
                 self._write_table_bundle(bundle, "reactions/alternative_explanations", reaction_payload["alternatives"], "alternative_explanations")
+                self._write_table_bundle(bundle, "storage_evidence/source_evidence", storage_evidence_payload.get("source_evidence", []), "storage_source_evidence")
+                self._write_table_bundle(bundle, "storage_evidence/nonreaction_evidence", storage_evidence_payload.get("nonreaction_evidence", []), "storage_nonreaction_evidence")
+                self._write_table_bundle(bundle, "storage_evidence/transformation_precedents", storage_evidence_payload.get("transformation_precedents", []), "storage_transformation_precedents")
+                self._write_table_bundle(bundle, "storage_evidence/condition_compatibility", storage_evidence_payload.get("condition_compatibility", []), "storage_condition_compatibility")
+                self._write_table_bundle(bundle, "storage_evidence/sample_evidence", storage_evidence_payload.get("sample_evidence", []), "storage_sample_evidence")
+                self._write_table_bundle(bundle, "storage_evidence/compound_evidence", storage_evidence_payload.get("compound_evidence", []), "storage_compound_evidence")
+                bundle.write_json("storage_evidence/storage_evidence_summary.json", storage_evidence_payload, logical_name="storage_evidence_summary")
                 self._write_table_bundle(bundle, "supporting/supporting_evidence", supporting_payload.get("evidence", []), "supporting_evidence")
                 self._write_table_bundle(
                     bundle,

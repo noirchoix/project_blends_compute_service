@@ -60,6 +60,22 @@ class UncertaintyService:
             "interpretation": "FoodDB occurrence is source-provenance evidence; FoodChem ML links are excluded from this count",
         }
 
+
+    @staticmethod
+    def storage_evidence_summary(storage_evidence: dict[str, Any]) -> dict[str, Any]:
+        counts = storage_evidence.get("counts", {}) if isinstance(storage_evidence, dict) else {}
+        linkage = storage_evidence.get("linkage_qc", {}) if isinstance(storage_evidence, dict) else {}
+        return {
+            "status": storage_evidence.get("status", "unavailable") if isinstance(storage_evidence, dict) else "unavailable",
+            "dataset_name": storage_evidence.get("dataset_name") if isinstance(storage_evidence, dict) else None,
+            "version": storage_evidence.get("version") if isinstance(storage_evidence, dict) else None,
+            "sources": int(counts.get("sources") or 0),
+            "nonreaction_explanations": int(counts.get("nonreaction_explanations") or 0),
+            "transformation_precedents": int(counts.get("transformation_precedents") or 0),
+            "linkage_qc_pass": bool(linkage.get("pass")),
+            "interpretation": "curated storage evidence supports bounded alternatives and condition-aware precedents; it is not proof of a Project Blends reaction",
+        }
+
     def aggregate(
         self,
         *,
@@ -68,21 +84,24 @@ class UncertaintyService:
         occurrences: list[dict[str, Any]],
         unresolved_provenance: list[dict[str, Any]],
         reaction_evaluations: list[dict[str, Any]],
+        storage_evidence: dict[str, Any],
         lane_status: dict[str, str],
     ) -> dict[str, Any]:
         identities = self.identity_summary(compounds)
         reactions = self.reaction_summary(reaction_evaluations)
         provenance = self.provenance_summary(occurrences, unresolved_provenance)
+        storage = self.storage_evidence_summary(storage_evidence)
         available_lanes = sum(status in {"available", "complete", "enabled", "executed", "executed_no_match", "executed_with_unknowns", "available_not_run", "queued"} for status in lane_status.values())
         lane_fraction = available_lanes / max(1, len(lane_status))
         identity_fraction = identities["resolved"] / max(1, identities["total"])
         reaction_nonabstain = reactions["retained"] / max(1, reactions["total"]) if reactions["total"] else 0.0
         overall = 0.45 * identity_fraction + 0.25 * lane_fraction + 0.15 * reaction_nonabstain + 0.15 * (1.0 if profile_metrics else 0.0)
         return {
-            "schema_version": "project_blends_uncertainty.v1",
+            "schema_version": "project_blends_uncertainty.v2",
             "identity": identities,
             "provenance": provenance,
             "reaction": reactions,
+            "storage_evidence": storage,
             "lane_status": lane_status,
             "descriptive_evidence_completeness": round(overall, 6),
             "not_a_probability": True,
@@ -91,5 +110,6 @@ class UncertaintyService:
                 "two timepoints without documented replicates do not support inferential kinetics",
                 "reaction analogies and molecular-screening descriptors support plausibility only; xTB/ORCA count as quantum evidence only after successful execution",
                 "predicted food-compound links are exploratory and not occurrence evidence",
+                "curated storage alternatives and transformation precedents remain condition-bounded and do not establish causal conversion",
             ],
         }

@@ -1,17 +1,20 @@
 {
   "schema_version": "project_blends_service_build.v1",
-  "service_version": "0.1.6",
-  "version": "0.1.6",
-  "build_date": "2026-08-09",
+  "service_version": "0.1.7",
+  "version": "0.1.7",
+  "build_date": "2026-08-10",
   "reported_profile_records": 75,
   "reported_samples": ["lemongrass", "blend_a", "blend_b", "blend_c"],
   "validation": {
     "python_compile": "passed",
-    "pytest": {"passed": 36, "failed": 0},
+    "pytest": {"passed": 43, "failed": 0},
+    "git_diff_check": "passed",
     "wheel_build_no_isolation": "passed",
-    "wheel_sha256": "8a1c6b2391558f62fa8cda4a6846744bc191647f33c9c7993d0a3fcdf2d5641a",
+    "wheel_sha256": "7fd4bea9e9236a9a3822fa3021b5fff4faae6296270e8e6a181acd654cde74a9",
     "wheel_integrity": "passed",
-    "real_uploaded_taxonomy_artifact_smoke": "passed"
+    "wheel_import": "passed",
+    "actual_v016_profile_linkage_acceptance": "passed",
+    "v017_storage_consumer_full_smoke": "passed"
   },
   "batch_a": {
     "status": "frozen",
@@ -30,25 +33,37 @@
     "analytical_ambiguity_redirects": 1,
     "rejected_pre_evidence": 210
   },
+  "storage_evidence": {
+    "dataset_name": "storage_reaction_evidence",
+    "active_version": "v1.0.1",
+    "sources": 13,
+    "referenced_sources": 13,
+    "nonreaction_explanations": 27,
+    "transformation_precedents": 2,
+    "condition_records": 2,
+    "identity_linkage_rows": 49,
+    "source_linkage_failures": 0,
+    "compound_linkage_failures": 0,
+    "sample_linkage_failures": 0,
+    "storage_evidence_packets": 29,
+    "artifact_manifest_sha256_verification": "matched",
+    "quality_count_verification": "matched"
+  },
   "taxonomy_coconut": {
     "artifact_version": "v1",
     "model_version": "lightgbm_coconut_hierarchy_v1",
     "feature_schema_version": "taxonomy.coconut.v1",
     "uploaded_zip_sha256": "78f13d3d259cfd1751eb077df5bc25897e73461fe8dfe481139c9bb066008940",
     "strict_file_hash_verification": "matched",
-    "canonical_entities_predicted": 49,
+    "canonical_entities_predicted_on_v016_windows_run": 49,
     "unknown": 0,
     "failed": 0
   },
-  "supporting_runtime_contract": {
-    "dess": "precomputed DESS artifact lookup through rxn_bridge provider",
-    "taxonomy": "authoritative COCONUT v1 LightGBM inference through upstream feature builder",
-    "standalone_coco_classifier": "removed_as_redundant"
-  },
   "computation_semantics": {
     "molecular_screening": "RDKit descriptors + ETKDG + MMFF/UFF; 49 canonical entities",
-    "quantum": "xTB/ORCA only after successful execution"
+    "quantum": "xTB/ORCA only after successful execution",
+    "storage_evidence": "literature and analytical-context evidence; no causal conversion inferred from relative-area changes"
   },
-  "strict_release_status": "blocked_until_storage_reaction_evidence_and_core_local_evidence_lanes_are_available",
-  "next_scientific_milestone": "storage_reaction_evidence v1"
+  "strict_release_status": "storage_evidence_consumer_acceptance_passed; full Windows v0.1.7 rerun required before publication release locking",
+  "next_scientific_milestone": "Windows v0.1.7 acceptance, publication evidence review, then decide whether any targeted xTB/ORCA calculations are justified"
 }

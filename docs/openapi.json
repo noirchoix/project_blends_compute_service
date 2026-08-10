@@ -2,8 +2,8 @@
   "openapi": "3.1.0",
   "info": {
     "title": "Project Blends Compute Service",
-    "description": "Artifact-backed identity, compositional-profile, provenance, gated reaction-intelligence, molecular-screening and quantum-chemistry service.",
-    "version": "0.1.6"
+    "description": "Artifact-backed identity, compositional-profile, provenance, storage-evidence, gated reaction-intelligence, molecular-screening and quantum-chemistry service.",
+    "version": "0.1.7"
   },
   "paths": {
     "/health": {

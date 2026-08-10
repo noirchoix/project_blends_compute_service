@@ -8,11 +8,12 @@
 6. FoodChem ML outputs are hypotheses, never occurrence evidence.
 7. rxn_bridge templates are analogous synthetic-reaction evidence and may be out of distribution for ambient storage chemistry.
 8. reaction_curation reaction-specific conditions are primary; signature-level conditions are broader support only.
-9. DESS physics artifacts and the authoritative COCONUT `taxonomy.coconut.v1` model are supporting computational evidence and cannot confirm analytical identity or a storage reaction.
-10. Taxonomy predictions retain confidence, entropy and probability vectors. Probability-weighted profile aggregation is model-assisted composition evidence, not measured class abundance.
-11. RDKit descriptors, ETKDG conformers and MMFF/UFF energies are molecular/cheminformatics screening, not quantum chemistry. True quantum-chemistry claims require completed xTB/ORCA calculations.
-12. No inferential p-values, kinetic constants, or shelf-life claims are produced without documented replicates and appropriate time-series data.
-13. Every publication claim must be labelled as observed, derived, literature-supported, computationally supported, hypothesized, unresolved or rejected.
+9. The complete `storage_reaction_evidence` corpus is consumed independently of reaction-candidate generation. Non-reaction explanations and condition-mismatched transformation precedents remain first-class evidence but cannot establish that a storage process occurred.
+10. DESS physics artifacts and the authoritative COCONUT `taxonomy.coconut.v1` model are supporting computational evidence and cannot confirm analytical identity or a storage reaction.
+11. Taxonomy predictions retain confidence, entropy and probability vectors. Probability-weighted profile aggregation is model-assisted composition evidence, not measured class abundance.
+12. RDKit descriptors, ETKDG conformers and MMFF/UFF energies are molecular/cheminformatics screening, not quantum chemistry. True quantum-chemistry claims require completed xTB/ORCA calculations.
+13. No inferential p-values, kinetic constants, or shelf-life claims are produced without documented replicates and appropriate time-series data.
+14. Every publication claim must be labelled as observed, derived, literature-supported, computationally supported, hypothesized, unresolved or rejected.
 
 ## Batch A identity and canonical-entity policy
 
@@ -39,3 +40,9 @@ Every disappeared×appeared pair is retained as an audit record, but only a boun
 Same-formula positional-isomer pairs are analytical/library-assignment ambiguities unless direct storage-reaction evidence establishes the transformation. Larger +O/-H oxidation/dehydrogenation hypotheses require strong scaffold preservation and cannot pass merely because the elemental delta resembles oxidation. The current bundled data therefore legitimately yield zero causal reaction candidates after pre-evidence gating.
 
 Non-reaction explanations—including volatilization, degradation to unobserved products, non-detection, library misidentification, co-elution, contamination/carryover and relative-area normalization—remain first-class alternatives.
+
+## Storage evidence consumer policy
+
+The active storage-evidence artifact must pass its curation QC and immutable manifest SHA-256 verification before use. Runtime linkage QC compares the curated identity-linkage table to the frozen 49-entity Project Blends registry and validates all source, compound and sample references.
+
+Source-backed non-reaction records may support the plausibility of volatility, degradation, non-detection, compositional redistribution or other bounded alternatives. Project-specific contamination, carryover or misidentification alternatives without direct source support remain hypotheses. Transformation precedents are literature-supported chemical context, but low/very-low condition compatibility is contradictory evidence against direct storage attribution. No calibrated numerical confidence is assigned where the literature record does not provide one.

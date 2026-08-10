@@ -1,0 +1,927 @@
+{
+  "dataset_name": "storage_reaction_evidence",
+  "version": "v1.0.1",
+  "reactions": [
+    {
+      "reaction_id": "sre-v1-caryophyllene-to-caryophyllene-oxide-001",
+      "source_id": "lee_ko_2021_caryophyllene_oxidation",
+      "source_doi": "10.1007/s10068-021-00983-z",
+      "source_type": "primary_article",
+      "precursor_compound_id": "cmp-dc8d031a631106c2",
+      "product_compound_id": "cmp-d5eebc7c82eca6db",
+      "precursor_name": "(-)-Caryophyllene",
+      "product_name": "Caryophyllene oxide",
+      "precursor_smiles": "C=C1CCC=C(C)CCC2C1CC2(C)C",
+      "product_smiles": "C=C1CCC2OC2(C)CCC2C1CC2(C)C",
+      "mapped_reaction_smiles": null,
+      "transformation_family": "oxidation_epoxidation",
+      "evidence_directness": "analogous",
+      "experimental_or_computational": "experimental",
+      "matrix": "black pepper (Piper nigrum) under subcritical-water extraction",
+      "solvent": "water (subcritical)",
+      "temperature_c": 200.0,
+      "duration_h": 0.25,
+      "oxygen_exposure": "not reported as ambient-air storage",
+      "atmosphere": "pressurized subcritical-water extraction",
+      "light_exposure": "not relevant / not reported",
+      "pH": null,
+      "water_activity": null,
+      "humidity": null,
+      "container_material": null,
+      "headspace": null,
+      "catalyst_or_initiator": "high-temperature subcritical-water conditions",
+      "analytical_method": "compound quantification/identification in extraction study",
+      "reported_yield": null,
+      "reported_abundance_change": "Caryophyllene decreased above ~170 °C while caryophyllene oxide increased; caryophyllene oxide maximum reported at 200 °C/15 min.",
+      "identification_level": "experimentally observed compound-level transformation precedent; storage-condition mismatch",
+      "notes": "Use only as analogous chemical precedent. The severe temperature/pressure conditions are incompatible with an unheated 28-day storage claim unless independent evidence bridges that gap.",
+      "provenance": {
+        "curation_class": "analogous_transformation_precedent",
+        "condition_compatibility_with_project_blends": "low",
+        "claim_boundary": "does_not_establish_conversion_during_project_blends_storage"
+      }
+    },
+    {
+      "reaction_id": "sre-v1-thymol-to-thymoquinone-biological-net-001",
+      "source_id": "hahn_2013_thymol_biotransformation",
+      "source_doi": "10.1007/s00253-012-4293-8",
+      "source_type": "primary_article",
+      "precursor_compound_id": "cmp-9c40ac51317d298a",
+      "product_compound_id": "cmp-6b32baf7b65a004e",
+      "precursor_name": "Thymol",
+      "product_name": "Thymoquinone",
+      "precursor_smiles": "Cc1ccc(C(C)C)c(O)c1",
+      "product_smiles": "CC1=CC(=O)C(C(C)C)=CC1=O",
+      "mapped_reaction_smiles": null,
+      "transformation_family": "biological_oxidation_via_hydroquinone_intermediate",
+      "evidence_directness": "analogous",
+      "experimental_or_computational": "experimental",
+      "matrix": "whole-cell bacterial biotransformation culture",
+      "solvent": null,
+      "temperature_c": null,
+      "duration_h": null,
+      "oxygen_exposure": null,
+      "atmosphere": "biological culture",
+      "light_exposure": null,
+      "pH": null,
+      "water_activity": null,
+      "humidity": null,
+      "container_material": null,
+      "headspace": null,
+      "catalyst_or_initiator": "Nocardia cyriacigeorgica / Mycobacterium neoaurum whole-cell metabolism",
+      "analytical_method": null,
+      "reported_yield": null,
+      "reported_abundance_change": "Thymol oxidation pathway proceeds through thymohydroquinone to the corresponding benzoquinone.",
+      "identification_level": "biological pathway precedent; net linkage used for retrieval only",
+      "notes": "This is not passive-storage evidence. It demonstrates that the skeletal oxidation sequence is chemically/biologically accessible, but the microbial catalyst and matrix differ fundamentally from the Project Blends storage experiment.",
+      "provenance": {
+        "curation_class": "biological_mechanistic_analogy",
+        "condition_compatibility_with_project_blends": "very_low",
+        "intermediate": "thymohydroquinone",
+        "claim_boundary": "cannot_support_spontaneous_storage_conversion"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ay_2019_citral_photodegradation",
+      "doi": "10.1021/acs.jafc.8b07034",
+      "title": "Citral Photodegradation in Solution: Highlighting of a Radical Pathway in Parallel to Cyclization Pathway",
+      "authors": "Emel Ay; Violaine Gérard; Bernadette Graff; Fabrice Morlet-Savary; William Mutilangi; Christophe Galopin; Jacques Lalevée",
+      "year": 2019,
+      "journal": "Journal of Agricultural and Food Chemistry",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Citral photodegradation was experimentally studied in citrate buffer (pH 3) and ethanol under air versus nitrogen. UV/light exposure produced degradation through radical and cyclization pathways. Supports light/oxygen-sensitive citral degradation, but the conditions are not equivalent to the Project Blends storage matrix."
+    },
+    {
+      "source_id": "ebadi_2017_lemon_verbena_storage",
+      "doi": "10.1002/fsn3.434",
+      "title": "Packaging methods and storage duration affect essential oil content and composition of lemon verbena (Lippia citriodora Kunth.)",
+      "authors": "Mohammad-Taghi Ebadi; Fatemeh Sefidkon; Majid Azizi; Noorollah Ahmadi",
+      "year": 2017,
+      "journal": "Food Science & Nutrition",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Citral-rich aromatic leaves stored for 8 months at 25±3 °C and 35±5% RH in air, nitrogen, vacuum, or uncovered control packaging. EO composition measured by GC/GC-MS every two months. EO content decreased with storage and citral generally declined with extended storage; nitrogen/vacuum reduced loss relative to air/control."
+    },
+    {
+      "source_id": "hahn_2013_thymol_biotransformation",
+      "doi": "10.1007/s00253-012-4293-8",
+      "title": "Two different primary oxidation mechanisms during biotransformation of thymol by gram-positive bacteria of the genera Nocardia and Mycobacterium",
+      "authors": "Veronika Hahn; Katharina Sünwoldt; Annett Mikolasch; Frieder Schauer",
+      "year": 2013,
+      "journal": "Applied Microbiology and Biotechnology",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Whole-cell bacterial biotransformation established oxidation pathways for thymol. One pathway proceeds through thymohydroquinone and subsequent oxidation to the corresponding benzoquinone. This is mechanistic biological precedent, not evidence that the same conversion occurs during storage of an n-hexane plant extract."
+    },
+    {
+      "source_id": "kumar_2026_lemongrass_container_storage",
+      "doi": "10.9734/ijbcrr/2026/v35i11097",
+      "title": "Impact of Storage Containers on Chemical Degradation and Antibacterial Activity of Lemongrass (Cymbopogon citratus L.) Essential Oil",
+      "authors": "Vimal Kumar; Sunil Kumar Yadav; Ankita Rai; Ashok Kumar Ranjan",
+      "year": 2026,
+      "journal": "International Journal of Biochemistry Research & Review",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Same plant species as the Project Blends control. Steam-distilled lemongrass essential oil was stored up to one year in aluminum, transparent glass, and HDPE containers. GC-MS reported citral declining from 66.51% fresh to 30.35%, 24.99%, and 11.82%, respectively, after one year. Supports storage-associated citral loss but does not identify a specific conversion product."
+    },
+    {
+      "source_id": "lee_ko_2021_caryophyllene_oxidation",
+      "doi": "10.1007/s10068-021-00983-z",
+      "title": "Thermal decomposition and oxidation of β-caryophyllene in black pepper during subcritical water extraction",
+      "authors": "Ha-Yeon Lee; Min-Jung Ko",
+      "year": 2021,
+      "journal": "Food Science and Biotechnology",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Black pepper was subjected to subcritical-water extraction across 110–200 °C and 5–20 min. β-Caryophyllene decreased at high temperature while caryophyllene oxide increased; optimal reported conditions for caryophyllene oxide were 200 °C/15 min. Supports a caryophyllene-to-caryophyllene-oxide oxidation precedent only under severe thermal conditions, not passive ambient storage."
+    },
+    {
+      "source_id": "murni_2017_clove_storage",
+      "doi": "10.1063/1.4991188",
+      "title": "Effect of oven drying and storage on essential oil composition of clove (Syzygium aromaticum) from Toli-Toli",
+      "authors": "V. W. Murni; E. Saepudin; A. H. Cahyana; D. U. C. Rahayu; L. T. Hastuti; J. Haib",
+      "year": 2017,
+      "journal": "AIP Conference Proceedings",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Clove material was oven dried and then stored in the laboratory at room temperature for four months. GC-MS showed only slight overall compositional change; eugenol increased while acetyleugenol decreased. This is direct storage-composition evidence but does not prove acetyleugenol-to-eugenol conversion."
+    },
+    {
+      "source_id": "naeem_2018_eo_oxidation_storage",
+      "doi": "10.1007/s11694-017-9702-3",
+      "title": "Effect of storage on oxidation stability of essential oils derived from culinary herbs and spices",
+      "authors": "Ayeza Naeem; Tanveer Abbas; Tahira Mohsin Ali; Abid Hasnain",
+      "year": 2018,
+      "journal": "Journal of Food Measurement and Characterization",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Essential oils were followed for 10 weeks at 10 °C. Peroxide, TBARS and p-anisidine measures increased with storage duration, demonstrating progressive oxidative chemistry in stored essential-oil matrices. Supports oxidation as a general storage process, but does not identify Project Blends precursor/product pairs."
+    },
+    {
+      "source_id": "orav_2004_piper_storage",
+      "doi": "10.1021/jf030635s",
+      "title": "Effect of storage on the essential oil composition of Piper nigrum L. fruits of different ripening states",
+      "authors": "Anne Orav; Irina Stulova; Tiiu Kailas; Mati Müürisepp",
+      "year": 2004,
+      "journal": "Journal of Agricultural and Food Chemistry",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Pepper samples were stored for one year in glass at room temperature. Oil amount and terpene content generally decreased while oxygenated terpenoids increased; beta-caryophyllene and caryophyllene oxide were among measured constituents. Supports a general ambient-storage shift from terpenes toward oxygenated terpenoid composition, not a uniquely assigned beta-caryophyllene-to-oxide reaction in Project Blends."
+    },
+    {
+      "source_id": "rahmanian_2025_ginger_storage",
+      "doi": "10.1007/s11947-025-03991-7",
+      "title": "Storage Stability of Essential Oil and Phenolic Content in Ginger Rhizomes Using Nanocomposite-Based Packaging",
+      "authors": "Fatemeh Rahmanian; Mohammad-Taghi Ebadi; Mehrdad Kokabi",
+      "year": 2025,
+      "journal": "Food and Bioprocess Technology",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Same species as the ginger component in Blend B. Ginger rhizomes were stored for 0, 3, 6 and 9 months under ambient air or vacuum with different packaging films. Packaging and atmosphere materially affected retention of essential oil and key volatiles including alpha-zingiberene and beta-sesquiphellandrene. Supports storage- and packaging-dependent volatile retention without identifying specific spontaneous precursor-product reactions."
+    },
+    {
+      "source_id": "rowshan_2013_thymus_storage",
+      "doi": "10.1016/j.indcrop.2013.04.029",
+      "title": "Influence of storage conditions on the essential oil composition of Thymus daenensis Celak",
+      "authors": "Vahid Rowshan; Atefeh Bahmanzadegan; Mohammad Jamal Saharkhiz",
+      "year": 2013,
+      "journal": "Industrial Crops and Products",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Air-dried Thymus material was stored for three months at room temperature, 4 °C, and -20 °C and analyzed by GC/GC-MS. At room temperature, lower-boiling monoterpenes including gamma-terpinene and p-cymene decreased, while relative thymol/carvacrol percentages increased. This supports compositional redistribution and volatility effects around the thymol/p-cymene/terpinene system, but does not establish a Project Blends conversion pathway."
+    },
+    {
+      "source_id": "soliman_2020_thymol_thymoquinone_stability",
+      "doi": "10.2478/acph-2020-0028",
+      "title": "Stability study of thymoquinone, carvacrol and thymol using HPLC-UV and LC-ESI-MS",
+      "authors": "Rabab M. Soliman; Randa A. Abdel Salam; Basma G. Eid; Ahdab Khayyat; Thikryat Neamatallah; Mostafa K. Mesbah; Ghada M. Hadad",
+      "year": 2020,
+      "journal": "Acta Pharmaceutica",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Pure thymol, carvacrol and thymoquinone were subjected to forced degradation. Oxidative stress used 30% H2O2 at room temperature for one month in the dark; photolysis used direct sunlight for 6 h; thermal stress used methanolic solutions at 85 °C for 2 h. Thymol and carvacrol were stable under the studied conditions; thymoquinone was sensitive to light and heat. This is negative/condition-specific evidence against assuming spontaneous thymol-to-thymoquinone conversion."
+    },
+    {
+      "source_id": "tran_2020_lemongrass_storage_conditions",
+      "doi": "10.14233/ajchem.2020.22561",
+      "title": "Impact of Different Storage Conditions on Composition of Lemongrass (Cymbopogon citratus L.) Essential Oil of Tien Giang Province, Vietnam",
+      "authors": "Thi Kim Ngan Tran; Tan Phat Dao; Thi Cam Quyen Ngo; Thien Hien Tran; Ung Thanh Dat; Mai Huyng Cang",
+      "year": 2020,
+      "journal": "Asian Journal of Chemistry",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Same species as the Project Blends lemongrass control. Essential oil was followed by GC-MS for four months under contrasting light/temperature conditions, including light/45 °C and dark/4 °C. The study reported condition-dependent compositional changes and loss/oxidation of some low-abundance components. Citral behavior was condition-dependent and should not be reduced to a universal monotonic-degradation rule."
+    },
+    {
+      "source_id": "tran_2020_vietnamese_clove_storage",
+      "doi": null,
+      "title": "Effect of Storage Conditions on the Chemical Composition of Vietnamese Clove (Syzygium aromaticum) Essential Oil",
+      "authors": "Thi Kim Ngan Tran; Thien Hien Tran; Xuan Tien Le; Tran Quoc Toan; Thuy Trang Le Ngoc; Hoang Le Tuan Anh; Mai Huynh Cang",
+      "year": 2020,
+      "journal": "Journal of Global Pharma Technology",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "retrieval_date_utc": "2026-08-10",
+      "notes": "Species-matched clove essential-oil storage study. Oil in glass jars was monitored by GC-MS over four months under daylight/room temperature, dark/room temperature, 4 °C, and 45 °C. Eugenol, beta-caryophyllene and acetyleugenol remained major constituents, but relative percentages changed; acetyleugenol generally declined and eugenol varied/increased slightly. A positional allyl-methoxyphenol was reported to disappear while another positional annotation appeared later. Use as direct storage-composition and analytical-ambiguity context, not as proof of stoichiometric conversion."
+    }
+  ],
+  "nonreaction_explanations": [
+    {
+      "hypothesis_id": "sre-v1-blend-a-citral-degradation",
+      "sample_id": "blend_a",
+      "compound_id": "cmp-2ccc82d715b06266",
+      "compound_name": "Citral",
+      "explanation_type": "degradation_to_unobserved_products",
+      "direction": "decrease_or_disappearance_after_storage",
+      "evidence_source_ids": [
+        "ay_2019_citral_photodegradation",
+        "ebadi_2017_lemon_verbena_storage"
+      ],
+      "notes": "Supports degradation as an alternative explanation, especially if light/oxygen exposure occurred; those storage variables are undocumented in Project Blends."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-a-citral-volatility",
+      "sample_id": "blend_a",
+      "compound_id": "cmp-2ccc82d715b06266",
+      "compound_name": "Citral",
+      "explanation_type": "evaporation_or_volatilization",
+      "direction": "decrease_or_disappearance_after_storage",
+      "evidence_source_ids": [
+        "kumar_2026_lemongrass_container_storage",
+        "ebadi_2017_lemon_verbena_storage"
+      ],
+      "notes": "Citral physical loss is plausible in a volatile plant-extract matrix; no direct conversion product is established."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-a-eugenol-relative-area",
+      "sample_id": "blend_a",
+      "compound_id": "cmp-f3f1a942af0b4ff7",
+      "compound_name": "Eugenol",
+      "explanation_type": "relative_area_normalization",
+      "direction": "reported_after_storage_only_high_relative_area",
+      "evidence_source_ids": [
+        "murni_2017_clove_storage"
+      ],
+      "notes": "Eugenol area-percent increase can reflect compositional redistribution rather than absolute production."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-a-gamma-terpinene-loss",
+      "sample_id": "blend_a",
+      "compound_id": "cmp-814600326e6e1b36",
+      "compound_name": "Gamma-Terpinene",
+      "explanation_type": "evaporation_or_volatilization",
+      "direction": "4.76_percent_before_to_not_reported_after",
+      "evidence_source_ids": [
+        "rowshan_2013_thymus_storage"
+      ],
+      "notes": "Room-temperature thyme storage showed substantial gamma-terpinene decline, supporting volatility/compositional loss as a plausible non-reaction explanation."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-a-thymol-compositional-retention",
+      "sample_id": "blend_a",
+      "compound_id": "cmp-9c40ac51317d298a",
+      "compound_name": "Thymol",
+      "explanation_type": "relative_area_normalization",
+      "direction": "37.05_percent_before_to_17.79_percent_after",
+      "evidence_source_ids": [
+        "soliman_2020_thymol_thymoquinone_stability",
+        "rowshan_2013_thymus_storage"
+      ],
+      "notes": "Thymol remained reported after storage but at a lower relative area. Forced-stability data show thymol can be chemically stable under several stress tests, while thyme-storage data show its relative percentage can move substantially as other volatiles change. Therefore the decline should not be translated directly into a degradation yield."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-a-thymoquinone-appearance-unresolved",
+      "sample_id": "blend_a",
+      "compound_id": "cmp-6b32baf7b65a004e",
+      "compound_name": "Thymoquinone",
+      "explanation_type": "unresolved",
+      "direction": "reported_after_storage_only",
+      "evidence_source_ids": [
+        "soliman_2020_thymol_thymoquinone_stability",
+        "hahn_2013_thymol_biotransformation"
+      ],
+      "notes": "The appearance of thymoquinone is chemically interesting but cannot be assigned to thymol oxidation from the available storage data."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-b-caryophyllene-retention-shift",
+      "sample_id": "blend_b",
+      "compound_id": "cmp-dc8d031a631106c2",
+      "compound_name": "(-)-Caryophyllene",
+      "explanation_type": "relative_area_normalization",
+      "direction": "11.67_percent_before_to_4.74_percent_after",
+      "evidence_source_ids": [
+        "tran_2020_vietnamese_clove_storage",
+        "orav_2004_piper_storage"
+      ],
+      "notes": "Storage studies show beta-caryophyllene/terpene proportions are condition-sensitive. The observed decline while the compound persists is descriptive and is not a reaction yield."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-b-citral-degradation",
+      "sample_id": "blend_b",
+      "compound_id": "cmp-2ccc82d715b06266",
+      "compound_name": "Citral",
+      "explanation_type": "degradation_to_unobserved_products",
+      "direction": "decrease_or_disappearance_after_storage",
+      "evidence_source_ids": [
+        "ay_2019_citral_photodegradation",
+        "ebadi_2017_lemon_verbena_storage"
+      ],
+      "notes": "Citral disappearance is compatible with degradation, but the data do not establish the identities of degradation products."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-b-eugenyl-acetate-decline",
+      "sample_id": "blend_b",
+      "compound_id": "cmp-4177871ed2ab98e4",
+      "compound_name": "Eugenyl Acetate",
+      "explanation_type": "relative_area_normalization",
+      "direction": "14.82_percent_before_to_6.81_percent_after",
+      "evidence_source_ids": [
+        "murni_2017_clove_storage",
+        "tran_2020_vietnamese_clove_storage"
+      ],
+      "notes": "Clove storage studies directly report acetyleugenol/eugenyl-acetate percentage declines while eugenol remains high or increases. The Project Blends decline is therefore storage-compatible, but no stoichiometric ester-cleavage pathway is inferred."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-b-ginger-sesquiterpene-storage-context",
+      "sample_id": "blend_b",
+      "compound_id": null,
+      "compound_name": "ginger-associated sesquiterpenes",
+      "explanation_type": "relative_area_normalization",
+      "direction": "storage-dependent_retention",
+      "evidence_source_ids": [
+        "rahmanian_2025_ginger_storage"
+      ],
+      "notes": "Same-species ginger storage data show packaging/atmosphere-dependent retention of alpha-zingiberene and beta-sesquiphellandrene over 3-9 months. This is matrix/source context for Blend B and does not identify a specific reaction."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-b-p-cymene-loss",
+      "sample_id": "blend_b",
+      "compound_id": "cmp-61584efd39f4e39d",
+      "compound_name": "P-Cymene",
+      "explanation_type": "evaporation_or_volatilization",
+      "direction": "0.66_percent_before_to_not_reported_after",
+      "evidence_source_ids": [
+        "rowshan_2013_thymus_storage"
+      ],
+      "notes": "p-Cymene decreases during room-temperature storage in a thyme matrix; this supports a physical/compositional loss alternative rather than a specific precursor-product assignment."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-b-thymol-nondetection-or-compositional",
+      "sample_id": "blend_b",
+      "compound_id": "cmp-9c40ac51317d298a",
+      "compound_name": "Thymol",
+      "explanation_type": "analytical_non_detection",
+      "direction": "not_reported_after_storage",
+      "evidence_source_ids": [
+        "soliman_2020_thymol_thymoquinone_stability"
+      ],
+      "notes": "Forced-stress work found thymol comparatively stable under the tested oxidative, photolytic and thermal conditions. This weakens a simple spontaneous-degradation explanation and increases the importance of analytical non-detection/compositional effects or different matrix chemistry."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-b-thymoquinone-appearance-unresolved",
+      "sample_id": "blend_b",
+      "compound_id": "cmp-6b32baf7b65a004e",
+      "compound_name": "Thymoquinone",
+      "explanation_type": "unresolved",
+      "direction": "reported_after_storage_only",
+      "evidence_source_ids": [
+        "soliman_2020_thymol_thymoquinone_stability",
+        "hahn_2013_thymol_biotransformation"
+      ],
+      "notes": "A biological oxidation pathway from thymol toward the quinone framework exists, but forced-stress thymol stability and the absence of a matching catalyst/storage context prevent attribution of the observed thymoquinone peak to thymol conversion."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-c-caryophyllene-oxide-loss",
+      "sample_id": "blend_c",
+      "compound_id": "cmp-d5eebc7c82eca6db",
+      "compound_name": "Caryophyllene oxide",
+      "explanation_type": "degradation_to_unobserved_products",
+      "direction": "not_reported_after_storage",
+      "evidence_source_ids": [
+        "lee_ko_2021_caryophyllene_oxidation",
+        "naeem_2018_eo_oxidation_storage"
+      ],
+      "notes": "Oxidized sesquiterpenes can participate in further oxidation/decomposition; the available studies are condition-analogous rather than direct matches to the Project Blends storage environment."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-c-caryophyllene-retention-shift",
+      "sample_id": "blend_c",
+      "compound_id": "cmp-dc8d031a631106c2",
+      "compound_name": "(-)-Caryophyllene",
+      "explanation_type": "relative_area_normalization",
+      "direction": "13.74_percent_before_to_6.43_percent_after",
+      "evidence_source_ids": [
+        "tran_2020_vietnamese_clove_storage",
+        "orav_2004_piper_storage"
+      ],
+      "notes": "Caryophyllene persisted but fell in relative area. Direct clove storage and pepper storage support condition-dependent terpene changes without proving conversion to any particular oxygenated product."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-c-eugenol-relative-area",
+      "sample_id": "blend_c",
+      "compound_id": "cmp-f3f1a942af0b4ff7",
+      "compound_name": "Eugenol",
+      "explanation_type": "relative_area_normalization",
+      "direction": "reported_after_storage_only_high_relative_area",
+      "evidence_source_ids": [
+        "murni_2017_clove_storage"
+      ],
+      "notes": "The 75.62% post-storage eugenol value is a relative GC-MS area percentage. External clove-storage data show eugenol percentage can increase during storage without proving conversion from any specific precursor."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-c-eugenol-storage-composition",
+      "sample_id": "blend_c",
+      "compound_id": "cmp-f3f1a942af0b4ff7",
+      "compound_name": "Eugenol",
+      "explanation_type": "relative_area_normalization",
+      "direction": "not_reported_before_to_75.62_percent_after",
+      "evidence_source_ids": [
+        "murni_2017_clove_storage",
+        "tran_2020_vietnamese_clove_storage"
+      ],
+      "notes": "Blend C contains clove, and independent clove-storage studies show that eugenol remains a major constituent and its relative percentage can increase during storage. This supports source plausibility and compositional redistribution, not de novo formation or conversion from a named precursor."
+    },
+    {
+      "hypothesis_id": "sre-v1-blend-c-positional-phenol-eugenol-ambiguity",
+      "sample_id": "blend_c",
+      "compound_id": "cmp-4dfb3126948d89fe",
+      "compound_name": "2-Methoxy-3-(2-propenyl)phenol",
+      "explanation_type": "library_misidentification",
+      "direction": "0.79_percent_positional_isomer_before_vs_75.62_percent_eugenol_after",
+      "evidence_source_ids": [
+        "tran_2020_vietnamese_clove_storage"
+      ],
+      "notes": "v0.1.6 redirects the same-formula positional-isomer/eugenol pair to analytical ambiguity rather than reaction inference. A clove storage study independently reported time-dependent appearance/disappearance of differently positioned allyl-methoxyphenol annotations, reinforcing the need for library/RI discrimination. This does not prove that either Project Blends assignment is wrong."
+    },
+    {
+      "hypothesis_id": "sre-v1-eugenyl-acetate-compositional-change",
+      "sample_id": "blend_b",
+      "compound_id": "cmp-4177871ed2ab98e4",
+      "compound_name": "Eugenyl Acetate",
+      "explanation_type": "relative_area_normalization",
+      "direction": "decreased_but_persisted_after_storage",
+      "evidence_source_ids": [
+        "murni_2017_clove_storage"
+      ],
+      "notes": "Clove-storage data directly report lower acetyleugenol with higher eugenol after storage, but do not prove stoichiometric hydrolysis/conversion. Preserve this as compositional evidence only."
+    },
+    {
+      "hypothesis_id": "sre-v1-lemongrass-citral-condition-dependence",
+      "sample_id": "lemongrass",
+      "compound_id": "cmp-2ccc82d715b06266",
+      "compound_name": "Citral",
+      "explanation_type": "unresolved",
+      "direction": "13.10_percent_before_to_not_reported_after",
+      "evidence_source_ids": [
+        "kumar_2026_lemongrass_container_storage",
+        "tran_2020_lemongrass_storage_conditions",
+        "ebadi_2017_lemon_verbena_storage",
+        "ay_2019_citral_photodegradation"
+      ],
+      "notes": "Direct same-species and citral-rich matrix studies show strong condition dependence of citral retention. Because Project Blends did not document light, temperature, headspace oxygen, or absolute concentrations, the disappearance of the 13.10% citral peak remains compatible with physical loss and/or degradation but does not identify a product."
+    },
+    {
+      "hypothesis_id": "sre-v1-lemongrass-citral-degradation",
+      "sample_id": "lemongrass",
+      "compound_id": "cmp-2ccc82d715b06266",
+      "compound_name": "Citral",
+      "explanation_type": "degradation_to_unobserved_products",
+      "direction": "decrease_or_disappearance_after_storage",
+      "evidence_source_ids": [
+        "ay_2019_citral_photodegradation",
+        "kumar_2026_lemongrass_container_storage",
+        "ebadi_2017_lemon_verbena_storage"
+      ],
+      "notes": "Citral is demonstrably storage/light sensitive under several matrices and atmospheres. The Project Blends experiment did not characterize degradation products, so disappearance should remain product-unassigned."
+    },
+    {
+      "hypothesis_id": "sre-v1-lemongrass-citral-volatility",
+      "sample_id": "lemongrass",
+      "compound_id": "cmp-2ccc82d715b06266",
+      "compound_name": "Citral",
+      "explanation_type": "evaporation_or_volatilization",
+      "direction": "decrease_or_disappearance_after_storage",
+      "evidence_source_ids": [
+        "kumar_2026_lemongrass_container_storage",
+        "ebadi_2017_lemon_verbena_storage"
+      ],
+      "notes": "Direct/analogous storage studies show substantial storage-associated loss of citral-rich volatile material. This supports physical loss as a plausible explanation for citral disappearance without assigning a product."
+    },
+    {
+      "hypothesis_id": "sre-v1-lemongrass-eugenol-instrument-carryover",
+      "sample_id": "lemongrass",
+      "compound_id": "cmp-f3f1a942af0b4ff7",
+      "compound_name": "Eugenol",
+      "explanation_type": "instrument_carryover",
+      "direction": "not_reported_before_to_64.13_percent_after",
+      "evidence_source_ids": [],
+      "notes": "A high eugenol signal in the lemongrass control is compatible with an instrument carryover hypothesis in a sequence containing eugenol-rich blended samples. No run-order or blank data survive to test this; therefore the explanation remains unresolved."
+    },
+    {
+      "hypothesis_id": "sre-v1-lemongrass-eugenol-library-misidentification",
+      "sample_id": "lemongrass",
+      "compound_id": "cmp-f3f1a942af0b4ff7",
+      "compound_name": "Eugenol",
+      "explanation_type": "library_misidentification",
+      "direction": "not_reported_before_to_64.13_percent_after",
+      "evidence_source_ids": [],
+      "notes": "The post-storage lemongrass eugenol assignment should be independently scrutinized because the original study used library matching without authentic-standard/RI confirmation. This is an analytical alternative, not a corrected identity claim."
+    },
+    {
+      "hypothesis_id": "sre-v1-lemongrass-eugenol-relative-area",
+      "sample_id": "lemongrass",
+      "compound_id": "cmp-f3f1a942af0b4ff7",
+      "compound_name": "Eugenol",
+      "explanation_type": "relative_area_normalization",
+      "direction": "reported_after_storage_only_high_relative_area",
+      "evidence_source_ids": [
+        "murni_2017_clove_storage"
+      ],
+      "notes": "Storage studies show that eugenol relative percentage can rise while other clove-oil constituents decline. Relative GC-MS area increase is therefore not, by itself, evidence of de novo formation."
+    },
+    {
+      "hypothesis_id": "sre-v1-lemongrass-eugenol-sample-contamination",
+      "sample_id": "lemongrass",
+      "compound_id": "cmp-f3f1a942af0b4ff7",
+      "compound_name": "Eugenol",
+      "explanation_type": "sample_contamination",
+      "direction": "not_reported_before_to_64.13_percent_after",
+      "evidence_source_ids": [],
+      "notes": "The lemongrass control did not contain clove or basil by formulation, yet eugenol was reported at 64.13% after storage. Sample contamination is retained as an explicit project-level alternative; this record does not assert that contamination occurred."
+    },
+    {
+      "hypothesis_id": "sre-v1-terpene-oxygenated-terpenoid-storage-context",
+      "sample_id": "all",
+      "compound_id": null,
+      "compound_name": "terpene/oxygenated-terpenoid profile",
+      "explanation_type": "degradation_to_unobserved_products",
+      "direction": "storage_can_reduce_terpenes_and_increase_oxygenated_terpenoid_fraction",
+      "evidence_source_ids": [
+        "orav_2004_piper_storage",
+        "naeem_2018_eo_oxidation_storage"
+      ],
+      "notes": "Independent storage studies support progressive oxidation and class-level redistribution in volatile-oil matrices. This can motivate targeted literature review but is insufficient to map any Project Blends disappeared compound to any appeared compound."
+    }
+  ],
+  "identity_linkage": [
+    {
+      "compound_id": "cmp-069df84a1ac04d8d",
+      "preferred_name": "Npc112697",
+      "inchikey": "MRBZASPFZDNMCA-UHFFFAOYSA-N",
+      "canonical_smiles": "CC1(C)CC=CC23CCC(C=C12)C3(C)C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-0b1fe6ea1d914836",
+      "preferred_name": "Spathulenol",
+      "inchikey": "FRMCCTDTYSRUBE-BGPZULBFSA-N",
+      "canonical_smiles": "C=C1CCC2C(C3C1CCC3(C)O)C2(C)C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-0c4ff94089eb3464",
+      "preferred_name": "Curcumene",
+      "inchikey": "VMYXUZSZMNBRCN-UHFFFAOYSA-N",
+      "canonical_smiles": "CC(C)=CCCC(C)c1ccc(C)cc1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-114b2bd1e7045214",
+      "preferred_name": "Isoaromadendrene epoxide",
+      "inchikey": "GLKQAHXBJLGAFT-UHFFFAOYSA-N",
+      "canonical_smiles": "CC1CCC2C1C1C(CC3OC32C)C1(C)C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-1220c1cf447a824c",
+      "preferred_name": "Dehydroabietane",
+      "inchikey": "QUUCYKKMFLJLFS-UHFFFAOYSA-N",
+      "canonical_smiles": "CC(C)c1ccc2c(c1)CCC1C(C)(C)CCCC21C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-2782a054db7b40a9",
+      "preferred_name": "Eremophilene",
+      "inchikey": "QEBNYNLSCGVZOH-GZBFAFLISA-N",
+      "canonical_smiles": "C=C(C)C1CCC2=CCCC(C)C2(C)C1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-2ccc82d715b06266",
+      "preferred_name": "Citral",
+      "inchikey": "WTEVQBCEXWBHNA-JXMROGBWSA-N",
+      "canonical_smiles": "CC(C)=CCCC(C)=CC=O",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-2eafc898839980ba",
+      "preferred_name": "Abieta-7,13-diene",
+      "inchikey": "BBPXZLJCPUPNGH-CMKODMSKSA-N",
+      "canonical_smiles": "CC(C)C1=CC2=CCC3C(C)(C)CCCC3(C)C2CC1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-40469f5f15b99f2a",
+      "preferred_name": "2-Methyl-5-(6-methylhept-5-en-2-yl)cyclohexa-1,3-diene",
+      "inchikey": "KKOXKGNSUHTUBV-UHFFFAOYSA-N",
+      "canonical_smiles": "CC(C)=CCCC(C)C1C=CC(C)=CC1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-40f0f095295fa463",
+      "preferred_name": "delta-Cadinene",
+      "inchikey": "FUCYIEXQVQJBKY-ZFWWWQNUSA-N",
+      "canonical_smiles": "CC1=CC2C(=C(C)CCC2C(C)C)CC1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-4177871ed2ab98e4",
+      "preferred_name": "Eugenyl Acetate",
+      "inchikey": "SCCDQYPEOIRVGX-UHFFFAOYSA-N",
+      "canonical_smiles": "C=CCc1ccc(OC(C)=O)c(OC)c1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-4c0b2eabcb223095",
+      "preferred_name": "gamma-Muurolene",
+      "inchikey": "WRHGORWNJGOVQY-ZNMIVQPWSA-N",
+      "canonical_smiles": "C=C1CCC(C(C)C)C2C=C(C)CCC12",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-4def4c440812694d",
+      "preferred_name": "3,5-Di-tert-butylcatechol",
+      "inchikey": "PJZLSMMERMMQBJ-UHFFFAOYSA-N",
+      "canonical_smiles": "CC(C)(C)c1cc(O)c(O)c(C(C)(C)C)c1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-4dfb3126948d89fe",
+      "preferred_name": "2-Methoxy-3-(2-propenyl)phenol",
+      "inchikey": "HKHVWTUGAJEQNP-UHFFFAOYSA-N",
+      "canonical_smiles": "C=CCc1cccc(O)c1OC",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-61584efd39f4e39d",
+      "preferred_name": "P-Cymene",
+      "inchikey": "HFPZCAJZSCWRBC-UHFFFAOYSA-N",
+      "canonical_smiles": "Cc1ccc(C(C)C)cc1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-6b32baf7b65a004e",
+      "preferred_name": "Thymoquinone",
+      "inchikey": "KEQHJBNSCLWCAE-UHFFFAOYSA-N",
+      "canonical_smiles": "CC1=CC(=O)C(C(C)C)=CC1=O",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-6d52770c69138455",
+      "preferred_name": "5-Hydroxy-1-(4-Hydroxy-3-Methoxyphenyl)Decan-3-One",
+      "inchikey": "NLDDIKRKFXEWBK-UHFFFAOYSA-N",
+      "canonical_smiles": "CCCCCC(O)CC(=O)CCc1ccc(O)c(OC)c1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-7b207c30bf46b1a8",
+      "preferred_name": "Trans-alpha-Bergamotene",
+      "inchikey": "YMBFCQPIMVLNIU-SOUVJXGZSA-N",
+      "canonical_smiles": "CC(C)=CCCC1(C)C2CC=C(C)C1C2",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-814600326e6e1b36",
+      "preferred_name": "Gamma-Terpinene",
+      "inchikey": "YKFLAYDHMOASIY-UHFFFAOYSA-N",
+      "canonical_smiles": "CC1=CCC(C(C)C)=CC1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-8148891772dfc676",
+      "preferred_name": "2',3',4'-Trimethoxyacetophenone",
+      "inchikey": "PKNAATJMQOUREZ-UHFFFAOYSA-N",
+      "canonical_smiles": "COc1ccc(C(C)=O)c(OC)c1OC",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-82c3fff2b3fc9646",
+      "preferred_name": "Isoborneol",
+      "inchikey": "DTGKSKDOIYIVQL-MRTMQBJTSA-N",
+      "canonical_smiles": "CC1(C)C2CCC1(C)C(O)C2",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-9b202c0708a38483",
+      "preferred_name": "Germacrene D",
+      "inchikey": "GAIBLDCXCZKKJE-RXJOXMPGSA-N",
+      "canonical_smiles": "C=C1C=CC(C(C)C)CCC(C)=CCC1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-9c40ac51317d298a",
+      "preferred_name": "Thymol",
+      "inchikey": "MGSRCZKZVOBKFT-UHFFFAOYSA-N",
+      "canonical_smiles": "Cc1ccc(C(C)C)c(O)c1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-a6a142de35cb12c4",
+      "preferred_name": "(8)-Shogaol",
+      "inchikey": "LGZSMXJRMTYABD-MDZDMXLPSA-N",
+      "canonical_smiles": "CCCCCCCC=CC(=O)CCc1ccc(O)c(OC)c1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-b93ce032599642fa",
+      "preferred_name": "(R,Z)-2-Methyl-6-(4-methylcyclohexa-1,4-dien-1-yl)hept-2-en-1-ol",
+      "inchikey": "ZHWZEHFYKZGQFR-MECSIWFOSA-N",
+      "canonical_smiles": "CC(=CCCC(C)C1=CCC(C)=CC1)CO",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-bec2d7a3abf7c08f",
+      "preferred_name": "Zingerone",
+      "inchikey": "OJYLAHXKWMRDGS-UHFFFAOYSA-N",
+      "canonical_smiles": "COc1cc(CCC(C)=O)ccc1O",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-c0dc1786bce0079c",
+      "preferred_name": "Carvacrol",
+      "inchikey": "RECUKUPTGUEGMW-UHFFFAOYSA-N",
+      "canonical_smiles": "Cc1ccc(C(C)C)cc1O",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-c4db83508cb03061",
+      "preferred_name": "Copaene",
+      "inchikey": "VLXDPFLIRFYIME-BTFPBAQTSA-N",
+      "canonical_smiles": "CC1=CCC2C3C(C(C)C)CCC2(C)C13",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-cbbb1b57a869359f",
+      "preferred_name": "Humulene",
+      "inchikey": "FAMPSKZZVDUYOS-HRGUGZIWSA-N",
+      "canonical_smiles": "CC1=CCCC(C)=CCC(C)(C)C=CC1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-cd34fbacdabfc8cc",
+      "preferred_name": "6-Nitro-2-(4-nitrophenyl)imidazo[1,2-a]pyridine",
+      "inchikey": "FZIBIOFNSKXAJW-UHFFFAOYSA-N",
+      "canonical_smiles": "O=[N+]([O-])c1ccc(-c2cn3cc([N+](=O)[O-])ccc3n2)cc1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-cf7f4d18443cac3f",
+      "preferred_name": "1,2,9,10-Tetradehydroaristolane",
+      "inchikey": "AOKPBPDKGDLBCJ-UHFFFAOYSA-N",
+      "canonical_smiles": "CC1CC=CC2=CCC3C(C3(C)C)C21C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-d03c645d5568a8ee",
+      "preferred_name": "(-)-beta-Curcumene",
+      "inchikey": "JXZQZARENYGJMK-CQSZACIVSA-N",
+      "canonical_smiles": "CC(C)=CCCC(C)C1=CCC(C)=CC1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-d17721ceca91daf6",
+      "preferred_name": "Fenchol, exo-",
+      "inchikey": "IAIHUHQCLTYTSF-JIBHNJPVSA-N",
+      "canonical_smiles": "CC12CCC(C1)C(C)(C)C2O",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-d21583b39679cb0c",
+      "preferred_name": "[10]-Gingerdione",
+      "inchikey": "QPSYZJDGMPQMSV-UHFFFAOYSA-N",
+      "canonical_smiles": "CCCCCCCCCC(=O)CC(=O)CCc1ccc(O)c(OC)c1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-d3781737e8bcae4b",
+      "preferred_name": "Gingerdione",
+      "inchikey": "KMNVXQHNIWUUSE-UHFFFAOYSA-N",
+      "canonical_smiles": "CCCCCC(=O)CC(=O)CCc1ccc(O)c(OC)c1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-d53e0d427bb0704a",
+      "preferred_name": "Cyclofenchene",
+      "inchikey": "NZXWDTCLMXDSHY-UHFFFAOYSA-N",
+      "canonical_smiles": "CC1(C)C2CC3C1C3(C)C2",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-d554dccb868c91f6",
+      "preferred_name": "2-Naphthaleneethanol, 1,2,3,4,4a,5,6,8a-octahydro-4a,8-dimethyl-beta-methylene-, (2R,4aR,8aR)-",
+      "inchikey": "MTJCJJFCDOSALI-QLFBSQMISA-N",
+      "canonical_smiles": "C=C(CO)C1CCC2(C)CCC=C(C)C2C1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-d5eebc7c82eca6db",
+      "preferred_name": "Caryophyllene oxide",
+      "inchikey": "NVEQFIOZRFFVFW-RGCMKSIDSA-N",
+      "canonical_smiles": "C=C1CCC2OC2(C)CCC2C1CC2(C)C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-d9fca00a16468f53",
+      "preferred_name": "alpha-Bergamotene",
+      "inchikey": "YMBFCQPIMVLNIU-UHFFFAOYSA-N",
+      "canonical_smiles": "CC(C)=CCCC1(C)C2CC=C(C)C1C2",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-da7d51a1d9439c10",
+      "preferred_name": "O-Cymene",
+      "inchikey": "WWRCMNKATXZARA-UHFFFAOYSA-N",
+      "canonical_smiles": "Cc1ccccc1C(C)C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-dc8d031a631106c2",
+      "preferred_name": "(-)-Caryophyllene",
+      "inchikey": "NPNUFJAVOOONJE-GFUGXAQUSA-N",
+      "canonical_smiles": "C=C1CCC=C(C)CCC2C1CC2(C)C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-e294a7db0980a84c",
+      "preferred_name": "Beta-Selinene",
+      "inchikey": "YOVSPTNQHMDJAG-QLFBSQMISA-N",
+      "canonical_smiles": "C=C(C)C1CCC2(C)CCCC(=C)C2C1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-e5e654c3f9d4cf58",
+      "preferred_name": "Valencene",
+      "inchikey": "QEBNYNLSCGVZOH-NFAWXSAZSA-N",
+      "canonical_smiles": "C=C(C)C1CCC2=CCCC(C)C2(C)C1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-ed2a1df37abc2e5d",
+      "preferred_name": "Thymol acetate",
+      "inchikey": "WFMIUXMJJBBOGJ-UHFFFAOYSA-N",
+      "canonical_smiles": "CC(=O)Oc1cc(C)ccc1C(C)C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-f23d0b6d573d2ec6",
+      "preferred_name": "beta-Maaliene",
+      "inchikey": "UPGLJTCDRBIZKP-KYOSRNDESA-N",
+      "canonical_smiles": "CC1=C2C3C(CCC2(C)CCC1)C3(C)C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-f3f1a942af0b4ff7",
+      "preferred_name": "Eugenol",
+      "inchikey": "RRAFCDWBNXTKKO-UHFFFAOYSA-N",
+      "canonical_smiles": "C=CCc1ccc(O)c(OC)c1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-f4940a384b8e0e36",
+      "preferred_name": "(-)-Zingiberene",
+      "inchikey": "KKOXKGNSUHTUBV-LSDHHAIUSA-N",
+      "canonical_smiles": "CC(C)=CCCC(C)C1C=CC(C)=CC1",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-fa2ecccc2b84c3ea",
+      "preferred_name": "beta-Bourbonene",
+      "inchikey": "YIRAHEODBQONHI-ZQNQSHIBSA-N",
+      "canonical_smiles": "C=C1CCC2C1C1C(C(C)C)CCC21C",
+      "source_ids": []
+    },
+    {
+      "compound_id": "cmp-faafec9e4d407866",
+      "preferred_name": "Dehydroelsholtzia ketone",
+      "inchikey": "XWFVDCOWPBJQFH-UHFFFAOYSA-N",
+      "canonical_smiles": "CC(C)=CC(=O)c1occc1C",
+      "source_ids": []
+    }
+  ],
+  "overwrite_registry_version": false
+}

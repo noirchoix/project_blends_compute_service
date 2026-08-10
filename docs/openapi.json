@@ -1,0 +1,4030 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Project Blends Compute Service",
+    "description": "Artifact-backed identity, compositional-profile, provenance, gated reaction-intelligence, molecular-screening and quantum-chemistry service.",
+    "version": "0.1.6"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": [
+          "service"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ready": {
+      "get": {
+        "tags": [
+          "service"
+        ],
+        "summary": "Ready",
+        "operationId": "ready_ready_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadyResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/identity/resolve": {
+      "post": {
+        "tags": [
+          "identity"
+        ],
+        "summary": "Resolve Identity",
+        "operationId": "resolve_identity_v1_identity_resolve_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IdentityResolveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IdentityResolveResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/profiles/ingest": {
+      "post": {
+        "tags": [
+          "profiles"
+        ],
+        "summary": "Ingest Profile",
+        "operationId": "ingest_profile_v1_profiles_ingest_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileIngestRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileIngestResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/profiles/analyse": {
+      "post": {
+        "tags": [
+          "profiles"
+        ],
+        "summary": "Analyse Profile",
+        "operationId": "analyse_profile_v1_profiles_analyse_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileAnalysisRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileAnalysisResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/provenance/evaluate": {
+      "post": {
+        "tags": [
+          "provenance"
+        ],
+        "summary": "Provenance",
+        "operationId": "provenance_v1_provenance_evaluate_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProvenanceEvaluateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProvenanceEvaluateResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/reactions/generate": {
+      "post": {
+        "tags": [
+          "reactions"
+        ],
+        "summary": "Generate Reactions",
+        "operationId": "generate_reactions_v1_reactions_generate_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReactionGenerateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReactionGenerateResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/reactions/evaluate": {
+      "post": {
+        "tags": [
+          "reactions"
+        ],
+        "summary": "Evaluate Reactions",
+        "operationId": "evaluate_reactions_v1_reactions_evaluate_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReactionEvaluateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReactionEvaluateResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/quantum/jobs": {
+      "post": {
+        "tags": [
+          "quantum"
+        ],
+        "summary": "Submit Quantum",
+        "operationId": "submit_quantum_v1_quantum_jobs_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuantumJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuantumJobResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/quantum/jobs/{job_id}": {
+      "get": {
+        "tags": [
+          "quantum"
+        ],
+        "summary": "Get Quantum",
+        "operationId": "get_quantum_v1_quantum_jobs__job_id__get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Job Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QuantumJobResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs": {
+      "post": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Create Run",
+        "operationId": "create_run_v1_runs_post",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunSummary"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "List Runs",
+        "operationId": "list_runs_v1_runs_get",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{run_id}": {
+      "get": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Get Run",
+        "operationId": "get_run_v1_runs__run_id__get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RunSummary"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{run_id}/artifacts": {
+      "get": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Get Artifacts",
+        "operationId": "get_artifacts_v1_runs__run_id__artifacts_get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{run_id}/release": {
+      "post": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Release Run",
+        "operationId": "release_run_v1_runs__run_id__release_post",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          },
+          {
+            "name": "require_quantum",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Require Quantum"
+            }
+          },
+          {
+            "name": "release_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Release Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/runs/{run_id}/report": {
+      "get": {
+        "tags": [
+          "runs"
+        ],
+        "summary": "Get Report",
+        "operationId": "get_report_v1_runs__run_id__report_get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Run Id"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "X-Api-Key"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AlternativeExplanation": {
+        "properties": {
+          "hypothesis_id": {
+            "type": "string",
+            "title": "Hypothesis Id"
+          },
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "compound_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compound Id"
+          },
+          "compound_name": {
+            "type": "string",
+            "title": "Compound Name"
+          },
+          "explanation_type": {
+            "$ref": "#/components/schemas/ExplanationType"
+          },
+          "direction": {
+            "type": "string",
+            "title": "Direction"
+          },
+          "score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Score"
+          },
+          "basis": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Basis"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "hypothesis_id",
+          "sample_id",
+          "compound_name",
+          "explanation_type",
+          "direction",
+          "score"
+        ],
+        "title": "AlternativeExplanation"
+      },
+      "ArtifactRef": {
+        "properties": {
+          "logical_name": {
+            "type": "string",
+            "title": "Logical Name"
+          },
+          "path": {
+            "type": "string",
+            "title": "Path"
+          },
+          "sha256": {
+            "type": "string",
+            "title": "Sha256"
+          },
+          "media_type": {
+            "type": "string",
+            "title": "Media Type"
+          },
+          "rows": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rows"
+          },
+          "schema_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Schema Version"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "logical_name",
+          "path",
+          "sha256",
+          "media_type"
+        ],
+        "title": "ArtifactRef"
+      },
+      "CanonicalCompound": {
+        "properties": {
+          "compound_id": {
+            "type": "string",
+            "title": "Compound Id"
+          },
+          "preferred_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preferred Name"
+          },
+          "reported_name": {
+            "type": "string",
+            "title": "Reported Name"
+          },
+          "normalized_name": {
+            "type": "string",
+            "title": "Normalized Name"
+          },
+          "pubchem_cid": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pubchem Cid"
+          },
+          "chebi_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chebi Id"
+          },
+          "cas_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cas Number"
+          },
+          "inchi": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Inchi"
+          },
+          "inchikey": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Inchikey"
+          },
+          "canonical_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Canonical Smiles"
+          },
+          "isomeric_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Isomeric Smiles"
+          },
+          "molecular_formula": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Molecular Formula"
+          },
+          "exact_mass": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Exact Mass"
+          },
+          "formal_charge": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Formal Charge"
+          },
+          "stereochemistry_status": {
+            "$ref": "#/components/schemas/StereochemistryStatus",
+            "default": "unknown"
+          },
+          "isomer_group_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Isomer Group Id"
+          },
+          "tautomer_parent_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tautomer Parent Id"
+          },
+          "structure_source": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Structure Source"
+          },
+          "source_retrieved_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Retrieved At"
+          },
+          "resolution_method": {
+            "type": "string",
+            "title": "Resolution Method"
+          },
+          "resolution_confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Resolution Confidence"
+          },
+          "manual_review_status": {
+            "$ref": "#/components/schemas/ManualReviewStatus"
+          },
+          "reported_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reported Smiles"
+          },
+          "legacy_reported_smiles": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Legacy Reported Smiles"
+          },
+          "reported_smiles_valid": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reported Smiles Valid"
+          },
+          "identity_basis": {
+            "type": "string",
+            "title": "Identity Basis",
+            "default": "reported_name"
+          },
+          "adjudication_status": {
+            "$ref": "#/components/schemas/IdentityAdjudicationStatus",
+            "default": "unresolved_pending"
+          },
+          "adjudication_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Adjudication Id"
+          },
+          "adjudicated_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Adjudicated Name"
+          },
+          "adjudication_notes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Adjudication Notes"
+          },
+          "adjudication_source": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Adjudication Source"
+          },
+          "downstream_structure_eligible": {
+            "type": "boolean",
+            "title": "Downstream Structure Eligible",
+            "default": false
+          },
+          "resolved_identity": {
+            "type": "boolean",
+            "title": "Resolved Identity",
+            "default": false
+          },
+          "candidate_identity_set": {
+            "items": {
+              "$ref": "#/components/schemas/IdentityCandidate"
+            },
+            "type": "array",
+            "title": "Candidate Identity Set"
+          },
+          "conflict_flags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Conflict Flags"
+          },
+          "provenance": {
+            "items": {
+              "$ref": "#/components/schemas/ProvenanceRecord"
+            },
+            "type": "array",
+            "title": "Provenance"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "compound_id",
+          "reported_name",
+          "normalized_name",
+          "resolution_method",
+          "resolution_confidence",
+          "manual_review_status"
+        ],
+        "title": "CanonicalCompound"
+      },
+      "CuratedReactionEvidence": {
+        "properties": {
+          "reaction_id": {
+            "type": "string",
+            "title": "Reaction Id"
+          },
+          "source_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Id"
+          },
+          "source_doi": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Doi"
+          },
+          "transformation_family": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Transformation Family"
+          },
+          "evidence_directness": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Directness"
+          },
+          "precursor_match": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Precursor Match",
+            "default": 0
+          },
+          "product_match": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Product Match",
+            "default": 0
+          },
+          "conditions": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Conditions"
+          },
+          "provenance": {
+            "items": {
+              "$ref": "#/components/schemas/ProvenanceRecord"
+            },
+            "type": "array",
+            "title": "Provenance"
+          },
+          "raw": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Raw"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "reaction_id"
+        ],
+        "title": "CuratedReactionEvidence"
+      },
+      "EvidenceGrade": {
+        "type": "string",
+        "enum": [
+          "A_direct",
+          "B_convergent",
+          "C_plausible",
+          "D_weak",
+          "U_unresolved",
+          "R_rejected"
+        ],
+        "title": "EvidenceGrade"
+      },
+      "ExplanationType": {
+        "type": "string",
+        "enum": [
+          "chemical_transformation",
+          "evaporation_or_volatilization",
+          "degradation_to_unobserved_products",
+          "analytical_non_detection",
+          "library_misidentification",
+          "co_elution",
+          "sample_contamination",
+          "instrument_carryover",
+          "relative_area_normalization",
+          "unresolved"
+        ],
+        "title": "ExplanationType"
+      },
+      "ExploratoryLinkPrediction": {
+        "properties": {
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "ingredient_name": {
+            "type": "string",
+            "title": "Ingredient Name"
+          },
+          "compound_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compound Name"
+          },
+          "compound_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compound Id"
+          },
+          "probability": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Probability"
+          },
+          "rank": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Rank"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "default": "exploratory_prediction"
+          },
+          "evidence_warning": {
+            "type": "string",
+            "title": "Evidence Warning",
+            "default": "not_occurrence_evidence"
+          },
+          "raw": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Raw"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sample_id",
+          "ingredient_name",
+          "probability",
+          "rank"
+        ],
+        "title": "ExploratoryLinkPrediction"
+      },
+      "FoodOccurrenceEvidence": {
+        "properties": {
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "ingredient_name": {
+            "type": "string",
+            "title": "Ingredient Name"
+          },
+          "food_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Food Id"
+          },
+          "food_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Food Name"
+          },
+          "food_scientific_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Food Scientific Name"
+          },
+          "compound_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compound Id"
+          },
+          "compound_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compound Name"
+          },
+          "match_basis": {
+            "type": "string",
+            "title": "Match Basis"
+          },
+          "documented_occurrence": {
+            "type": "boolean",
+            "title": "Documented Occurrence"
+          },
+          "standard_content": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Standard Content"
+          },
+          "original_content": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Content"
+          },
+          "original_unit": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Original Unit"
+          },
+          "preparation_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preparation Type"
+          },
+          "citation": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Citation"
+          },
+          "citation_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Citation Type"
+          },
+          "confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence"
+          },
+          "provenance": {
+            "items": {
+              "$ref": "#/components/schemas/ProvenanceRecord"
+            },
+            "type": "array",
+            "title": "Provenance"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sample_id",
+          "ingredient_name",
+          "match_basis",
+          "documented_occurrence",
+          "confidence"
+        ],
+        "title": "FoodOccurrenceEvidence"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthResponse": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "service": {
+            "type": "string",
+            "title": "Service"
+          },
+          "version": {
+            "type": "string",
+            "title": "Version"
+          },
+          "environment": {
+            "type": "string",
+            "title": "Environment"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "service",
+          "version",
+          "environment"
+        ],
+        "title": "HealthResponse"
+      },
+      "IdentityAdjudicationStatus": {
+        "type": "string",
+        "enum": [
+          "resolved",
+          "manual_corrected",
+          "excluded_unresolved",
+          "unresolved_pending"
+        ],
+        "title": "IdentityAdjudicationStatus"
+      },
+      "IdentityCandidate": {
+        "properties": {
+          "source": {
+            "type": "string",
+            "title": "Source"
+          },
+          "source_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Id"
+          },
+          "preferred_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preferred Name"
+          },
+          "canonical_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Canonical Smiles"
+          },
+          "isomeric_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Isomeric Smiles"
+          },
+          "inchi": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Inchi"
+          },
+          "inchikey": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Inchikey"
+          },
+          "molecular_formula": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Molecular Formula"
+          },
+          "exact_mass": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Exact Mass"
+          },
+          "formal_charge": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Formal Charge"
+          },
+          "cas_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cas Number"
+          },
+          "pubchem_cid": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pubchem Cid"
+          },
+          "chebi_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chebi Id"
+          },
+          "score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Score",
+            "default": 0.0
+          },
+          "parse_valid": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Parse Valid"
+          },
+          "validation_notes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Validation Notes"
+          },
+          "provenance": {
+            "items": {
+              "$ref": "#/components/schemas/ProvenanceRecord"
+            },
+            "type": "array",
+            "title": "Provenance"
+          },
+          "raw": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Raw"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source"
+        ],
+        "title": "IdentityCandidate"
+      },
+      "IdentityResolveItem": {
+        "properties": {
+          "reported_name": {
+            "type": "string",
+            "title": "Reported Name"
+          },
+          "reported_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reported Smiles"
+          },
+          "legacy_reported_smiles": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Legacy Reported Smiles"
+          },
+          "reported_formula": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reported Formula"
+          },
+          "retention_time_min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retention Time Min"
+          },
+          "library_match_quality": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Library Match Quality"
+          },
+          "source_row_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Row Id"
+          },
+          "candidate_names": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Candidate Names"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "reported_name"
+        ],
+        "title": "IdentityResolveItem"
+      },
+      "IdentityResolveRequest": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/IdentityResolveItem"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "online": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Online"
+          },
+          "sources": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sources"
+          },
+          "force_refresh": {
+            "type": "boolean",
+            "title": "Force Refresh",
+            "default": false
+          },
+          "strict": {
+            "type": "boolean",
+            "title": "Strict",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "items"
+        ],
+        "title": "IdentityResolveRequest"
+      },
+      "IdentityResolveResponse": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "compounds": {
+            "items": {
+              "$ref": "#/components/schemas/CanonicalCompound"
+            },
+            "type": "array",
+            "title": "Compounds"
+          },
+          "unresolved_count": {
+            "type": "integer",
+            "title": "Unresolved Count"
+          },
+          "unresolved_pending_count": {
+            "type": "integer",
+            "title": "Unresolved Pending Count",
+            "default": 0
+          },
+          "excluded_unresolved_count": {
+            "type": "integer",
+            "title": "Excluded Unresolved Count",
+            "default": 0
+          },
+          "manual_corrected_count": {
+            "type": "integer",
+            "title": "Manual Corrected Count",
+            "default": 0
+          },
+          "conflict_count": {
+            "type": "integer",
+            "title": "Conflict Count"
+          },
+          "manual_review_count": {
+            "type": "integer",
+            "title": "Manual Review Count"
+          },
+          "adjudication_registry_sha256": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Adjudication Registry Sha256"
+          },
+          "frozen_registry_sha256": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Frozen Registry Sha256"
+          },
+          "frozen_registry_used_count": {
+            "type": "integer",
+            "title": "Frozen Registry Used Count",
+            "default": 0
+          },
+          "artifacts": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Artifacts"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "compounds",
+          "unresolved_count",
+          "conflict_count",
+          "manual_review_count"
+        ],
+        "title": "IdentityResolveResponse"
+      },
+      "LaneStatus": {
+        "type": "string",
+        "enum": [
+          "available",
+          "degraded",
+          "unavailable",
+          "disabled"
+        ],
+        "title": "LaneStatus"
+      },
+      "ManualReviewStatus": {
+        "type": "string",
+        "enum": [
+          "not_required",
+          "pending",
+          "approved",
+          "rejected"
+        ],
+        "title": "ManualReviewStatus"
+      },
+      "PeakRecord": {
+        "properties": {
+          "peak_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Peak Id"
+          },
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "blend_id": {
+            "type": "string",
+            "title": "Blend Id"
+          },
+          "timepoint": {
+            "$ref": "#/components/schemas/Timepoint"
+          },
+          "storage_days": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Storage Days",
+            "default": 0
+          },
+          "plant_components": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Plant Components"
+          },
+          "plant_ratios": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Plant Ratios"
+          },
+          "reported_compound_name": {
+            "type": "string",
+            "title": "Reported Compound Name"
+          },
+          "candidate_names": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Candidate Names"
+          },
+          "retention_time_min": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retention Time Min"
+          },
+          "area_percent": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Area Percent"
+          },
+          "library_match_quality": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Library Match Quality"
+          },
+          "reported_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reported Smiles"
+          },
+          "reported_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reported Class"
+          },
+          "compound_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compound Id"
+          },
+          "inchikey": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Inchikey"
+          },
+          "canonical_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Canonical Smiles"
+          },
+          "identity_confidence": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Identity Confidence"
+          },
+          "source_table": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Table"
+          },
+          "source_row": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Row"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sample_id",
+          "blend_id",
+          "timepoint",
+          "reported_compound_name",
+          "area_percent"
+        ],
+        "title": "PeakRecord"
+      },
+      "ProfileAnalysisRequest": {
+        "properties": {
+          "dataset_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dataset Id"
+          },
+          "records": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/PeakRecord"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Records"
+          },
+          "zero_replacement": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Zero Replacement",
+            "default": 1e-06
+          },
+          "identity_key": {
+            "type": "string",
+            "title": "Identity Key",
+            "default": "compound_id"
+          },
+          "confidence_weighted": {
+            "type": "boolean",
+            "title": "Confidence Weighted",
+            "default": true
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ProfileAnalysisRequest"
+      },
+      "ProfileAnalysisResponse": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "metrics": {
+            "items": {
+              "$ref": "#/components/schemas/ProfileMetric"
+            },
+            "type": "array",
+            "title": "Metrics"
+          },
+          "ranking": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Ranking"
+          },
+          "method": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Method"
+          },
+          "artifacts": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Artifacts"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "metrics",
+          "ranking",
+          "method"
+        ],
+        "title": "ProfileAnalysisResponse"
+      },
+      "ProfileIngestRequest": {
+        "properties": {
+          "records": {
+            "items": {
+              "$ref": "#/components/schemas/PeakRecord"
+            },
+            "type": "array",
+            "title": "Records"
+          },
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id",
+            "default": "project_blends_reported_v1"
+          },
+          "source_document": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Document"
+          },
+          "replace": {
+            "type": "boolean",
+            "title": "Replace",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "records"
+        ],
+        "title": "ProfileIngestRequest"
+      },
+      "ProfileIngestResponse": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "dataset_id": {
+            "type": "string",
+            "title": "Dataset Id"
+          },
+          "rows": {
+            "type": "integer",
+            "title": "Rows"
+          },
+          "samples": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Samples"
+          },
+          "artifact_path": {
+            "type": "string",
+            "title": "Artifact Path"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "dataset_id",
+          "rows",
+          "samples",
+          "artifact_path"
+        ],
+        "title": "ProfileIngestResponse"
+      },
+      "ProfileMetric": {
+        "properties": {
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "blend_id": {
+            "type": "string",
+            "title": "Blend Id"
+          },
+          "before_count": {
+            "type": "integer",
+            "title": "Before Count"
+          },
+          "after_count": {
+            "type": "integer",
+            "title": "After Count"
+          },
+          "shared_count": {
+            "type": "integer",
+            "title": "Shared Count"
+          },
+          "weighted_jaccard": {
+            "type": "number",
+            "title": "Weighted Jaccard"
+          },
+          "bray_curtis_dissimilarity": {
+            "type": "number",
+            "title": "Bray Curtis Dissimilarity"
+          },
+          "jensen_shannon_divergence": {
+            "type": "number",
+            "title": "Jensen Shannon Divergence"
+          },
+          "aitchison_distance": {
+            "type": "number",
+            "title": "Aitchison Distance"
+          },
+          "class_weighted_jaccard": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Class Weighted Jaccard"
+          },
+          "source_area_before": {
+            "type": "number",
+            "title": "Source Area Before"
+          },
+          "source_area_after": {
+            "type": "number",
+            "title": "Source Area After"
+          },
+          "confidence_weighted_retention": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Confidence Weighted Retention"
+          },
+          "added_compounds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Added Compounds"
+          },
+          "removed_compounds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Removed Compounds"
+          },
+          "shared_compounds": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Shared Compounds"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sample_id",
+          "blend_id",
+          "before_count",
+          "after_count",
+          "shared_count",
+          "weighted_jaccard",
+          "bray_curtis_dissimilarity",
+          "jensen_shannon_divergence",
+          "aitchison_distance",
+          "source_area_before",
+          "source_area_after"
+        ],
+        "title": "ProfileMetric"
+      },
+      "ProvenanceEvaluateRequest": {
+        "properties": {
+          "queries": {
+            "items": {
+              "$ref": "#/components/schemas/ProvenanceQuery"
+            },
+            "type": "array",
+            "title": "Queries"
+          },
+          "include_exploratory_predictions": {
+            "type": "boolean",
+            "title": "Include Exploratory Predictions",
+            "default": false
+          },
+          "exploratory_top_k": {
+            "type": "integer",
+            "maximum": 100.0,
+            "minimum": 1.0,
+            "title": "Exploratory Top K",
+            "default": 10
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "queries"
+        ],
+        "title": "ProvenanceEvaluateRequest"
+      },
+      "ProvenanceEvaluateResponse": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "occurrences": {
+            "items": {
+              "$ref": "#/components/schemas/FoodOccurrenceEvidence"
+            },
+            "type": "array",
+            "title": "Occurrences"
+          },
+          "exploratory_predictions": {
+            "items": {
+              "$ref": "#/components/schemas/ExploratoryLinkPrediction"
+            },
+            "type": "array",
+            "title": "Exploratory Predictions"
+          },
+          "unresolved_queries": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Unresolved Queries"
+          },
+          "lane_status": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Lane Status"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "occurrences"
+        ],
+        "title": "ProvenanceEvaluateResponse"
+      },
+      "ProvenanceQuery": {
+        "properties": {
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "ingredient_names": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Ingredient Names"
+          },
+          "compound_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compound Id"
+          },
+          "compound_name": {
+            "type": "string",
+            "title": "Compound Name"
+          },
+          "inchikey": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Inchikey"
+          },
+          "cas_number": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cas Number"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sample_id",
+          "ingredient_names",
+          "compound_name"
+        ],
+        "title": "ProvenanceQuery"
+      },
+      "ProvenanceRecord": {
+        "properties": {
+          "source": {
+            "type": "string",
+            "title": "Source"
+          },
+          "source_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Id"
+          },
+          "source_uri": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Uri"
+          },
+          "source_version": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Version"
+          },
+          "retrieved_at_utc": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retrieved At Utc"
+          },
+          "evidence_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Type"
+          },
+          "source_quality": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Quality"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source"
+        ],
+        "title": "ProvenanceRecord"
+      },
+      "QuantumJobRequest": {
+        "properties": {
+          "task": {
+            "$ref": "#/components/schemas/QuantumTask",
+            "default": "descriptors"
+          },
+          "engine": {
+            "type": "string",
+            "title": "Engine",
+            "default": "rdkit"
+          },
+          "molecules": {
+            "items": {
+              "$ref": "#/components/schemas/QuantumMolecule"
+            },
+            "type": "array",
+            "title": "Molecules"
+          },
+          "reaction_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reaction Smiles"
+          },
+          "solvent": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Solvent",
+            "default": "n-hexane"
+          },
+          "temperature_k": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Temperature K",
+            "default": 298.15
+          },
+          "method": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Method"
+          },
+          "basis": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Basis"
+          },
+          "max_conformers": {
+            "type": "integer",
+            "maximum": 1000.0,
+            "minimum": 1.0,
+            "title": "Max Conformers",
+            "default": 20
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "molecules"
+        ],
+        "title": "QuantumJobRequest"
+      },
+      "QuantumJobResponse": {
+        "properties": {
+          "job_id": {
+            "type": "string",
+            "title": "Job Id"
+          },
+          "status": {
+            "$ref": "#/components/schemas/QuantumJobStatus"
+          },
+          "task": {
+            "$ref": "#/components/schemas/QuantumTask"
+          },
+          "engine": {
+            "type": "string",
+            "title": "Engine"
+          },
+          "created_at_utc": {
+            "type": "string",
+            "title": "Created At Utc"
+          },
+          "updated_at_utc": {
+            "type": "string",
+            "title": "Updated At Utc"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Result"
+          },
+          "error": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Error"
+          },
+          "attempts": {
+            "type": "integer",
+            "title": "Attempts",
+            "default": 0
+          },
+          "artifact_paths": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Artifact Paths"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "job_id",
+          "status",
+          "task",
+          "engine",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "title": "QuantumJobResponse"
+      },
+      "QuantumJobStatus": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "running",
+          "succeeded",
+          "failed",
+          "cancelled"
+        ],
+        "title": "QuantumJobStatus"
+      },
+      "QuantumMolecule": {
+        "properties": {
+          "compound_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Compound Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "smiles": {
+            "type": "string",
+            "title": "Smiles"
+          },
+          "charge": {
+            "type": "integer",
+            "title": "Charge",
+            "default": 0
+          },
+          "multiplicity": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Multiplicity",
+            "default": 1
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "smiles"
+        ],
+        "title": "QuantumMolecule"
+      },
+      "QuantumTask": {
+        "type": "string",
+        "enum": [
+          "descriptors",
+          "conformer_search",
+          "geometry_optimization",
+          "single_point",
+          "thermochemistry",
+          "reaction_energy"
+        ],
+        "title": "QuantumTask"
+      },
+      "ReactionCandidate": {
+        "properties": {
+          "hypothesis_id": {
+            "type": "string",
+            "title": "Hypothesis Id"
+          },
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "precursor_compound_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Precursor Compound Id"
+          },
+          "product_compound_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Compound Id"
+          },
+          "precursor_name": {
+            "type": "string",
+            "title": "Precursor Name"
+          },
+          "product_name": {
+            "type": "string",
+            "title": "Product Name"
+          },
+          "precursor_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Precursor Smiles"
+          },
+          "product_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Smiles"
+          },
+          "reaction_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reaction Smiles"
+          },
+          "mapped_reaction_smiles": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mapped Reaction Smiles"
+          },
+          "transformation_family": {
+            "type": "string",
+            "title": "Transformation Family"
+          },
+          "formula_delta": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Formula Delta"
+          },
+          "same_formula": {
+            "type": "boolean",
+            "title": "Same Formula",
+            "default": false
+          },
+          "tanimoto_similarity": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tanimoto Similarity"
+          },
+          "mcs_coverage": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mcs Coverage"
+          },
+          "heuristic_score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Heuristic Score"
+          },
+          "mapping_status": {
+            "type": "string",
+            "title": "Mapping Status",
+            "default": "not_attempted"
+          },
+          "mass_balanced": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mass Balanced"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "hypothesis_id",
+          "sample_id",
+          "precursor_name",
+          "product_name",
+          "transformation_family",
+          "heuristic_score"
+        ],
+        "title": "ReactionCandidate"
+      },
+      "ReactionEvaluateRequest": {
+        "properties": {
+          "candidates": {
+            "items": {
+              "$ref": "#/components/schemas/ReactionCandidate"
+            },
+            "type": "array",
+            "title": "Candidates"
+          },
+          "storage_context": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Storage Context"
+          },
+          "use_rxn_bridge": {
+            "type": "boolean",
+            "title": "Use Rxn Bridge",
+            "default": true
+          },
+          "use_reaction_curation": {
+            "type": "boolean",
+            "title": "Use Reaction Curation",
+            "default": true
+          },
+          "strict": {
+            "type": "boolean",
+            "title": "Strict",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "candidates"
+        ],
+        "title": "ReactionEvaluateRequest"
+      },
+      "ReactionEvaluateResponse": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "evaluations": {
+            "items": {
+              "$ref": "#/components/schemas/ReactionEvaluation"
+            },
+            "type": "array",
+            "title": "Evaluations"
+          },
+          "lane_status": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Lane Status"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "evaluations",
+          "lane_status"
+        ],
+        "title": "ReactionEvaluateResponse"
+      },
+      "ReactionEvaluation": {
+        "properties": {
+          "candidate": {
+            "$ref": "#/components/schemas/ReactionCandidate"
+          },
+          "template_evidence": {
+            "items": {
+              "$ref": "#/components/schemas/TemplateEvidence"
+            },
+            "type": "array",
+            "title": "Template Evidence"
+          },
+          "curated_evidence": {
+            "items": {
+              "$ref": "#/components/schemas/CuratedReactionEvidence"
+            },
+            "type": "array",
+            "title": "Curated Evidence"
+          },
+          "condition_match_score": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Condition Match Score"
+          },
+          "evidence_grade": {
+            "$ref": "#/components/schemas/EvidenceGrade"
+          },
+          "plausibility_score": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Plausibility Score"
+          },
+          "abstained": {
+            "type": "boolean",
+            "title": "Abstained",
+            "default": false
+          },
+          "abstention_reasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Abstention Reasons"
+          },
+          "claim_boundary": {
+            "type": "string",
+            "title": "Claim Boundary"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "candidate",
+          "evidence_grade",
+          "plausibility_score",
+          "claim_boundary"
+        ],
+        "title": "ReactionEvaluation"
+      },
+      "ReactionGenerateRequest": {
+        "properties": {
+          "before": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "Before"
+          },
+          "after": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "title": "After"
+          },
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "max_candidates": {
+            "type": "integer",
+            "maximum": 2000.0,
+            "minimum": 1.0,
+            "title": "Max Candidates",
+            "default": 200
+          },
+          "minimum_similarity": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Minimum Similarity",
+            "default": 0.15
+          },
+          "minimum_identity_confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Minimum Identity Confidence",
+            "default": 0.65
+          },
+          "include_all_alternatives": {
+            "type": "boolean",
+            "title": "Include All Alternatives",
+            "default": true
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "before",
+          "after",
+          "sample_id"
+        ],
+        "title": "ReactionGenerateRequest"
+      },
+      "ReactionGenerateResponse": {
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "title": "Ok"
+          },
+          "candidates": {
+            "items": {
+              "$ref": "#/components/schemas/ReactionCandidate"
+            },
+            "type": "array",
+            "title": "Candidates"
+          },
+          "alternatives": {
+            "items": {
+              "$ref": "#/components/schemas/AlternativeExplanation"
+            },
+            "type": "array",
+            "title": "Alternatives"
+          },
+          "screening": {
+            "items": {
+              "$ref": "#/components/schemas/ReactionScreeningRecord"
+            },
+            "type": "array",
+            "title": "Screening"
+          },
+          "rejected_pairs": {
+            "type": "integer",
+            "title": "Rejected Pairs"
+          },
+          "method": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Method"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ok",
+          "candidates",
+          "alternatives",
+          "rejected_pairs",
+          "method"
+        ],
+        "title": "ReactionGenerateResponse"
+      },
+      "ReactionScreeningRecord": {
+        "properties": {
+          "screening_id": {
+            "type": "string",
+            "title": "Screening Id"
+          },
+          "sample_id": {
+            "type": "string",
+            "title": "Sample Id"
+          },
+          "precursor_compound_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Precursor Compound Id"
+          },
+          "product_compound_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Compound Id"
+          },
+          "precursor_name": {
+            "type": "string",
+            "title": "Precursor Name"
+          },
+          "product_name": {
+            "type": "string",
+            "title": "Product Name"
+          },
+          "formula_delta": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Formula Delta"
+          },
+          "same_formula": {
+            "type": "boolean",
+            "title": "Same Formula",
+            "default": false
+          },
+          "tanimoto_similarity": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Tanimoto Similarity"
+          },
+          "mcs_coverage": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mcs Coverage"
+          },
+          "transformation_family": {
+            "type": "string",
+            "title": "Transformation Family"
+          },
+          "identity_gate": {
+            "type": "boolean",
+            "title": "Identity Gate"
+          },
+          "formula_gate": {
+            "type": "boolean",
+            "title": "Formula Gate"
+          },
+          "connectivity_gate": {
+            "type": "boolean",
+            "title": "Connectivity Gate"
+          },
+          "storage_prior_gate": {
+            "type": "boolean",
+            "title": "Storage Prior Gate"
+          },
+          "decision": {
+            "type": "string",
+            "title": "Decision"
+          },
+          "rejection_reasons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Rejection Reasons"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "screening_id",
+          "sample_id",
+          "precursor_name",
+          "product_name",
+          "transformation_family",
+          "identity_gate",
+          "formula_gate",
+          "connectivity_gate",
+          "storage_prior_gate",
+          "decision"
+        ],
+        "title": "ReactionScreeningRecord"
+      },
+      "ReadyLane": {
+        "properties": {
+          "lane": {
+            "type": "string",
+            "title": "Lane"
+          },
+          "status": {
+            "$ref": "#/components/schemas/LaneStatus"
+          },
+          "required": {
+            "type": "boolean",
+            "title": "Required",
+            "default": false
+          },
+          "detail": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Detail"
+          },
+          "paths": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Paths"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "lane",
+          "status"
+        ],
+        "title": "ReadyLane"
+      },
+      "ReadyResponse": {
+        "properties": {
+          "ready": {
+            "type": "boolean",
+            "title": "Ready"
+          },
+          "lanes": {
+            "items": {
+              "$ref": "#/components/schemas/ReadyLane"
+            },
+            "type": "array",
+            "title": "Lanes"
+          },
+          "effective_paths": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Effective Paths"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ready",
+          "lanes",
+          "effective_paths"
+        ],
+        "title": "ReadyResponse"
+      },
+      "RunRequest": {
+        "properties": {
+          "run_name": {
+            "type": "string",
+            "title": "Run Name",
+            "default": "project_blends_full_analysis"
+          },
+          "dataset_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dataset Id",
+            "default": "project_blends_reported_v1"
+          },
+          "records": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/PeakRecord"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Records"
+          },
+          "resolve_identities_online": {
+            "type": "boolean",
+            "title": "Resolve Identities Online",
+            "default": false
+          },
+          "refresh_identities": {
+            "type": "boolean",
+            "title": "Refresh Identities",
+            "default": false
+          },
+          "include_food_provenance": {
+            "type": "boolean",
+            "title": "Include Food Provenance",
+            "default": true
+          },
+          "include_reaction_intelligence": {
+            "type": "boolean",
+            "title": "Include Reaction Intelligence",
+            "default": true
+          },
+          "include_molecular_screening": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Include Molecular Screening"
+          },
+          "include_quantum_descriptors": {
+            "type": "boolean",
+            "title": "Include Quantum Descriptors",
+            "default": true
+          },
+          "queue_external_quantum": {
+            "type": "boolean",
+            "title": "Queue External Quantum",
+            "default": false
+          },
+          "include_exploratory_foodchem_ml": {
+            "type": "boolean",
+            "title": "Include Exploratory Foodchem Ml",
+            "default": false
+          },
+          "strict_lanes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Strict Lanes"
+          },
+          "storage_context": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Storage Context"
+          },
+          "metadata": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Metadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "RunRequest"
+      },
+      "RunStatus": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "running",
+          "complete",
+          "complete_with_warnings",
+          "failed"
+        ],
+        "title": "RunStatus"
+      },
+      "RunSummary": {
+        "properties": {
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "status": {
+            "$ref": "#/components/schemas/RunStatus"
+          },
+          "created_at_utc": {
+            "type": "string",
+            "title": "Created At Utc"
+          },
+          "updated_at_utc": {
+            "type": "string",
+            "title": "Updated At Utc"
+          },
+          "completed_at_utc": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Completed At Utc"
+          },
+          "stages": {
+            "additionalProperties": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "object",
+            "title": "Stages"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "errors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Errors"
+          },
+          "artifacts": {
+            "items": {
+              "$ref": "#/components/schemas/ArtifactRef"
+            },
+            "type": "array",
+            "title": "Artifacts"
+          },
+          "report_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Report Path"
+          },
+          "rag_export_path": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rag Export Path"
+          },
+          "release_locked": {
+            "type": "boolean",
+            "title": "Release Locked",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "run_id",
+          "status",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "title": "RunSummary"
+      },
+      "StereochemistryStatus": {
+        "type": "string",
+        "enum": [
+          "specified",
+          "unspecified",
+          "partial",
+          "not_applicable",
+          "ambiguous_mixture",
+          "unknown"
+        ],
+        "title": "StereochemistryStatus"
+      },
+      "TemplateEvidence": {
+        "properties": {
+          "template_id": {
+            "type": "string",
+            "title": "Template Id"
+          },
+          "template_family": {
+            "type": "string",
+            "title": "Template Family"
+          },
+          "support_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Support Count"
+          },
+          "confidence": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Confidence",
+            "default": 0
+          },
+          "candidate_products": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Candidate Products"
+          },
+          "product_match_similarity": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 1.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Product Match Similarity"
+          },
+          "mechanism_tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Mechanism Tags"
+          },
+          "provenance": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Provenance"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "template_id",
+          "template_family"
+        ],
+        "title": "TemplateEvidence"
+      },
+      "Timepoint": {
+        "type": "string",
+        "enum": [
+          "before_storage",
+          "after_storage"
+        ],
+        "title": "Timepoint"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

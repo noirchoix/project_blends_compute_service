@@ -1,0 +1,22 @@
+{
+  "schema_version": "project_blends_experiment_metadata.v1",
+  "study_title": "Effect of storage on levels of volatile compounds in n-hexane extracts from selected medicinal plant blends",
+  "timepoints": [
+    "before_storage",
+    "after_storage_28_days"
+  ],
+  "storage": {
+    "duration_days": 28,
+    "container": "airtight",
+    "temperature_c": null,
+    "light_exposure": null,
+    "headspace": null,
+    "oxygen_exposure": null
+  },
+  "analytical_basis": "GC-MS NIST 14 library comparison and reported relative peak-area percentages",
+  "documented_replicates": null,
+  "absolute_quantitation": false,
+  "raw_spectra_available_in_source_document": false,
+  "claim_boundary": "profile observations do not independently establish chemical transformations",
+  "record_count": 75
+}

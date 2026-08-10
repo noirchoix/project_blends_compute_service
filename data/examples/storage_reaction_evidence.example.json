@@ -1,0 +1,49 @@
+{
+  "dataset_name": "storage_reaction_evidence",
+  "version": "v1_example",
+  "reactions": [
+    {
+      "reaction_id": "storage-example-001",
+      "source_id": "replace-with-primary-source-id",
+      "source_doi": null,
+      "source_type": "primary_article",
+      "precursor_name": "replace precursor",
+      "product_name": "replace product",
+      "precursor_smiles": "CCO",
+      "product_smiles": "CC=O",
+      "mapped_reaction_smiles": null,
+      "transformation_family": "oxidation",
+      "evidence_directness": "direct",
+      "experimental_or_computational": "experimental",
+      "matrix": "model solution",
+      "solvent": null,
+      "temperature_c": 25.0,
+      "duration_h": 24.0,
+      "oxygen_exposure": "air",
+      "atmosphere": "ambient",
+      "light_exposure": "unknown",
+      "pH": null,
+      "water_activity": null,
+      "humidity": null,
+      "container_material": null,
+      "headspace": null,
+      "catalyst_or_initiator": null,
+      "analytical_method": "GC-MS",
+      "reported_yield": null,
+      "reported_abundance_change": null,
+      "identification_level": "replace",
+      "notes": "Schema example only; not scientific evidence.",
+      "provenance": {"example_only": true}
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "replace-with-primary-source-id",
+      "source_type": "primary_article",
+      "primary_source": true,
+      "notes": "Schema example only"
+    }
+  ],
+  "nonreaction_explanations": [],
+  "identity_linkage": []
+}

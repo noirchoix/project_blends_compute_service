@@ -1,0 +1,12 @@
+{
+  "schema_version": "project_blends_uploaded_sources.v1",
+  "sources": [
+    {"filename": "PROJECT BLENDS.doc", "sha256": "82be236157813bb3ea48a01c15f9c886f420212b4e8840dde3d18055a448d9cf", "role": "reported experimental source"},
+    {"filename": "reaction_curation-main.zip", "sha256": "69b0f5d0a02822d66bf01ae0557bc79ab5a66180c997b29f9012752bfcbd04a8", "role": "authoritative reaction evidence"},
+    {"filename": "rxn_bridge-main.zip", "sha256": "3cfc966d1ca58322d6c748e719c1c29aab0033dbf697e0962e21936928840aba", "role": "reaction template and curation adapters"},
+    {"filename": "pipeline_fooddb-main.zip", "sha256": "cb277c3f1c64382b1176e83272258cef956936efa57da5a191f933b1f03481a6", "role": "documented food provenance"},
+    {"filename": "foodchem_ml-main.zip", "sha256": "62a1307e6f09ae8513008e2f2d21a6185b48f92e376b4cd7b2ec0d200a49036c", "role": "exploratory link prediction"},
+    {"filename": "RouteLens-feature-artifact-backed-inference-service.zip", "sha256": "f60a7e3536d1eacb707b20a50d23e8db39311f58b5dfc0a8ee016d0c8a8d1bc5", "role": "governance patterns"},
+    {"filename": "chemrag-main.zip", "sha256": "20ef0d7dbdf8cb073fc8c8e8ff005f37e2081f5b0e2be29067c787bc1832039e", "role": "downstream evidence export"}
+  ]
+}

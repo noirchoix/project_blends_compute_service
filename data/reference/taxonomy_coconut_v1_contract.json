@@ -1,0 +1,33 @@
+{
+  "schema_version": "project_blends.taxonomy_artifact_contract.v1",
+  "artifact_role": "authoritative_supporting_computational_taxonomy",
+  "artifact_version": "v1",
+  "model_version": "lightgbm_coconut_hierarchy_v1",
+  "feature_schema_version": "taxonomy.coconut.v1",
+  "targets": {
+    "chemical_super_class": 20,
+    "chemical_class": 198
+  },
+  "feature_contract": {
+    "tabular_features": 42,
+    "morgan_radius": 2,
+    "morgan_bits": 2048,
+    "total_model_features": 2090
+  },
+  "uploaded_artifact_sha256": "78f13d3d259cfd1751eb077df5bc25897e73461fe8dfe481139c9bb066008940",
+  "files": {
+    "metadata_superclass.json": "46974b9cd9ab1956d5d9715a2ef39e900ead31dfd116fc9f4e78ef2212b4fa0a",
+    "metadata_class.json": "a0ffc069662bc1c9a139139fd077560cf8584da57fd1bf5e2ade7d436f095329",
+    "config.normalized.json": "172ae0a3eab6a0abd38d2268711e3705666da54eaa1ea91e114b27e6040c3c66",
+    "classes_lookup.json": "e9f90352338dce0fefb0ea31cc89a2e8e0f8bf3f5e316dbb1d468d889097fb7b",
+    "model_superclass.txt": "b2431d1317d52cdc6879f0b14e90b87046a6303f44e871e6198c49adf101296e",
+    "model_class.txt": "034b7d209cc6a00dbb58ff2c9ec64b7a248e7911c87e1aec456892790b2d6be7"
+  },
+  "validation_summary": {
+    "superclass_accuracy": 0.9420,
+    "class_accuracy": 0.9182,
+    "superclass_ece": 0.0122,
+    "class_ece": 0.0280
+  },
+  "claim_boundary": "Model-derived taxonomy is supporting classification only; it does not confirm GC-MS identity, occurrence, storage transformation, or absolute abundance."
+}

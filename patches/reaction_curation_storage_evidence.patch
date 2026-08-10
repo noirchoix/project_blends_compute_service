@@ -1,0 +1,12 @@
+--- a/reaction_curation_core/reaction_curation/schemas.py
++++ b/reaction_curation_core/reaction_curation/schemas.py
+@@
+-DatasetKind = Literal["orderly", "uspto_llm", "transformer_csv", "atommap_csv", "multistep_csv"]
++DatasetKind = Literal[
++    "orderly",
++    "uspto_llm",
++    "transformer_csv",
++    "atommap_csv",
++    "multistep_csv",
++    "storage_reaction_evidence",
++]

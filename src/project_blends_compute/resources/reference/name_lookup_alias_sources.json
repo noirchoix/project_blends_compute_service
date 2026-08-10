@@ -1,0 +1,103 @@
+{
+  "schema_version": "project_blends_identity_alias_provenance.v1",
+  "policy": "lookup_aliases_only_external_database_supplies_structure",
+  "verified_utc_date": "2026-08-09",
+  "mappings": [
+    {
+      "reported_name": "Naphthalene, decahydro-4a-methyl-1 -methylene-7-(1-methylethenyl)-, [4aR-(4aalpha-,7alpha-,8abeta-)]",
+      "lookup_alias": "beta-Selinene",
+      "authority": "PubChem",
+      "pubchem_cid": 442393,
+      "cas_number": "17066-67-0",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "Naphthalene,1,2,3,5,6,7,8,8a-octahydro-1,8a-dimethyl-7-(1-methylethenyl)-, [1R-(1α,7β,8aα)]-",
+      "lookup_alias": "Valencene",
+      "authority": "PubChem",
+      "pubchem_cid": 9855795,
+      "cas_number": "4630-07-3",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "Benzene,1-(1,5-dimethyl-4-hexenyl)-4-methyl-",
+      "lookup_alias": "alpha-Curcumene",
+      "authority": "PubChem",
+      "pubchem_cid": 92139,
+      "cas_number": "644-30-4",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "Tricyclo[2.2.1.0(2,6)]heptane, 1,3 ,3-trimethyl-",
+      "lookup_alias": "Cyclofenchene",
+      "authority": "PubChem",
+      "pubchem_cid": 79022,
+      "cas_number": "488-97-1",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "1H-Cyclopropa[a]naphthalene, 1a,2, 3,3a,4,5,6,7b-octahydro-1,1,3a,7-t etramethyl-, [1aR-(1aalpha-,3a.al pha.,7balpha-)]-",
+      "lookup_alias": "beta-Maaliene",
+      "authority": "PubChem",
+      "pubchem_cid": 101596917,
+      "cas_number": "489-29-2",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "Naphthalene, 1,2,3,5,6,8a-hexahydr o-4,7-dimethyl-1-(1-methylethyl)-, (1S-cis)-",
+      "lookup_alias": "delta-Cadinene",
+      "authority": "PubChem",
+      "pubchem_cid": 441005,
+      "cas_number": "483-76-1",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "1H-Cycloprop[e]azulen-7-ol, decahy dro-1,1,7-trimethyl-4-methylene-, [1ar-(1aalpha-,4aalpha-,7beta-, 7abeta-,7balpha-)]-",
+      "lookup_alias": "Spathulenol",
+      "authority": "PubChem",
+      "pubchem_cid": 92231,
+      "cas_number": "6750-60-3",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "1H-Cyclopropa[a]naphthalene, 1a,2, 6,7,7a,7b-hexahydro-1,1,7,7a-tetra methyl-, [1aR-(1aalpha-,7alpha-, 7aalpha-,7balpha-)]-",
+      "lookup_alias": "1,2,9,10-Tetradehydroaristolane",
+      "authority": "PubChem",
+      "pubchem_cid": 5321842,
+      "cas_number": "34143-96-9",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "Naphthalene, 1,2,3,5,6,7,8,8a-octa hydro-1,8a-dimethyl-7-(1-methyleth enyl)-, [1S-(1alpha-,7alpha-,8a. alpha.)]-",
+      "lookup_alias": "Eremophilene",
+      "authority": "PubChem",
+      "pubchem_cid": 12309744,
+      "cas_number": "10219-75-7",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "Neoisolongifolene, 8,9-dehydro-4,4-Dimethyl-3-(3-methylbut-3-enylidene)-2-methylenebicyclo[4.1.0]heptane",
+      "lookup_alias": "Neoisolongifolene, 8,9-dehydro-",
+      "authority": "PubChem",
+      "pubchem_cid": 583166,
+      "cas_number": null,
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "1,3-Cyclohexadiene, 5-(1,5-dimethy l-4-hexenyl)-2-methyl-, [S-(R*,S*) ]-",
+      "lookup_alias": "Zingiberene",
+      "authority": "PubChem",
+      "pubchem_cid": 92776,
+      "cas_number": "495-60-3",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    },
+    {
+      "reported_name": "(4aS,4bR,10aS)-7-Isopropyl-1,1,4a- trimethyl-1,2,3,4,4a,5,6,9,10,10a-deca hydrophenanthrene",
+      "lookup_alias": "Abieta-7,13-diene",
+      "authority": "PubChem",
+      "pubchem_cid": 443470,
+      "cas_number": "35241-40-8",
+      "review_status": "verified_synonym_or_equivalent_database_name"
+    }
+  ]
+}

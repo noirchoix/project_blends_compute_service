@@ -1,0 +1,2470 @@
+[
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "Citral",
+    "candidate_names": [],
+    "retention_time_min": 7.296,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC(C)=CCCC(C)=CC=O",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 1",
+    "metadata": {
+      "reported_name_verbatim": "Citral",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC(C)=CCCC(C)=CC=O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 13.1,
+    "peak_id": "project_blends_reported_v1:lemongrass:before:001"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "Thymol",
+    "candidate_names": [],
+    "retention_time_min": 7.401,
+    "library_match_quality": 90.0,
+    "reported_smiles": "CC1=CC(=C(C=C1)C(C)C)O",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 2",
+    "metadata": {
+      "reported_name_verbatim": "Thymol",
+      "reported_quality_verbatim": "90",
+      "reported_smiles_verbatim": "CC1=CC(=C(C=C1)C(C)C)O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 1.4,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:002"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "Eugenol",
+    "candidate_names": [],
+    "retention_time_min": 8.008,
+    "library_match_quality": 97.0,
+    "reported_smiles": "C=CCc1ccc(O)c(OC)c1",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 3",
+    "metadata": {
+      "reported_name_verbatim": "Eugenol",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "C=CCc1ccc(O)c(OC)c1",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 64.13,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:003"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "Caryophyllene",
+    "candidate_names": [],
+    "retention_time_min": 8.531,
+    "library_match_quality": 99.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 4",
+    "metadata": {
+      "reported_name_verbatim": "Caryophyllene",
+      "reported_quality_verbatim": "99",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 5.57,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:004"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "Humulene",
+    "candidate_names": [],
+    "retention_time_min": 8.793,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 5",
+    "metadata": {
+      "reported_name_verbatim": "Humulene",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.66,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:005"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "1,3-Cyclohexadiene, 5-(1,5-dimethyl-4-hexenyl)-2-methyl-, [S-(R*,S*)]-",
+    "candidate_names": [],
+    "retention_time_min": 9.013,
+    "library_match_quality": 87.0,
+    "reported_smiles": "[C@H]1CCC[C@@H]2[C@@H]1CCC(C2)C(C)C",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 6",
+    "metadata": {
+      "reported_name_verbatim": "1,3-Cyclohexadiene, 5-(1,5-dimethyl-4-hexenyl)-2-methyl-, [S-(R*,S*)]-",
+      "reported_quality_verbatim": "87",
+      "reported_smiles_verbatim": "[C@H]1CCC[C@@H]2[C@@H]1CCC(C2)C(C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 1.36,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:006"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "Phenol, 2-methoxy-4-(2-propenyl)-, acetate",
+    "candidate_names": [],
+    "retention_time_min": 9.254,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC(=O)OCc1ccc(OCC=C)cc1OC",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 7",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 2-methoxy-4-(2-propenyl)-, acetate",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC(=O)OCc1ccc(OCC=C)cc1OC",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 10.2,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:007"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "2-Butanone, 4-(4-hydroxy-3-methoxyphenyl)-",
+    "candidate_names": [],
+    "retention_time_min": 10.133,
+    "library_match_quality": 96.0,
+    "reported_smiles": "COc1cc(ccc1O)C(=O)CC",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 8",
+    "metadata": {
+      "reported_name_verbatim": "2-Butanone, 4-(4-hydroxy-3-methoxyphenyl)-",
+      "reported_quality_verbatim": "96",
+      "reported_smiles_verbatim": "COc1cc(ccc1O)C(=O)CC",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 1.11,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:008"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "1-(4-Hydroxy-3-methoxyphenyl)dec-4-en-3-one",
+    "candidate_names": [],
+    "retention_time_min": 13.882,
+    "library_match_quality": 96.0,
+    "reported_smiles": "COc1cc(ccc1O)C(=O)C=CCC",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 9",
+    "metadata": {
+      "reported_name_verbatim": "1-(4-Hydroxy-3-methoxyphenyl)dec-4-en-3-one",
+      "reported_quality_verbatim": "96",
+      "reported_smiles_verbatim": "COc1cc(ccc1O)C(=O)C=CCC",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 2.47,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:009"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "1-(4-Hydroxy-3-methoxyphenyl)decane-3,5-dione",
+    "candidate_names": [],
+    "retention_time_min": 14.091,
+    "library_match_quality": 92.0,
+    "reported_smiles": "COc1cc(ccc1O)C(=O)CC(=O)C",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 10",
+    "metadata": {
+      "reported_name_verbatim": "1-(4-Hydroxy-3-methoxyphenyl)decane-3,5-dione",
+      "reported_quality_verbatim": "92",
+      "reported_smiles_verbatim": "COc1cc(ccc1O)C(=O)CC(=O)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 1.0,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:010"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "5-Hydroxy-1-(4-hydroxy-3-methoxyphenyl)decan-3-one",
+    "candidate_names": [],
+    "retention_time_min": 14.395,
+    "library_match_quality": 99.0,
+    "reported_smiles": "COc1cc(ccc1O)C(=O)CC(O)C",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 11",
+    "metadata": {
+      "reported_name_verbatim": "5-Hydroxy-1-(4-hydroxy-3-methoxyphenyl)decan-3-one",
+      "reported_quality_verbatim": "99",
+      "reported_smiles_verbatim": "COc1cc(ccc1O)C(=O)CC(O)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 6.05,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:011"
+  },
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 30.0
+    },
+    "reported_compound_name": "1-(4-Hydroxy-3-methoxyphenyl)tetradecane-3,5-dione",
+    "candidate_names": [],
+    "retention_time_min": 16.038,
+    "library_match_quality": 94.0,
+    "reported_smiles": "COc1cc(ccc1O)C(=O)CC(=O)CCCC",
+    "reported_class": null,
+    "source_table": "Table 4.1",
+    "source_row": "Table 4.1 row 12",
+    "metadata": {
+      "reported_name_verbatim": "1-(4-Hydroxy-3-methoxyphenyl)tetradecane-3,5-dione",
+      "reported_quality_verbatim": "94",
+      "reported_smiles_verbatim": "COc1cc(ccc1O)C(=O)CC(=O)CCCC",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 2.32,
+    "peak_id": "project_blends_reported_v1:lemongrass:after:012"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "o-Cymene",
+    "candidate_names": [
+      "o-Cymene",
+      "p-Cymene"
+    ],
+    "retention_time_min": 5.055,
+    "library_match_quality": 94.0,
+    "reported_smiles": "CC1=CC=CC=C1C CC1=CC=C(C)C=C1",
+    "reported_class": "Monoterpene",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 1",
+    "metadata": {
+      "reported_name_verbatim": "o-Cymene p-Cymene",
+      "reported_quality_verbatim": "94",
+      "reported_smiles_verbatim": "CC1=CC=CC=C1C CC1=CC=C(C)C=C1",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 6.48,
+    "peak_id": "project_blends_reported_v1:blend_a:before:001"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "p-Cymene",
+    "candidate_names": [
+      "p-Cymene",
+      "o-Cymene"
+    ],
+    "retention_time_min": 5.003,
+    "library_match_quality": 96.0,
+    "reported_smiles": "CC1=CC=C(C=C1)C(C)C CC1=CC=C(C=C1)CC",
+    "reported_class": "Monoterpene",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 2",
+    "metadata": {
+      "reported_name_verbatim": "p-Cymene o-Cymene",
+      "reported_quality_verbatim": "96 96",
+      "reported_smiles_verbatim": "CC1=CC=C(C=C1)C(C)C CC1=CC=C(C=C1)CC",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 2.51,
+    "peak_id": "project_blends_reported_v1:blend_a:after:002"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "gamma--Terpinene",
+    "candidate_names": [],
+    "retention_time_min": 5.38,
+    "library_match_quality": 95.0,
+    "reported_smiles": "CC(C)=CCC1=CC=CC=C1",
+    "reported_class": "Monoterpene",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 3",
+    "metadata": {
+      "reported_name_verbatim": "gamma--Terpinene",
+      "reported_quality_verbatim": "95",
+      "reported_smiles_verbatim": "CC(C)=CCC1=CC=CC=C1",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 4.76,
+    "peak_id": "project_blends_reported_v1:blend_a:before:003"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Citral",
+    "candidate_names": [],
+    "retention_time_min": 7.296,
+    "library_match_quality": 95.0,
+    "reported_smiles": "CC(C)=CCCC(C)=CC=O",
+    "reported_class": "Monoterpene aldehyde",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 4",
+    "metadata": {
+      "reported_name_verbatim": "Citral",
+      "reported_quality_verbatim": "95",
+      "reported_smiles_verbatim": "CC(C)=CCCC(C)=CC=O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 19.03,
+    "peak_id": "project_blends_reported_v1:blend_a:before:004"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Thymoquinone",
+    "candidate_names": [],
+    "retention_time_min": 7.108,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1=CC=C(C=C1)C(=O)C1=CC=CC=C1",
+    "reported_class": "Monoterpene Ketone",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 5",
+    "metadata": {
+      "reported_name_verbatim": "Thymoquinone",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1=CC=C(C=C1)C(=O)C1=CC=CC=C1",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 5.21,
+    "peak_id": "project_blends_reported_v1:blend_a:after:005"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Thymol",
+    "candidate_names": [
+      "Thymol",
+      "Phenol, 2-methyl-5-(1-methylethyl)"
+    ],
+    "retention_time_min": 7.401,
+    "library_match_quality": 90.0,
+    "reported_smiles": "CC1=CC=C(C=C1)C(C)(C)O CC(C)C1=CC(=CC=C1)O",
+    "reported_class": "Monoterpene alcohol",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 6",
+    "metadata": {
+      "reported_name_verbatim": "Thymol Phenol, 2-methyl-5-(1-methylethyl)",
+      "reported_quality_verbatim": "90 90",
+      "reported_smiles_verbatim": "CC1=CC=C(C=C1)C(C)(C)O CC(C)C1=CC(=CC=C1)O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 17.79,
+    "peak_id": "project_blends_reported_v1:blend_a:after:006"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Thymol",
+    "candidate_names": [],
+    "retention_time_min": 7.442,
+    "library_match_quality": 94.0,
+    "reported_smiles": "CC1=CC=C(C(C)C=C1)C(C)(C)O",
+    "reported_class": "Monoterpene alcohol",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 7",
+    "metadata": {
+      "reported_name_verbatim": "Thymol",
+      "reported_quality_verbatim": "94",
+      "reported_smiles_verbatim": "CC1=CC=C(C(C)C=C1)C(C)(C)O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 37.05,
+    "peak_id": "project_blends_reported_v1:blend_a:before:007"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Eugenol",
+    "candidate_names": [],
+    "retention_time_min": 7.997,
+    "library_match_quality": 98.0,
+    "reported_smiles": "CC1=CC(=CC=C1CC=C(C)C)O",
+    "reported_class": "Phenolic compound",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 8",
+    "metadata": {
+      "reported_name_verbatim": "Eugenol",
+      "reported_quality_verbatim": "98",
+      "reported_smiles_verbatim": "CC1=CC(=CC=C1CC=C(C)C)O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 24.6,
+    "peak_id": "project_blends_reported_v1:blend_a:after:008"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Caryophyllene",
+    "candidate_names": [],
+    "retention_time_min": 8.532,
+    "library_match_quality": 98.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 9",
+    "metadata": {
+      "reported_name_verbatim": "Caryophyllene",
+      "reported_quality_verbatim": "98",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 9.03,
+    "peak_id": "project_blends_reported_v1:blend_a:after:009"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Bicyclo[3.1.1]hept-2-ene, 2,6-dimethyl-6-(4-methyl-3-pentenyl)-",
+    "candidate_names": [],
+    "retention_time_min": 9.013,
+    "library_match_quality": 89.0,
+    "reported_smiles": "CC(=CCC/C(=C/C(CC1CCC1)=C/C(C)C)\\C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 10",
+    "metadata": {
+      "reported_name_verbatim": "Bicyclo[3.1.1]hept-2-ene, 2,6-dimethyl-6-(4-methyl-3-pentenyl)-",
+      "reported_quality_verbatim": "89",
+      "reported_smiles_verbatim": "CC(=CCC/C(=C/C(CC1CCC1)=C/C(C)C)\\C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 15.56,
+    "peak_id": "project_blends_reported_v1:blend_a:after:010"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Naphthalene, decahydro-4a-methyl-1 -methylene-7-(1-methylethenyl)-, [4aR-(4aalpha-,7alpha-,8abeta-)]",
+    "candidate_names": [],
+    "retention_time_min": 9.097,
+    "library_match_quality": 98.0,
+    "reported_smiles": "CC1=CCC2C1CCC2(C)C(C)=CC1=CC=CC=C1",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 11",
+    "metadata": {
+      "reported_name_verbatim": "Naphthalene, decahydro-4a-methyl-1 -methylene-7-(1-methylethenyl)-, [4aR-(4aalpha-,7alpha-,8abeta-)]",
+      "reported_quality_verbatim": "98",
+      "reported_smiles_verbatim": "CC1=CCC2C1CCC2(C)C(C)=CC1=CC=CC=C1",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 5.82,
+    "peak_id": "project_blends_reported_v1:blend_a:before:011"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "Naphthalene,1,2,3,5,6,7,8,8a-octahydro-1,8a-dimethyl-7-(1-methylethenyl)-, [1R-(1α,7β,8aα)]-",
+    "candidate_names": [],
+    "retention_time_min": 9.107,
+    "library_match_quality": 96.0,
+    "reported_smiles": "CC1=CCC2C(CCC3C2CCC2C4CCC@@HCC3(C)C)C1C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 12",
+    "metadata": {
+      "reported_name_verbatim": "Naphthalene,1,2,3,5,6,7,8,8a-octahydro-1,8a-dimethyl-7-(1-methylethenyl)-, [1R-(1α,7β,8aα)]-",
+      "reported_quality_verbatim": "96",
+      "reported_smiles_verbatim": "CC1=CCC2C(CCC3C2CCC2C4CCC@@HCC3(C)C)C1C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 4.79,
+    "peak_id": "project_blends_reported_v1:blend_a:after:012"
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    },
+    "reported_compound_name": "1,2-Benzenediol, 3,5-bis(1,1-dimethylethyl)-",
+    "candidate_names": [],
+    "retention_time_min": 12.866,
+    "library_match_quality": 64.0,
+    "reported_smiles": "CC(C)(C)C1=CC(=CC(=C1)O)C(C)(C)C",
+    "reported_class": "Phenolic compound",
+    "source_table": "Table 4.2",
+    "source_row": "Table 4.2 row 13",
+    "metadata": {
+      "reported_name_verbatim": "1,2-Benzenediol, 3,5-bis(1,1-dimethylethyl)-",
+      "reported_quality_verbatim": "64",
+      "reported_smiles_verbatim": "CC(C)(C)C1=CC(=CC(=C1)O)C(C)(C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 1.79,
+    "peak_id": "project_blends_reported_v1:blend_a:after:013"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "p-Cymene",
+    "candidate_names": [
+      "p-Cymene",
+      "Benzene, 1-methyl-3-(1-methylethyl)-",
+      "o-Cymene"
+    ],
+    "retention_time_min": 5.056,
+    "library_match_quality": 92.0,
+    "reported_smiles": "CC1=CC(=CC=C1C)C CC(C)Cc1ccccc1 CC1=CC(=CC=C1C)C",
+    "reported_class": "Monoterpene Alkylbenzene Monoterpene",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 1",
+    "metadata": {
+      "reported_name_verbatim": "p-Cymene Benzene, 1-methyl-3-(1-methylethyl)- o-Cymene",
+      "reported_quality_verbatim": "92 92 92",
+      "reported_smiles_verbatim": "CC1=CC(=CC=C1C)C CC(C)Cc1ccccc1 CC1=CC(=CC=C1C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 0.66,
+    "peak_id": "project_blends_reported_v1:blend_b:before:001"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Thymoquinone",
+    "candidate_names": [],
+    "retention_time_min": 7.097,
+    "library_match_quality": 98.0,
+    "reported_smiles": "CC(C)C1=CC(=O)C=C(C)C1",
+    "reported_class": "Monoterpene Ketone",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 2",
+    "metadata": {
+      "reported_name_verbatim": "Thymoquinone",
+      "reported_quality_verbatim": "98",
+      "reported_smiles_verbatim": "CC(C)C1=CC(=O)C=C(C)C1",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.16,
+    "peak_id": "project_blends_reported_v1:blend_b:after:002"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Citral",
+    "candidate_names": [],
+    "retention_time_min": 7.296,
+    "library_match_quality": 96.0,
+    "reported_smiles": "CC(C)=CCCC(C)=CC(=O)",
+    "reported_class": "Monoterpene Aldehyde",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 3",
+    "metadata": {
+      "reported_name_verbatim": "Citral",
+      "reported_quality_verbatim": "96",
+      "reported_smiles_verbatim": "CC(C)=CCCC(C)=CC(=O)",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 2.53,
+    "peak_id": "project_blends_reported_v1:blend_b:before:003"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Phenol, 5-methyl-2-(1-methylethyl)-, acetate",
+    "candidate_names": [],
+    "retention_time_min": 7.401,
+    "library_match_quality": 93.0,
+    "reported_smiles": "CC(C)C1=CC(=CC=C1O)C(C)C",
+    "reported_class": "Phenolic Ester",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 4",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 5-methyl-2-(1-methylethyl)-, acetate",
+      "reported_quality_verbatim": "93",
+      "reported_smiles_verbatim": "CC(C)C1=CC(=CC=C1O)C(C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 1.71,
+    "peak_id": "project_blends_reported_v1:blend_b:after:004"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Thymol",
+    "candidate_names": [],
+    "retention_time_min": 7.443,
+    "library_match_quality": 94.0,
+    "reported_smiles": "CC1=CC=C(C=C1)C(C)(C)",
+    "reported_class": "Monoterpene Alcohol",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 5",
+    "metadata": {
+      "reported_name_verbatim": "Thymol",
+      "reported_quality_verbatim": "94",
+      "reported_smiles_verbatim": "CC1=CC=C(C=C1)C(C)(C)",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 4.3,
+    "peak_id": "project_blends_reported_v1:blend_b:before:005"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Phenol, 2-methoxy-3-(2-propenyl)-",
+    "candidate_names": [
+      "Phenol, 2-methoxy-3-(2-propenyl)-",
+      "Eugenol"
+    ],
+    "retention_time_min": 8.039,
+    "library_match_quality": 98.0,
+    "reported_smiles": "COC=CC=C(C=C1)C(O)=C1 OCC1=CC=C(C=C1)CC=C",
+    "reported_class": "Phenolic Compound Phenolic Compound",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 6",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 2-methoxy-3-(2-propenyl)- Eugenol",
+      "reported_quality_verbatim": "98 98",
+      "reported_smiles_verbatim": "COC=CC=C(C=C1)C(O)=C1 OCC1=CC=C(C=C1)CC=C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 53.25,
+    "peak_id": "project_blends_reported_v1:blend_b:before:006"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Phenol, 2-methoxy-3-(2-propenyl)-",
+    "candidate_names": [
+      "Eugenol",
+      "Phenol, 2-methoxy-3-(2-propenyl)-"
+    ],
+    "retention_time_min": 8.019,
+    "library_match_quality": 97.0,
+    "reported_smiles": "C=CCc1cccc(OC)c1O",
+    "reported_class": "Phenolic Compound",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 7",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 2-methoxy-3-(2-propenyl)-",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "C=CCc1cccc(OC)c1O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true,
+      "continuation_rows": [
+        "Table 4.3 row 8"
+      ]
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 77.11,
+    "peak_id": "project_blends_reported_v1:blend_b:after:007"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Caryophyllene",
+    "candidate_names": [],
+    "retention_time_min": 8.532,
+    "library_match_quality": 99.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 9",
+    "metadata": {
+      "reported_name_verbatim": "Caryophyllene",
+      "reported_quality_verbatim": "99",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 4.74,
+    "peak_id": "project_blends_reported_v1:blend_b:after:009"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Carophyllene",
+    "candidate_names": [],
+    "retention_time_min": 8.594,
+    "library_match_quality": 99.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 10",
+    "metadata": {
+      "reported_name_verbatim": "Carophyllene",
+      "reported_quality_verbatim": "99",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 11.67,
+    "peak_id": "project_blends_reported_v1:blend_b:before:010"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Humulene",
+    "candidate_names": [],
+    "retention_time_min": 8.793,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 11",
+    "metadata": {
+      "reported_name_verbatim": "Humulene",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.61,
+    "peak_id": "project_blends_reported_v1:blend_b:after:011"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Humulene",
+    "candidate_names": [],
+    "retention_time_min": 8.846,
+    "library_match_quality": 95.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 12",
+    "metadata": {
+      "reported_name_verbatim": "Humulene",
+      "reported_quality_verbatim": "95",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.29,
+    "peak_id": "project_blends_reported_v1:blend_b:before:012"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Benzene,1-(1,5-dimethyl-4-hexenyl)-4-methyl-",
+    "candidate_names": [],
+    "retention_time_min": 8.982,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CCC(=C)CCCC1=CC=C(C)C=C1",
+    "reported_class": "Alkylbenzene",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 13",
+    "metadata": {
+      "reported_name_verbatim": "Benzene,1-(1,5-dimethyl-4-hexenyl)-4-methyl-",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CCC(=C)CCCC1=CC=C(C)C=C1",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.12,
+    "peak_id": "project_blends_reported_v1:blend_b:before:013"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "trans-alpha-Bergamotene",
+    "candidate_names": [
+      "trans-alpha-Bergamotene",
+      "1,3-Cyclohexadiene, 5-(1,5-dimethyl-4-hexenyl)-2-methyl-, [S-(R*,S*)]-"
+    ],
+    "retention_time_min": 9.066,
+    "library_match_quality": 93.0,
+    "reported_smiles": "CC(=CCCC1(C)CCC(=C)C1(C)C)C CC(C)C(C)=CCC1=CCC(=CC1=C)C(C)=C",
+    "reported_class": "Cyclohexadiene derivative (Terpenoid)",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 14",
+    "metadata": {
+      "reported_name_verbatim": "trans-alpha--Bergamotene 1,3-Cyclohexadiene, 5-(1,5 dimethyl-4-hexenyl)-2-methyl-, [S-(R*,S*)]-",
+      "reported_quality_verbatim": "93 93",
+      "reported_smiles_verbatim": "CC(=CCCC1(C)CCC(=C)C1(C)C)C CC(C)C(C)=CCC1=CCC(=CC1=C)C(C)=C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 6.58,
+    "peak_id": "project_blends_reported_v1:blend_b:before:014"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "(R)-1-Methyl-4-(6-methylhept-5-en-2-yl)cyclohexa-1,4-diene",
+    "candidate_names": [],
+    "retention_time_min": 9.013,
+    "library_match_quality": 83.0,
+    "reported_smiles": "CC(=C)[C@H]1CCC[C@@H]2[C@@H]1CCC(C2)C(C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 15",
+    "metadata": {
+      "reported_name_verbatim": "(R)-1-Methyl-4-(6-methylhept-5-en-2-yl)cyclohexa-1,4-diene",
+      "reported_quality_verbatim": "83",
+      "reported_smiles_verbatim": "CC(=C)[C@H]1CCC[C@@H]2[C@@H]1CCC(C2)C(C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 4.37,
+    "peak_id": "project_blends_reported_v1:blend_b:after:015"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "gamma--Muurolene",
+    "candidate_names": [],
+    "retention_time_min": 9.118,
+    "library_match_quality": 93.0,
+    "reported_smiles": "CC1=CCC(CC1)C(C)CCC=C(C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 16",
+    "metadata": {
+      "reported_name_verbatim": "gamma--Muurolene",
+      "reported_quality_verbatim": "93",
+      "reported_smiles_verbatim": "CC1=CCC(CC1)C(C)CCC=C(C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.98,
+    "peak_id": "project_blends_reported_v1:blend_b:after:016"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Phenol, 2-methoxy-4-(2-propenyl)-acetate",
+    "candidate_names": [],
+    "retention_time_min": 9.243,
+    "library_match_quality": 96.0,
+    "reported_smiles": "CC(=O)OCc1ccc(OCC=C)cc1OC",
+    "reported_class": "Phenolic Ester",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 17",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 2-methoxy-4-(2-propenyl)-acetate",
+      "reported_quality_verbatim": "96",
+      "reported_smiles_verbatim": "CC(=O)OCc1ccc(OCC=C)cc1OC",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 6.81,
+    "peak_id": "project_blends_reported_v1:blend_b:after:017"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "Phenol, 2-methoxy-4-(2 propenyl)-,acetate",
+    "candidate_names": [],
+    "retention_time_min": 9.296,
+    "library_match_quality": 97.0,
+    "reported_smiles": "COC(=O)C=CC=C(C=C1)C(O)=C1",
+    "reported_class": "Phenolic Ester",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 18",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 2-methoxy-4-(2 propenyl)-,acetate",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "COC(=O)C=CC=C(C=C1)C(O)=C1",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 14.82,
+    "peak_id": "project_blends_reported_v1:blend_b:before:018"
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    },
+    "reported_compound_name": "2-((2R,4aR,8aR)-4a,8-Dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalen-2-yl)prop-2-en-1-ol",
+    "candidate_names": [],
+    "retention_time_min": 9.777,
+    "library_match_quality": 91.0,
+    "reported_smiles": "CC(=C)[C@H]1CCC[C@@H]2[C@@H]1CCC(C2)(C)CO",
+    "reported_class": "Terpenoid Alcohol",
+    "source_table": "Table 4.3",
+    "source_row": "Table 4.3 row 19",
+    "metadata": {
+      "reported_name_verbatim": "2-((2R,4aR,8aR)-4a,8-Dimethyl-1,2,3,4,4a,5,6,8a-octahydronaphthalen-2-yl)prop-2-en-1-ol",
+      "reported_quality_verbatim": "91",
+      "reported_smiles_verbatim": "CC(=C)[C@H]1CCC[C@@H]2[C@@H]1CCC(C2)(C)CO",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.52,
+    "peak_id": "project_blends_reported_v1:blend_b:after:019"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Fenchol, exo-",
+    "candidate_names": [],
+    "retention_time_min": 3.338,
+    "library_match_quality": 87.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1O)C)C",
+    "reported_class": "Monoterpene alcohol",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 1",
+    "metadata": {
+      "reported_name_verbatim": "Fenchol, exo-",
+      "reported_quality_verbatim": "87",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1O)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 7.26,
+    "peak_id": "project_blends_reported_v1:blend_c:before:001"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Isoborneol",
+    "candidate_names": [],
+    "retention_time_min": 3.768,
+    "library_match_quality": 94.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1O)C)C",
+    "reported_class": "Monoterpene alcohol",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 2",
+    "metadata": {
+      "reported_name_verbatim": "Isoborneol",
+      "reported_quality_verbatim": "94",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1O)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.01,
+    "peak_id": "project_blends_reported_v1:blend_c:before:002"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "gamma-Terpinene",
+    "candidate_names": [],
+    "retention_time_min": 3.851,
+    "library_match_quality": 94.0,
+    "reported_smiles": "CC1=CCC(CC1)C",
+    "reported_class": "Monoterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 3",
+    "metadata": {
+      "reported_name_verbatim": "gamma-Terpinene",
+      "reported_quality_verbatim": "94",
+      "reported_smiles_verbatim": "CC1=CCC(CC1)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 3.09,
+    "peak_id": "project_blends_reported_v1:blend_c:before:003"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Tricyclo[2.2.1.0(2,6)]heptane, 1,3 ,3-trimethyl-",
+    "candidate_names": [],
+    "retention_time_min": 3.946,
+    "library_match_quality": 92.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Tricyclic sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 4",
+    "metadata": {
+      "reported_name_verbatim": "Tricyclo[2.2.1.0(2,6)]heptane, 1,3 ,3-trimethyl-",
+      "reported_quality_verbatim": "92",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 0.72,
+    "peak_id": "project_blends_reported_v1:blend_c:before:004"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "o-Cymene",
+    "candidate_names": [],
+    "retention_time_min": 5.003,
+    "library_match_quality": 93.0,
+    "reported_smiles": "CC1=CC=CC=C1C",
+    "reported_class": "Monoterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 5",
+    "metadata": {
+      "reported_name_verbatim": "o-Cymene",
+      "reported_quality_verbatim": "93",
+      "reported_smiles_verbatim": "CC1=CC=CC=C1C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.08,
+    "peak_id": "project_blends_reported_v1:blend_c:after:005"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Phenol, 2-methoxy-3-(2-propenyl)-",
+    "candidate_names": [
+      "Phenol, 2-methoxy-3-(2-propenyl)-",
+      "Eugenol"
+    ],
+    "retention_time_min": 5.369,
+    "library_match_quality": 98.0,
+    "reported_smiles": "CC=CC1=CC(=CC(=C1)OC)O CC1=CC(=CC=C1CC=C(O)C)O",
+    "reported_class": "Phenylpropanoid",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 6",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 2-methoxy-3-(2-propenyl)- Eugenol",
+      "reported_quality_verbatim": "98",
+      "reported_smiles_verbatim": "CC=CC1=CC(=CC(=C1)OC)O CC1=CC(=CC=C1CC=C(O)C)O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 0.79,
+    "peak_id": "project_blends_reported_v1:blend_c:before:006"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Copaene",
+    "candidate_names": [],
+    "retention_time_min": 5.589,
+    "library_match_quality": 99.0,
+    "reported_smiles": "CC1CCC2(C1CCC3C2CCC4C3(CCC(C4)C)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 7",
+    "metadata": {
+      "reported_name_verbatim": "Copaene",
+      "reported_quality_verbatim": "99",
+      "reported_smiles_verbatim": "CC1CCC2(C1CCC3C2CCC4C3(CCC(C4)C)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.24,
+    "peak_id": "project_blends_reported_v1:blend_c:before:007"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "(-)-beta--Bourbonene",
+    "candidate_names": [],
+    "retention_time_min": 5.684,
+    "library_match_quality": 96.0,
+    "reported_smiles": "CC1CCC2(C1CCC2(C)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 8",
+    "metadata": {
+      "reported_name_verbatim": "(-)-beta--Bourbonene",
+      "reported_quality_verbatim": "96",
+      "reported_smiles_verbatim": "CC1CCC2(C1CCC2(C)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.82,
+    "peak_id": "project_blends_reported_v1:blend_c:before:008"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Caryophyllene",
+    "candidate_names": [],
+    "retention_time_min": 6.008,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 9",
+    "metadata": {
+      "reported_name_verbatim": "Caryophyllene",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 13.74,
+    "peak_id": "project_blends_reported_v1:blend_c:before:009"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Humulene",
+    "candidate_names": [],
+    "retention_time_min": 6.28,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 10",
+    "metadata": {
+      "reported_name_verbatim": "Humulene",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.4,
+    "peak_id": "project_blends_reported_v1:blend_c:before:010"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Germacrene D",
+    "candidate_names": [],
+    "retention_time_min": 6.5,
+    "library_match_quality": 95.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3CCC5C4CCC(C5)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 11",
+    "metadata": {
+      "reported_name_verbatim": "Germacrene D",
+      "reported_quality_verbatim": "95",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3CCC5C4CCC(C5)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 4.3,
+    "peak_id": "project_blends_reported_v1:blend_c:before:011"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "1H-Cyclopropa[a]naphthalene, 1a,2, 3,3a,4,5,6,7b-octahydro-1,1,3a,7-t etramethyl-, [1aR-(1aalpha-,3a.al pha.,7balpha-)]-",
+    "candidate_names": [],
+    "retention_time_min": 6.626,
+    "library_match_quality": 95.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Cyclopropyl sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 12",
+    "metadata": {
+      "reported_name_verbatim": "1H-Cyclopropa[a]naphthalene, 1a,2, 3,3a,4,5,6,7b-octahydro-1,1,3a,7-t etramethyl-, [1aR-(1aalpha-,3a.al pha.,7balpha-)]-",
+      "reported_quality_verbatim": "95",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 3.59,
+    "peak_id": "project_blends_reported_v1:blend_c:before:012"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Naphthalene, 1,2,3,5,6,8a-hexahydr o-4,7-dimethyl-1-(1-methylethyl)-, (1S-cis)-",
+    "candidate_names": [],
+    "retention_time_min": 6.793,
+    "library_match_quality": 99.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Diterpene alcohol",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 13",
+    "metadata": {
+      "reported_name_verbatim": "Naphthalene, 1,2,3,5,6,8a-hexahydr o-4,7-dimethyl-1-(1-methylethyl)-, (1S-cis)-",
+      "reported_quality_verbatim": "99",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.34,
+    "peak_id": "project_blends_reported_v1:blend_c:before:013"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Dehydroelasholtza ketone",
+    "candidate_names": [],
+    "retention_time_min": 7.097,
+    "library_match_quality": 80.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Sesquiterpene ketone",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 14",
+    "metadata": {
+      "reported_name_verbatim": "Dehydroelasholtza ketone",
+      "reported_quality_verbatim": "80",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.22,
+    "peak_id": "project_blends_reported_v1:blend_c:after:014"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "1H-Cycloprop[e]azulen-7-ol, decahy dro-1,1,7-trimethyl-4-methylene-, [1ar-(1aalpha-,4aalpha-,7beta-, 7abeta-,7balpha-)]-",
+    "candidate_names": [],
+    "retention_time_min": 7.306,
+    "library_match_quality": 96.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Cyclopropyl sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 15",
+    "metadata": {
+      "reported_name_verbatim": "1H-Cycloprop[e]azulen-7-ol, decahy dro-1,1,7-trimethyl-4-methylene-, [1ar-(1aalpha-,4aalpha-,7beta-, 7abeta-,7balpha-)]-",
+      "reported_quality_verbatim": "96",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 8.42,
+    "peak_id": "project_blends_reported_v1:blend_c:before:015"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Isoaromadendrene epoxide",
+    "candidate_names": [],
+    "retention_time_min": 7.38,
+    "library_match_quality": 83.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Sesquiterpene epoxide",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 16",
+    "metadata": {
+      "reported_name_verbatim": "Isoaromadendrene epoxide",
+      "reported_quality_verbatim": "83",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 11.97,
+    "peak_id": "project_blends_reported_v1:blend_c:before:016"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Phenol, 2-methyl-5-(1-methylethyl)",
+    "candidate_names": [
+      "Phenol, 2-methyl-5-(1-methylethyl)",
+      "Thymol"
+    ],
+    "retention_time_min": 7.401,
+    "library_match_quality": 90.0,
+    "reported_smiles": "CC(C)C1=CC(=CC(=C1)O)C CC1=CC(=C(C=C1)C(C)C)O",
+    "reported_class": "Phenolic monoterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 17",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 2-methyl-5-(1-methylethyl) Thymol",
+      "reported_quality_verbatim": "90",
+      "reported_smiles_verbatim": "CC(C)C1=CC(=CC(=C1)O)C CC1=CC(=C(C=C1)C(C)C)O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.47,
+    "peak_id": "project_blends_reported_v1:blend_c:before:017"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Caryophyllene oxide",
+    "candidate_names": [],
+    "retention_time_min": 7.568,
+    "library_match_quality": 83.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)O)C",
+    "reported_class": "Sesquiterpene oxide",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 18",
+    "metadata": {
+      "reported_name_verbatim": "Caryophyllene oxide",
+      "reported_quality_verbatim": "83",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)O)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.93,
+    "peak_id": "project_blends_reported_v1:blend_c:before:018"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "1H-Cyclopropa[a]naphthalene, 1a,2, 6,7,7a,7b-hexahydro-1,1,7,7a-tetra methyl-, [1aR-(1aalpha-,7alpha-, 7aalpha-,7balpha-)]-",
+    "candidate_names": [],
+    "retention_time_min": 7.757,
+    "library_match_quality": 92.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Cyclopropyl sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 19",
+    "metadata": {
+      "reported_name_verbatim": "1H-Cyclopropa[a]naphthalene, 1a,2, 6,7,7a,7b-hexahydro-1,1,7,7a-tetra methyl-, [1aR-(1aalpha-,7alpha-, 7aalpha-,7balpha-)]-",
+      "reported_quality_verbatim": "92",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 3.04,
+    "peak_id": "project_blends_reported_v1:blend_c:before:019"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Naphthalene, 1,2,3,5,6,7,8,8a-octa hydro-1,8a-dimethyl-7-(1-methyleth enyl)-, [1S-(1alpha-,7alpha-,8a. alpha.)]-",
+    "candidate_names": [],
+    "retention_time_min": 7.882,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 20",
+    "metadata": {
+      "reported_name_verbatim": "Naphthalene, 1,2,3,5,6,7,8,8a-octa hydro-1,8a-dimethyl-7-(1-methyleth enyl)-, [1S-(1alpha-,7alpha-,8a. alpha.)]-",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 3.25,
+    "peak_id": "project_blends_reported_v1:blend_c:before:020"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Neoisolongifolene, 8,9-dehydro-4,4-Dimethyl-3-(3-methylbut-3-enylidene)-2-methylenebicyclo[4.1.0]heptane",
+    "candidate_names": [],
+    "retention_time_min": 7.997,
+    "library_match_quality": 95.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Sesquiterpene",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 21",
+    "metadata": {
+      "reported_name_verbatim": "Neoisolongifolene, 8,9-dehydro-4,4-Dimethyl-3-(3-methylbut-3-enylidene)-2-methylenebicyclo[4.1.0]heptane",
+      "reported_quality_verbatim": "95",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 2.48,
+    "peak_id": "project_blends_reported_v1:blend_c:before:021"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Eugenol",
+    "candidate_names": [],
+    "retention_time_min": 8.008,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1=CC(=CC=C1CC=C(O)C)O",
+    "reported_class": "",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 22",
+    "metadata": {
+      "reported_name_verbatim": "Eugenol",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1=CC(=CC=C1CC=C(O)C)O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 75.62,
+    "peak_id": "project_blends_reported_v1:blend_c:after:022"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "(R,Z)-2-Methyl-6-(4-methylcyclohex a-1,4-dien-1-yl)hept-2-en-1-ol",
+    "candidate_names": [],
+    "retention_time_min": 8.113,
+    "library_match_quality": 64.0,
+    "reported_smiles": "CC1=CC(=CC=C1CC=C(C)CCC(C)O)C",
+    "reported_class": "Sesquiterpene alcohol",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 23",
+    "metadata": {
+      "reported_name_verbatim": "(R,Z)-2-Methyl-6-(4-methylcyclohex a-1,4-dien-1-yl)hept-2-en-1-ol",
+      "reported_quality_verbatim": "64",
+      "reported_smiles_verbatim": "CC1=CC(=CC=C1CC=C(C)CCC(C)O)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 8.24,
+    "peak_id": "project_blends_reported_v1:blend_c:before:023"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Caryophyllene",
+    "candidate_names": [],
+    "retention_time_min": 8.532,
+    "library_match_quality": 99.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 24",
+    "metadata": {
+      "reported_name_verbatim": "Caryophyllene",
+      "reported_quality_verbatim": "99",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 6.43,
+    "peak_id": "project_blends_reported_v1:blend_c:after:024"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Humulene",
+    "candidate_names": [],
+    "retention_time_min": 8.793,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+    "reported_class": "",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 25",
+    "metadata": {
+      "reported_name_verbatim": "Humulene",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1CCC2C(C1)CCC3C2CCC4C3(CCC(C4)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.79,
+    "peak_id": "project_blends_reported_v1:blend_c:after:025"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Benzene, 1-(1,5-dimethyl-4-hexenyl)-4-methyl-",
+    "candidate_names": [],
+    "retention_time_min": 8.929,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC(C)C1=CC(=CC=C1)CC=C(C)C",
+    "reported_class": "Phenylpropanoid",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 26",
+    "metadata": {
+      "reported_name_verbatim": "Benzene, 1-(1,5-dimethyl-4-hexenyl)-4-methyl-",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC(C)C1=CC(=CC=C1)CC=C(C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.52,
+    "peak_id": "project_blends_reported_v1:blend_c:after:026"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "1,3-Cyclohexadiene, 5-(1,5-dimethy l-4-hexenyl)-2-methyl-, [S-(R*,S*) ]-",
+    "candidate_names": [],
+    "retention_time_min": 9.013,
+    "library_match_quality": 87.0,
+    "reported_smiles": "CC(C)C1=CC(=CC=C1)CC=C(C)C",
+    "reported_class": "Phenylpropanoid",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 27",
+    "metadata": {
+      "reported_name_verbatim": "1,3-Cyclohexadiene, 5-(1,5-dimethy l-4-hexenyl)-2-methyl-, [S-(R*,S*) ]-",
+      "reported_quality_verbatim": "87",
+      "reported_smiles_verbatim": "CC(C)C1=CC(=CC=C1)CC=C(C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 1.52,
+    "peak_id": "project_blends_reported_v1:blend_c:after:027"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Phenol, 2-methoxy-4-(2-propenyl)-, acetate",
+    "candidate_names": [],
+    "retention_time_min": 9.252,
+    "library_match_quality": 98.0,
+    "reported_smiles": "CC(=O)OC1=CC(=CC(=C1)OC)O",
+    "reported_class": "Phenylpropanoid",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 28",
+    "metadata": {
+      "reported_name_verbatim": "Phenol, 2-methoxy-4-(2-propenyl)-, acetate",
+      "reported_quality_verbatim": "98",
+      "reported_smiles_verbatim": "CC(=O)OC1=CC(=CC(=C1)OC)O",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 1.56,
+    "peak_id": "project_blends_reported_v1:blend_c:after:028"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "2',3',4' Trimethoxyacetophenone",
+    "candidate_names": [],
+    "retention_time_min": 10.437,
+    "library_match_quality": 86.0,
+    "reported_smiles": "COC1=CC(=CC(=C1)OC)C(=O)COC",
+    "reported_class": "Phenylpropanoid",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 29",
+    "metadata": {
+      "reported_name_verbatim": "2',3',4' Trimethoxyacetophenone",
+      "reported_quality_verbatim": "86",
+      "reported_smiles_verbatim": "COC1=CC(=CC(=C1)OC)C(=O)COC",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "after_storage",
+    "storage_days": 28,
+    "area_percent": 0.11,
+    "peak_id": "project_blends_reported_v1:blend_c:after:029"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "7-Isopropyl-1,1,4a-trimethyl-1,2,3 ,4,4a,9,10,10a-octahydrophenanthre ne",
+    "candidate_names": [],
+    "retention_time_min": 10.688,
+    "library_match_quality": 97.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Steroid",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 30",
+    "metadata": {
+      "reported_name_verbatim": "7-Isopropyl-1,1,4a-trimethyl-1,2,3 ,4,4a,9,10,10a-octahydrophenanthre ne",
+      "reported_quality_verbatim": "97",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 4.89,
+    "peak_id": "project_blends_reported_v1:blend_c:before:030"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "(4aS,4bR,10aS)-7-Isopropyl-1,1,4a- trimethyl-1,2,3,4,4a,5,6,9,10,10a-deca hydrophenanthrene",
+    "candidate_names": [],
+    "retention_time_min": 10.877,
+    "library_match_quality": 99.0,
+    "reported_smiles": "CC1(C2CCC(C2)(C1)C)C",
+    "reported_class": "Steriod",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 31",
+    "metadata": {
+      "reported_name_verbatim": "(4aS,4bR,10aS)-7-Isopropyl-1,1,4a- trimethyl-1,2,3,4,4a,5,6,9,10,10a-deca hydrophenanthrene",
+      "reported_quality_verbatim": "99",
+      "reported_smiles_verbatim": "CC1(C2CCC(C2)(C1)C)C",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 1.71,
+    "peak_id": "project_blends_reported_v1:blend_c:before:031"
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    },
+    "reported_compound_name": "Imidazolo[1,2-a]pyridine, 6-chloro -2-(4-nitrophenyl)-",
+    "candidate_names": [],
+    "retention_time_min": 12.28,
+    "library_match_quality": 91.0,
+    "reported_smiles": "CLC1CCC(-C2NC3CCCCC3N2)CC1N+[O-]",
+    "reported_class": "Alkaloid",
+    "source_table": "Table 4.4",
+    "source_row": "Table 4.4 row 32",
+    "metadata": {
+      "reported_name_verbatim": "Imidazolo[1,2-a]pyridine, 6-chloro -2-(4-nitrophenyl)-",
+      "reported_quality_verbatim": "91",
+      "reported_smiles_verbatim": "CLC1CCC(-C2NC3CCCCC3N2)CC1N+[O-]",
+      "identity_status": "tentative_library_annotation",
+      "source_preserved_without_silent_correction": true
+    },
+    "timepoint": "before_storage",
+    "storage_days": 0,
+    "area_percent": 5.07,
+    "peak_id": "project_blends_reported_v1:blend_c:before:032"
+  }
+]

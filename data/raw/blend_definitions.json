@@ -1,0 +1,54 @@
+[
+  {
+    "sample_id": "lemongrass",
+    "blend_id": "lemongrass_control",
+    "plant_components": [
+      "Cymbopogon citratus"
+    ],
+    "plant_ratios_g": {
+      "Cymbopogon citratus": 30.0
+    }
+  },
+  {
+    "sample_id": "blend_a",
+    "blend_id": "A",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum"
+    ],
+    "plant_ratios_g": {
+      "Cymbopogon citratus": 15.0,
+      "Ocimum gratissimum": 15.0
+    }
+  },
+  {
+    "sample_id": "blend_b",
+    "blend_id": "B",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum",
+      "Zingiber officinale"
+    ],
+    "plant_ratios_g": {
+      "Cymbopogon citratus": 7.5,
+      "Ocimum gratissimum": 7.5,
+      "Syzygium aromaticum": 7.5,
+      "Zingiber officinale": 7.5
+    }
+  },
+  {
+    "sample_id": "blend_c",
+    "blend_id": "C",
+    "plant_components": [
+      "Cymbopogon citratus",
+      "Ocimum gratissimum",
+      "Syzygium aromaticum"
+    ],
+    "plant_ratios_g": {
+      "Cymbopogon citratus": 10.0,
+      "Ocimum gratissimum": 10.0,
+      "Syzygium aromaticum": 10.0
+    }
+  }
+]

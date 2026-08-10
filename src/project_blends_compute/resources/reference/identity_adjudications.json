@@ -1,0 +1,33 @@
+{
+  "schema_version": "project_blends.identity_adjudications.v1",
+  "records": [
+    {
+      "adjudication_id": "pb-id-adj-001",
+      "reported_name": "Imidazolo[1,2-a]pyridine, 6-chloro -2-(4-nitrophenyl)-",
+      "status": "manual_corrected",
+      "adjudicated_name": "6-Nitro-2-(4-nitrophenyl)imidazo[1,2-a]pyridine",
+      "reason": "Researcher adjudication corrects an apparent transcription error in the project table from the reported 6-chloro/Imidazolo form to the official PubChem record for 6-Nitro-2-(4-nitrophenyl)imidazo[1,2-a]pyridine (CID 14042757). The original GC-MS/library-reported string is preserved verbatim as observational provenance; the adjudicated PubChem structure is used only for downstream structure-based computation.",
+      "source": {
+        "authority": "PubChem",
+        "source_id": "CID 14042757",
+        "pubchem_cid": 14042757,
+        "source_uri": "https://pubchem.ncbi.nlm.nih.gov/compound/14042757",
+        "evidence_type": "manual_identity_adjudication_from_official_database"
+      },
+      "structure": {
+        "preferred_name": "6-Nitro-2-(4-nitrophenyl)imidazo[1,2-a]pyridine",
+        "smiles": "C1=CC(=CC=C1C2=CN3C=C(C=CC3=N2)[N+](=O)[O-])[N+](=O)[O-]",
+        "inchi": "InChI=1S/C13H8N4O4/c18-16(19)10-3-1-9(2-4-10)12-8-15-7-11(17(20)21)5-6-13(15)14-12/h1-8H",
+        "inchikey": "FZIBIOFNSKXAJW-UHFFFAOYSA-N",
+        "molecular_formula": "C13H8N4O4",
+        "exact_mass": 284.05455475,
+        "formal_charge": 0
+      },
+      "review": {
+        "review_status": "approved",
+        "review_basis": "researcher manual adjudication using the user-supplied official PubChem CID 14042757 record; independent RDKit structure/InChI/InChIKey/formula validation",
+        "legacy_reported_smiles_policy": "provenance_only_not_identity_evidence"
+      }
+    }
+  ]
+}

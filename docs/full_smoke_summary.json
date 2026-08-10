@@ -1,0 +1,92 @@
+{
+  "schema_version": "project_blends_build_smoke.v1",
+  "status": "complete_with_warnings",
+  "record_count": 75,
+  "samples": [
+    "blend_a",
+    "blend_b",
+    "blend_c",
+    "lemongrass"
+  ],
+  "profile_metrics": [
+    {
+      "sample_id": "blend_a",
+      "before_count": 5,
+      "after_count": 8,
+      "shared_count": 1,
+      "weighted_jaccard": 0.12288457553360503,
+      "source_area_before": 73.13999999999999,
+      "source_area_after": 81.28,
+      "warnings": [
+        "before_area_sum_not_near_100",
+        "after_area_sum_not_near_100"
+      ]
+    },
+    {
+      "sample_id": "blend_b",
+      "before_count": 9,
+      "after_count": 9,
+      "shared_count": 2,
+      "weighted_jaccard": 0.3886065958745691,
+      "source_area_before": 96.22,
+      "source_area_after": 97.01,
+      "warnings": []
+    },
+    {
+      "sample_id": "blend_c",
+      "before_count": 23,
+      "after_count": 9,
+      "shared_count": 2,
+      "weighted_jaccard": 0.04336857280153772,
+      "source_area_before": 92.76999999999998,
+      "source_area_after": 86.85000000000001,
+      "warnings": [
+        "before_area_sum_not_near_100",
+        "after_area_sum_not_near_100"
+      ]
+    },
+    {
+      "sample_id": "lemongrass",
+      "before_count": 1,
+      "after_count": 11,
+      "shared_count": 0,
+      "weighted_jaccard": 0.0,
+      "source_area_before": 13.1,
+      "source_area_after": 96.27,
+      "warnings": [
+        "before_area_sum_not_near_100"
+      ]
+    }
+  ],
+  "identity": {
+    "unresolved_count": 66,
+    "conflict_count": 9,
+    "manual_review_count": 66
+  },
+  "reaction_evaluations": 0,
+  "quantum_inline_results": 0,
+  "lane_status": {
+    "coco_classifier": "unavailable",
+    "dess": "unavailable",
+    "foodchem_ml": "disabled",
+    "identity": "available",
+    "orca": "unavailable",
+    "pipeline_fooddb": "unavailable",
+    "profiles": "available",
+    "rdkit": "available",
+    "reaction_curation": "unavailable",
+    "rxn_bridge": "unavailable",
+    "taxonomy": "unavailable",
+    "xtb": "unavailable"
+  },
+  "warnings": [
+    "FileNotFoundError('FoodDB curated artifacts are not fully configured')",
+    "reaction_curation_registry_not_configured",
+    "rxn_bridge_project_root_not_configured"
+  ],
+  "strict_release_expected": false,
+  "strict_release_blockers": [
+    "unresolved identities",
+    "local authoritative artifact paths not configured in build environment"
+  ]
+}

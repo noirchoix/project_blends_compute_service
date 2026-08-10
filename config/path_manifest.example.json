@@ -1,0 +1,34 @@
+{
+  "original_experiment": {
+    "project_blends_source_document": "C:\\path\\to\\PROJECT BLENDS.doc",
+    "raw_gc_ms_export_directory": "C:\\path\\to\\gcms\\raw",
+    "raw_chromatogram_directory": "C:\\path\\to\\gcms\\chromatograms",
+    "nist_library_match_export_directory": "C:\\path\\to\\gcms\\nist_exports",
+    "existing_peak_tables_path": "C:\\path\\to\\gcms\\tables"
+  },
+  "reaction_curation": {
+    "reaction_curation_project_root": "C:\\projects\\reaction_curation-main",
+    "reaction_curation_registry": "C:\\data\\reaction_curation\\benchmark_registry.json"
+  },
+  "rxn_bridge": {
+    "rxn_bridge_project_root": "C:\\projects\\rxn_bridge-main",
+    "rxn_artifact_registry": "C:\\data\\rxn_artifacts\\registry\\artifact_registry.json",
+    "rxn_template_artifact_root": "C:\\data\\rxn_artifacts\\uspto_templates\\curated\\v1_original_mapped_10k"
+  },
+  "fooddb": {
+    "fooddb_db_path": "C:\\data\\fooddb\\serving.duckdb",
+    "fooddb_food_lookup_path": "C:\\data\\fooddb\\curated_food_lookup.parquet",
+    "fooddb_compound_lookup_path": "C:\\data\\fooddb\\curated_compound_lookup.parquet",
+    "fooddb_edges_path": "C:\\data\\fooddb\\curated_food_compound_content.parquet"
+  },
+  "supporting_artifacts": {
+    "dess_artifact_root": "C:\\data\\dess_artifacts",
+    "taxonomy_artifact_root": "C:\\data\\taxonomy_artifacts\\coconut\\curated\\v1"
+  },
+  "runtime": {
+    "rxnutils_source_root": "C:\\projects\\reaction_utils",
+    "xtb_executable": "C:\\tools\\xtb\\bin\\xtb.exe",
+    "orca_executable": "C:\\tools\\orca\\orca.exe",
+    "psi4_executable": null
+  }
+}

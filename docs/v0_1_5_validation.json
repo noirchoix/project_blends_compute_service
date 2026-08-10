@@ -1,0 +1,51 @@
+{
+  "schema_version": "project_blends.v0_1_5.validation.v1",
+  "service_version": "0.1.5",
+  "date": "2026-08-09",
+  "python_compile": "passed",
+  "pytest": {
+    "passed": 29,
+    "failed": 0
+  },
+  "wheel": {
+    "built": true,
+    "filename": "project_blends_compute-0.1.5-py3-none-any.whl",
+    "sha256": "9cb40b8be4be9820adcdbb6902f80dc8f7bc8a313aa363e0fe08e048ff7fff3e",
+    "bundled_resource_files": 6
+  },
+  "batch_a_freeze": {
+    "registry_file": "data/reference/project_blends_compound_registry_v1.json",
+    "registry_file_sha256": "469c6bb563233403ddec8d127484a7c0de92c1905ad5ee086a3e1abfabcc64d0",
+    "total_reported_identities": 53,
+    "automatic_resolved": 52,
+    "manual_corrected": 1,
+    "excluded_unresolved": 0,
+    "unresolved_pending": 0,
+    "manual_pubchem_cid": 14042757,
+    "manual_inchikey": "FZIBIOFNSKXAJW-UHFFFAOYSA-N",
+    "manual_formula": "C13H8N4O4",
+    "all_53_structure_records_rdkit_validated": true,
+    "source_run_id": "pb-20260809T170256-ab71807a8f",
+    "source_run_compound_registry_jsonl_sha256": "6cd016c4c217f3a8c19a7afaab85200ee28ea41f684996ca8e3f1e38d86a2bed"
+  },
+  "offline_frozen_registry_smoke": {
+    "run_id": "pb-20260809T175356-1f6f5529e9",
+    "resolved": 53,
+    "manual_corrected": 1,
+    "unresolved_pending": 0,
+    "screened_pairs": 211,
+    "retained_reaction_candidates": 2,
+    "rejected_pre_evidence": 209,
+    "reaction_candidate_evidence_status": "both abstained U_unresolved because authoritative storage-reaction evidence was not configured",
+    "molecular_screening_rdkit_results": 53,
+    "quantum_completed_results": 0,
+    "quantum_queued_jobs": 0
+  },
+  "supporting_lane_build_environment": {
+    "dess": "runtime unavailable because user local rxn_bridge/artifact registry is not mounted in build environment",
+    "taxonomy": "runtime unavailable because user local rxn_bridge/artifact registry is not mounted in build environment",
+    "coco_classifier": "runtime unavailable because standalone classifier service is not running in build environment",
+    "integration_tests": "provider-execution semantics covered with deterministic test doubles; artifact-presence-only state is tested not to masquerade as execution"
+  },
+  "strict_release": "still intentionally blocked until pipeline_fooddb, rxn_bridge, and registered storage_reaction_evidence/reaction_curation are all available in the target Windows runtime; require_quantum additionally requires completed xTB/ORCA results"
+}

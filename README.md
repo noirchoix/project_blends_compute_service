@@ -243,6 +243,30 @@ project-blends-curate-storage \
 
 Reaction-specific condition context remains primary. Signature-level condition context is broader support only. See `docs/STORAGE_EVIDENCE_V1_0_1.md`.
 
+## Publication artifact reproduction via Hugging Face
+
+The frozen v0.1.7 Git repository intentionally does not vendor large external runtime artifacts. A reproducibility bundle can be assembled from a validated local installation and published as a versioned Hugging Face **dataset** repository:
+
+```bash
+pip install -e ".[artifacts,dev,repro]"
+python scripts/collect_hf_repro_bundle.py --path-manifest config/path_manifest.local.json --output-dir data_hf
+python scripts/upload_hf_repro_bundle.py --repo-id <user-or-org>/project-blends-v017-artifacts
+```
+
+A clean clone of the reproducibility-tooling commit/tag can then download one pinned Hub revision, verify the detached manifest digest and every SHA-256, check the recorded Project Blends Git commit when available, and generate `config/path_manifest.local.json` automatically:
+
+```bash
+git checkout v0.1.7-repro1   # recommended tag for this non-scientific reproducibility overlay
+pip install -e ".[artifacts,repro]"
+python scripts/bootstrap_hf_repro.py \
+  --repo-id <user-or-org>/project-blends-v017-artifacts \
+  --revision <PINNED_HF_COMMIT_SHA>
+```
+
+The artifact bundle contains the **runtime closure**, not the upstream training corpora: storage-evidence v1.0.1, mapped reaction-template runtime artifacts, DESS serving data, exact COCONUT LightGBM inference files, FoodDB serving data, and the small rxn_bridge provider-code snapshot required by v0.1.7. xTB/ORCA, FoodChem ML, raw instrument files and the rejected multistep artifact are not required for the frozen non-quantum publication run.
+
+Before making the Hugging Face repository public, verify third-party redistribution rights for all bundled upstream artifacts. See `docs/HUGGINGFACE_REPRODUCIBILITY.md`.
+
 ## API and release
 
 Principal endpoints remain under `/v1/*`; OpenAPI is available at `/docs`. Each finalized run is immutable and SHA-256 registered under `artifacts/runs/<run_id>/`.

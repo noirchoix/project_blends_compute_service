@@ -12,3 +12,7 @@ dist/
 config/path_manifest.local.json
 .env
 *.log
+
+# Downloaded/assembled reproducibility artifacts live on Hugging Face, not Git.
+/data_hf/
+/data_hf_*/

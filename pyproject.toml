@@ -29,6 +29,7 @@ dependencies = [
 artifacts = ["pyarrow>=16"]
 dev = ["pytest>=8.2", "pytest-asyncio>=0.23", "pytest-cov>=5", "ruff>=0.6", "mypy>=1.10"]
 quantum = ["networkx>=3.3"]
+repro = ["huggingface-hub>=0.34"]
 
 [project.scripts]
 project-blends-api = "project_blends_compute.api.main:run"

@@ -14,7 +14,7 @@ Exact artifact-backed inference requires the exact runtime artifacts actually co
 - the active mapped `uspto_templates` runtime artifact required for `rxn_bridge` readiness;
 - the DESS serving DuckDB used for precomputed lookup;
 - the exact COCONUT taxonomy inference artifact, including both LightGBM model files, metadata, normalized config, and class lookup;
-- the FoodDB serving DuckDB and/or the three curated fallback Parquet tables;
+- the FoodDB serving DuckDB used by the frozen run, plus any available curated Parquet fallbacks (all three Parquets are required only when the DuckDB is unavailable);
 - the small `rxn_bridge` provider-code snapshot needed by v0.1.7 dynamic imports.
 
 The **original training datasets and training pipelines are not required to reproduce the frozen inference run**. They are required only if a reproducer wants to retrain/rebuild those upstream artifacts. Likewise, xTB/ORCA binaries are not required because the publication run contains no quantum calculations.
@@ -47,6 +47,14 @@ data_hf/
 ├── REPRODUCIBILITY_MANIFEST.sha256
 ├── README.md
 ├── REDISTRIBUTION_REVIEW.md
+├── ARTIFACT_LICENSES.json
+├── LICENSES/
+│   ├── RXN_UTILS_APACHE_2_0.txt
+│   ├── DESS_DESRES_DATA_SETS_LICENSE.txt
+│   ├── COCONUT_CC0_1_0_NOTICE.txt
+│   ├── FOODB_CC_BY_NC_4_0_NOTICE.txt
+│   ├── REACTION_CURATION_MIT_NOTICE.txt
+│   └── PROJECT_BLENDS_ARTIFACT_NOTICE.txt
 ├── environment/
 │   ├── runtime_versions.json
 │   └── requirements-repro.lock.txt
@@ -69,13 +77,23 @@ data_hf/
     └── curated_food_compound_content.parquet
 ```
 
-Every distributed file is SHA-256 listed, and the manifest itself has a detached SHA-256 file. Original absolute Windows paths are not published.
+Every distributed file is SHA-256 listed, and the manifest itself has a detached SHA-256 file. Collector copy-provenance paths are normalized relative to `data_hf/`; original absolute Windows paths are not published.
 
-## 2. Review redistribution rights
+Run the pre-upload audit explicitly if desired:
 
-Before a **public** upload, inspect `data_hf/REDISTRIBUTION_REVIEW.md` and verify the redistribution terms for the upstream COCONUT-derived model, DESS artifact, FoodDB-derived tables and mapped USPTO/template artifact. Technical reproducibility does not itself grant redistribution rights.
+```bash
+python scripts/audit_hf_repro_bundle.py --bundle-dir data_hf
+```
 
-A private Hugging Face repository is the safe default until that review is complete.
+The audit verifies integrity, required runtime lanes, forbidden/superseded artifact exclusion, machine-local path leakage, and required mixed-license notices. The collector runs the same audit automatically and fails closed.
+
+## 2. Component-level redistribution terms
+
+This is a mixed-license artifact bundle and therefore uses `license: other` at the Hugging Face repository level. `ARTIFACT_LICENSES.json` maps each runtime subtree to the controlling upstream/source terms and `LICENSES/` carries the required notices.
+
+The publication bundle records: rxnutils-derived mapped reaction/template artifacts under Apache-2.0 terms; DESS-derived artifacts under the DESRES Data Sets License; COCONUT-derived taxonomy artifacts under CC0-1.0; reaction_curation storage-evidence artifacts under the declared MIT lineage/source license; and FoodDB-derived serving data under CC BY-NC 4.0/non-commercial terms with source acknowledgment.
+
+The upload helper still defaults to a private repository and requires an explicit redistribution-rights acknowledgment for `--public`.
 
 ## 3. Upload to Hugging Face
 
@@ -87,7 +105,7 @@ python scripts/upload_hf_repro_bundle.py \
   --bundle-dir data_hf
 ```
 
-The script creates a **private dataset repository by default**, verifies the local SHA-256 manifest, uploads the folder with the resumable large-folder API, and prints the resulting immutable Hub commit SHA.
+The script creates a **private dataset repository by default**, verifies the detached manifest digest, all file SHA-256 values, runtime completeness, path portability and component-license notices, uploads the folder with the resumable large-folder API, and prints the resulting immutable Hub commit SHA.
 
 After redistribution rights are cleared, a public upload can be created with:
 

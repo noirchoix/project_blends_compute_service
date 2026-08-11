@@ -1,0 +1,18 @@
+FOODB DATA LICENSE / USE NOTICE
+
+FooDB is offered as a freely available resource. Use and redistribution of
+the data, in whole or in part, for commercial purposes requires explicit
+permission of the authors and explicit acknowledgment of the source material
+(FooDB) and the original publication. Users who download significant portions
+of the database are asked to cite the FooDB paper in resulting publications.
+
+The current FooDB website identifies the work as licensed under a Creative
+Commons Attribution-NonCommercial 4.0 International License.
+
+License identifier: CC-BY-NC-4.0
+Official license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+Source: https://foodb.ca/
+
+The FoodDB serving artifact in this bundle is distributed for research
+reproducibility and must retain this attribution/non-commercial notice.
+Commercial use or redistribution requires the permission specified by FooDB.

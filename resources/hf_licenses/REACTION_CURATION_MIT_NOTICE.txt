@@ -1,0 +1,11 @@
+REACTION CURATION LICENSE NOTICE
+
+The Project Blends storage_reaction_evidence artifact was built by the
+publisher through the reaction_curation pipeline. The publisher declares the
+reaction_curation dataset/pipeline lineage used for this artifact to be under
+the MIT License. The source reaction_curation repository LICENSE, when
+available during collection, is copied separately into this bundle and is the
+controlling license text for that source project.
+
+This notice does not alter the citation or copyright status of the primary
+literature referenced by the curated evidence records.

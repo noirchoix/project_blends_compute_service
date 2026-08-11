@@ -21,10 +21,13 @@ from hf_repro_common import (
     json_load,
     json_write,
     make_dataset_card,
+    portable_copy_summary,
     runtime_versions,
     sha256_file,
     utc_now,
     verify_file_manifest,
+    audit_bundle,
+    write_license_bundle,
     write_runtime_lock,
 )
 
@@ -82,15 +85,20 @@ def collect(project_root: Path, path_manifest: Path, output_dir: Path, *, force:
 
     versions = runtime_versions()
     write_runtime_lock(output_dir, versions)
+    write_license_bundle(output_dir, reaction_curation_registry=reaction_registry)
     (output_dir / "README.md").write_text(make_dataset_card(), encoding="utf-8")
     (output_dir / "REDISTRIBUTION_REVIEW.md").write_text(
-        "# Redistribution review required before public upload\n\n"
-        "This bundle is technically reproducible but may contain third-party data/model artifacts. "
-        "Before making the Hugging Face repository public, verify the redistribution terms for: "
-        "(1) COCONUT-derived taxonomy models/data, (2) DESS-derived artifacts, (3) FoodDB-derived serving tables, "
-        "and (4) mapped USPTO/rxnutils template artifacts. Keep the HF repository private until that review is complete.\n\n"
-        "Project Blends does not require xTB/ORCA binaries, FoodChem ML, raw GC-MS files, or the screened/rejected "
-        "USPTO multistep artifact for the frozen v0.1.7 publication run.\n",
+        "# Redistribution / license review\n\n"
+        "Component-level terms are recorded in `ARTIFACT_LICENSES.json` and `LICENSES/`. "
+        "The bundle intentionally uses Hugging Face `license: other`; no single license is applied to all artifacts.\n\n"
+        "Reviewed upstream terms for this publication bundle:\n"
+        "- mapped rxnutils-derived reaction/template artifact: Apache-2.0 notice retained;\n"
+        "- DESS-derived serving artifact: DESRES Data Sets License notice/conditions/disclaimer retained;\n"
+        "- reaction_curation storage evidence artifact: MIT lineage as declared by the publisher;\n"
+        "- COCONUT taxonomy artifact: CC0-1.0;\n"
+        "- FoodDB serving artifact: CC BY-NC 4.0 / non-commercial terms; source acknowledgment is required and commercial use/redistribution requires permission.\n\n"
+        "Public upload is technically permitted only after the publisher confirms these notices remain attached and "
+        "uses `--acknowledge-redistribution-rights`. This tooling does not provide legal advice.\n",
         encoding="utf-8",
     )
 
@@ -119,7 +127,7 @@ def collect(project_root: Path, path_manifest: Path, output_dir: Path, *, force:
             "foodchem_ml is excluded because it is disabled and not part of the evidence lane",
             "uspto_llm_multistep_only is excluded because it was screened and not adopted as a core Project Blends dependency",
         ],
-        "copy_summary": [record.__dict__ for record in records],
+        "copy_summary": portable_copy_summary(records, output_dir),
         "files": [],
     }
     manifest_path = output_dir / "REPRODUCIBILITY_MANIFEST.json"
@@ -133,6 +141,9 @@ def collect(project_root: Path, path_manifest: Path, output_dir: Path, *, force:
     verification = verify_file_manifest(output_dir, manifest["files"])
     if not verification["pass"]:
         raise RuntimeError(f"Bundle verification failed immediately after collection: {json.dumps(verification, indent=2)}")
+    audit = audit_bundle(output_dir)
+    if not audit["pass"]:
+        raise RuntimeError(f"Bundle audit failed immediately after collection: {json.dumps(audit, indent=2)}")
     return {
         "ok": True,
         "output_dir": str(output_dir),
@@ -143,6 +154,7 @@ def collect(project_root: Path, path_manifest: Path, output_dir: Path, *, force:
         "bytes": sum(int(row["bytes"]) for row in manifest["files"]),
         "manifest_sha256": sha256_file(manifest_path),
         "verification": verification,
+        "audit": audit,
     }
 
 

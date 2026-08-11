@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from bootstrap_hf_repro import bootstrap  # noqa: E402
 from collect_hf_repro_bundle import collect  # noqa: E402
+from hf_repro_common import audit_bundle  # noqa: E402
 
 
 def _write(path: Path, value: str = "x") -> Path:
@@ -30,6 +31,10 @@ def _fixture(tmp_path: Path) -> Path:
     _write(rxn / "reaction_framework" / "__init__.py")
     _write(rxn / "pipelines" / "__init__.py")
     _write(rxn / "pipelines" / "taxonomy_bridge" / "feature_builder.py", "VALUE = 1\n")
+    _write(
+        rxn / "pipelines" / "taxonomy_bridge" / "TAXONOMY_BRIDGE_DEPLOYMENT_README.md",
+        r"Local deployment example: C:\Users\developer\taxonomy\model.txt" + "\n",
+    )
     art = rxn / "data" / "rxn_artifacts"
     uspto = art / "uspto_templates" / "curated" / "v1_original_mapped_10k"
     for name in ("manifest.json", "templates.parquet", "template_stats.json", "screening.duckdb"):
@@ -102,6 +107,9 @@ def test_collects_minimal_portable_runtime_closure(tmp_path: Path) -> None:
     assert "checkpoint" not in portable["dess_physics"]["versions"]["v1"]
     assert (bundle / "reaction_curation_runtime/data/rxn_artifacts/reaction_curation/curated/storage_reaction_evidence/v1.0.1/manifest.json").exists()
     assert (bundle / "fooddb/serving.duckdb").exists()
+    assert not (
+        bundle / "rxn_bridge_runtime/pipelines/taxonomy_bridge/TAXONOMY_BRIDGE_DEPLOYMENT_README.md"
+    ).exists()
 
 
 def test_offline_bootstrap_verifies_and_writes_machine_local_manifest(tmp_path: Path) -> None:
@@ -157,3 +165,73 @@ def test_bootstrap_rejects_modified_reproducibility_manifest(tmp_path: Path) -> 
             Path("config/path_manifest.local.json"),
             source_dir=source_bundle,
         )
+
+
+def test_collect_fooddb_accepts_duckdb_with_stale_optional_parquet_path(tmp_path: Path) -> None:
+    manifest = _fixture(tmp_path)
+    payload = json.loads(manifest.read_text())
+    payload["fooddb"]["fooddb_food_lookup_path"] = str(tmp_path / "food" / "does_not_exist.parquet")
+    manifest.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    bundle = tmp_path / "bundle"
+    result = collect(ROOT, manifest, bundle)
+
+    assert result["ok"] is True
+    assert (bundle / "fooddb/serving.duckdb").exists()
+    assert not (bundle / "fooddb/curated_food_lookup.parquet").exists()
+
+    clean_project = tmp_path / "clean_project"
+    (clean_project / "config").mkdir(parents=True)
+    bootstrap(
+        clean_project,
+        Path("data_hf"),
+        Path("config/path_manifest.local.json"),
+        source_dir=bundle,
+    )
+    local = json.loads((clean_project / "config/path_manifest.local.json").read_text())
+    assert Path(local["fooddb"]["fooddb_db_path"]).exists()
+    assert local["fooddb"]["fooddb_food_lookup_path"] is None
+
+
+def test_collect_fooddb_requires_complete_parquet_fallback_without_duckdb(tmp_path: Path) -> None:
+    manifest = _fixture(tmp_path)
+    payload = json.loads(manifest.read_text())
+    payload["fooddb"]["fooddb_db_path"] = str(tmp_path / "food" / "missing.duckdb")
+    payload["fooddb"]["fooddb_food_lookup_path"] = str(tmp_path / "food" / "missing_food.parquet")
+    manifest.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    with pytest.raises(FileNotFoundError, match="existing serving DuckDB or all three curated Parquet tables"):
+        collect(ROOT, manifest, tmp_path / "bundle")
+
+
+def test_bundle_contains_mixed_license_metadata_and_notices(tmp_path: Path) -> None:
+    manifest = _fixture(tmp_path)
+    bundle = tmp_path / "bundle"
+    result = collect(ROOT, manifest, bundle)
+    assert result["audit"]["pass"] is True
+
+    licenses = json.loads((bundle / "ARTIFACT_LICENSES.json").read_text(encoding="utf-8"))
+    assert licenses["repository_license_metadata"] == "other"
+    by_id = {row["component_id"]: row for row in licenses["components"]}
+    assert by_id["dess_physics"]["license_id"] == "DESRES-Data-Sets-License"
+    assert by_id["taxonomy_coconut"]["license_id"] == "CC0-1.0"
+    assert by_id["fooddb"]["license_id"] == "CC-BY-NC-4.0"
+    assert by_id["fooddb"]["commercial_use_requires_permission"] is True
+    assert (bundle / "LICENSES/DESS_DESRES_DATA_SETS_LICENSE.txt").exists()
+    assert (bundle / "LICENSES/RXN_UTILS_APACHE_2_0.txt").exists()
+    assert (bundle / "LICENSES/FOODB_CC_BY_NC_4_0_NOTICE.txt").exists()
+
+
+def test_copy_summary_is_portable_and_audit_has_no_local_path_leak(tmp_path: Path) -> None:
+    manifest = _fixture(tmp_path)
+    bundle = tmp_path / "bundle"
+    collect(ROOT, manifest, bundle)
+    payload = json.loads((bundle / "REPRODUCIBILITY_MANIFEST.json").read_text(encoding="utf-8"))
+    destinations = [row["destination"] for row in payload["copy_summary"]]
+    assert destinations
+    assert all(not Path(value).is_absolute() for value in destinations)
+    audit = audit_bundle(bundle)
+    assert audit["pass"] is True
+    assert audit["machine_local_path_leaks"] == []
+    assert audit["forbidden_paths"] == []
+    assert all(audit["runtime_presence"].values())

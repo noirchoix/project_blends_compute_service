@@ -1,0 +1,12 @@
+COCONUT DATA LICENSE NOTICE
+
+COCONUT data is released under the Creative Commons CC0 1.0 Universal
+Public Domain Dedication (CC0 1.0), allowing use, modification, and
+distribution without restriction.
+
+Source: COCONUT — COlleCtion of Open Natural prodUcTs.
+License identifier: CC0-1.0
+Official license text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+This notice records the upstream terms for the COCONUT-derived taxonomy
+artifact included in the Project Blends reproducibility bundle.

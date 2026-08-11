@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from hf_repro_common import BUNDLE_DIRNAME, json_load, verify_file_manifest, verify_manifest_digest
+from hf_repro_common import BUNDLE_DIRNAME, audit_bundle, json_load, verify_file_manifest, verify_manifest_digest
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -35,6 +35,9 @@ def main() -> None:
     verification = verify_file_manifest(bundle, manifest.get("files") or [])
     if not verification["pass"]:
         raise SystemExit("Refusing upload: local reproducibility bundle failed SHA-256 verification")
+    audit = audit_bundle(bundle)
+    if not audit["pass"]:
+        raise SystemExit("Refusing upload: local reproducibility bundle failed portability/license/runtime audit")
     if args.public and not args.acknowledge_redistribution_rights:
         raise SystemExit(
             "Refusing public upload until --acknowledge-redistribution-rights is supplied after reviewing REDISTRIBUTION_REVIEW.md"

@@ -1,0 +1,10 @@
+PROJECT BLENDS REPRODUCIBILITY ARTIFACT NOTICE
+
+The runtime artifacts in this bundle were assembled/built by the Project
+Blends author for reproducible research. Upstream data and software terms are
+not replaced by authorship of the derived artifacts. Each subtree is governed
+by the component-level terms recorded in ARTIFACT_LICENSES.json and the
+corresponding files under LICENSES/.
+
+There is no single blanket license for the complete mixed-license data_hf
+bundle. The Hugging Face dataset card therefore uses `license: other`.

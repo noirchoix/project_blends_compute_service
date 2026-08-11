@@ -55,6 +55,9 @@ LANE_RUNTIME_PATH_KEYS: dict[str, tuple[str, ...]] = {
     ),
 }
 
+LICENSE_SCHEMA = "project_blends.artifact_licenses.v1"
+LICENSE_TEMPLATE_DIR = Path(__file__).resolve().parents[1] / "resources" / "hf_licenses"
+
 
 @dataclass(frozen=True)
 class CopyRecord:
@@ -64,6 +67,201 @@ class CopyRecord:
     bytes: int
     sha256: str | None = None
 
+
+
+def portable_copy_summary(records: list[CopyRecord], bundle_root: Path) -> list[dict[str, Any]]:
+    """Serialize collector provenance without leaking machine-specific absolute paths."""
+    root = bundle_root.resolve()
+    rows: list[dict[str, Any]] = []
+    for record in records:
+        raw = Path(record.destination)
+        try:
+            destination = raw.resolve().relative_to(root).as_posix()
+        except Exception:
+            destination = raw.as_posix()
+        rows.append({
+            "logical_name": record.logical_name,
+            "destination": destination,
+            "kind": record.kind,
+            "bytes": int(record.bytes),
+            "sha256": record.sha256,
+        })
+    return rows
+
+
+def write_license_bundle(root: Path, *, reaction_curation_registry: Path | None = None) -> dict[str, Any]:
+    """Write component-level mixed-license metadata and required redistribution notices."""
+    licenses = root / "LICENSES"
+    licenses.mkdir(parents=True, exist_ok=True)
+    template_names = (
+        "RXN_UTILS_APACHE_2_0.txt",
+        "DESS_DESRES_DATA_SETS_LICENSE.txt",
+        "COCONUT_CC0_1_0_NOTICE.txt",
+        "FOODB_CC_BY_NC_4_0_NOTICE.txt",
+        "REACTION_CURATION_MIT_NOTICE.txt",
+        "PROJECT_BLENDS_ARTIFACT_NOTICE.txt",
+    )
+    for name in template_names:
+        src = LICENSE_TEMPLATE_DIR / name
+        if not src.exists():
+            raise FileNotFoundError(f"HF license template missing: {src}")
+        shutil.copy2(src, licenses / name)
+
+    rc_license = None
+    if reaction_curation_registry is not None and reaction_curation_registry.exists():
+        rc_root = infer_repo_root_from_registry(reaction_curation_registry)
+        for candidate in ("LICENSE", "LICENSE.txt", "LICENSE.md"):
+            src = rc_root / candidate
+            if src.exists() and src.is_file():
+                rc_license = licenses / f"REACTION_CURATION_SOURCE_{src.name}"
+                shutil.copy2(src, rc_license)
+                break
+
+    payload = {
+        "schema_version": LICENSE_SCHEMA,
+        "repository_license_metadata": "other",
+        "blanket_license": None,
+        "policy": "Each runtime subtree retains its own upstream/source terms; no license is broadened by inclusion in this bundle.",
+        "components": [
+            {
+                "component_id": "rxn_bridge_runtime_code",
+                "path_prefixes": ["rxn_bridge_runtime/reaction_framework/", "rxn_bridge_runtime/pipelines/"],
+                "license_id": "source-repository-terms",
+                "notice": "Publisher-authored/integrated runtime code snapshot; retain the source repository license and provenance.",
+            },
+            {
+                "component_id": "mapped_uspto_templates",
+                "path_prefixes": ["rxn_bridge_runtime/data/rxn_artifacts/uspto_templates/"],
+                "license_id": "Apache-2.0",
+                "notice_file": "LICENSES/RXN_UTILS_APACHE_2_0.txt",
+                "provenance": "mapped_10k reaction/template runtime artifact built by the publisher using rxnutils tooling",
+            },
+            {
+                "component_id": "dess_physics",
+                "path_prefixes": ["rxn_bridge_runtime/data/rxn_artifacts/dess_physics/"],
+                "license_id": "DESRES-Data-Sets-License",
+                "notice_file": "LICENSES/DESS_DESRES_DATA_SETS_LICENSE.txt",
+                "redistribution_requirement": "retain copyright notice, conditions, and disclaimer",
+            },
+            {
+                "component_id": "taxonomy_coconut",
+                "path_prefixes": ["rxn_bridge_runtime/data/rxn_artifacts/taxonomy_coconut/"],
+                "license_id": "CC0-1.0",
+                "notice_file": "LICENSES/COCONUT_CC0_1_0_NOTICE.txt",
+            },
+            {
+                "component_id": "storage_reaction_evidence",
+                "path_prefixes": ["reaction_curation_runtime/data/rxn_artifacts/reaction_curation/"],
+                "license_id": "MIT",
+                "notice_file": "LICENSES/REACTION_CURATION_MIT_NOTICE.txt",
+                "source_license_file": rc_license.relative_to(root).as_posix() if rc_license else None,
+                "note": "Primary-literature citations remain citations; this license metadata concerns the curated artifact/pipeline lineage.",
+            },
+            {
+                "component_id": "fooddb",
+                "path_prefixes": ["fooddb/"],
+                "license_id": "CC-BY-NC-4.0",
+                "notice_file": "LICENSES/FOODB_CC_BY_NC_4_0_NOTICE.txt",
+                "commercial_use_requires_permission": True,
+                "attribution_required": True,
+                "citation_requested_for_significant_portions": True,
+            },
+            {
+                "component_id": "bundle_metadata",
+                "path_prefixes": ["environment/", "LICENSES/"],
+                "license_id": "mixed-metadata",
+                "notice_file": "LICENSES/PROJECT_BLENDS_ARTIFACT_NOTICE.txt",
+            },
+        ],
+    }
+    json_write(root / "ARTIFACT_LICENSES.json", payload)
+    return payload
+
+
+def audit_bundle(root: Path) -> dict[str, Any]:
+    """Audit integrity, portability, runtime completeness, and license notices."""
+    root = root.resolve()
+    digest = verify_manifest_digest(root)
+    manifest_path = root / "REPRODUCIBILITY_MANIFEST.json"
+    manifest = json_load(manifest_path) if manifest_path.exists() else {}
+    files = manifest.get("files") or []
+    integrity = verify_file_manifest(root, files) if files else {"pass": False, "checked": 0, "missing": ["manifest_files"], "mismatches": []}
+    rels = {str(row.get("path") or "") for row in files}
+    required_prefixes = {
+        "mapped_uspto_templates": "rxn_bridge_runtime/data/rxn_artifacts/uspto_templates/",
+        "dess_physics": "rxn_bridge_runtime/data/rxn_artifacts/dess_physics/",
+        "taxonomy_coconut": "rxn_bridge_runtime/data/rxn_artifacts/taxonomy_coconut/",
+        "storage_reaction_evidence": f"reaction_curation_runtime/data/rxn_artifacts/reaction_curation/curated/{STORAGE_DATASET}/{EXPECTED_STORAGE_VERSION}/",
+        "fooddb_serving": "fooddb/serving.duckdb",
+    }
+    runtime_presence = {}
+    for key, prefix in required_prefixes.items():
+        runtime_presence[key] = prefix in rels if not prefix.endswith("/") else any(r.startswith(prefix) for r in rels)
+
+    forbidden_tokens = (
+        "uspto_llm_multistep_only",
+        "foodchem_ml",
+        "/checkpoints/",
+        "\\checkpoints\\",
+        "training_checkpoint",
+        ".git/",
+        "__pycache__/",
+    )
+    forbidden_paths = sorted(r for r in rels if any(token.lower() in r.lower() for token in forbidden_tokens))
+
+    local_path_hits: list[dict[str, Any]] = []
+    text_suffixes = {".json", ".md", ".txt", ".toml", ".yaml", ".yml"}
+    markers = ("C:\\Users\\", "C:/Users/", "/home/", "/Users/")
+    text_candidates = sorted(rels | ({"REPRODUCIBILITY_MANIFEST.json"} if manifest_path.exists() else set()))
+    for rel in text_candidates:
+        path = root / rel
+        if path.suffix.lower() not in text_suffixes or not path.exists() or path.stat().st_size > 5_000_000:
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        found = [marker for marker in markers if marker in text]
+        if found:
+            local_path_hits.append({"path": rel, "markers": found})
+
+    license_path = root / "ARTIFACT_LICENSES.json"
+    license_payload = json_load(license_path) if license_path.exists() else {}
+    missing_license_notices = []
+    for component in license_payload.get("components") or []:
+        notice = component.get("notice_file")
+        if notice and not (root / str(notice)).exists():
+            missing_license_notices.append(str(notice))
+        source_license = component.get("source_license_file")
+        if source_license and not (root / str(source_license)).exists():
+            missing_license_notices.append(str(source_license))
+
+    largest = sorted(
+        ({"path": r, "bytes": (root / r).stat().st_size} for r in rels if (root / r).exists()),
+        key=lambda row: row["bytes"], reverse=True
+    )[:15]
+    passed = (
+        digest.get("pass") is True
+        and integrity.get("pass") is True
+        and all(runtime_presence.values())
+        and not forbidden_paths
+        and not local_path_hits
+        and bool(license_payload)
+        and not missing_license_notices
+    )
+    return {
+        "pass": passed,
+        "manifest_digest": digest,
+        "file_integrity": integrity,
+        "runtime_presence": runtime_presence,
+        "forbidden_paths": forbidden_paths,
+        "machine_local_path_leaks": local_path_hits,
+        "license_metadata_present": bool(license_payload),
+        "missing_license_notices": sorted(set(missing_license_notices)),
+        "file_count": len(rels),
+        "bytes": sum((root / r).stat().st_size for r in rels if (root / r).exists()),
+        "largest_files": largest,
+    }
 
 def utc_now() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -144,7 +342,8 @@ def copy_runtime_code(source_root: Path, destination_root: Path) -> list[CopyRec
             src,
             dst,
             ignore=shutil.ignore_patterns(
-                "__pycache__", "*.pyc", "*.pyo", ".pytest_cache", ".mypy_cache", ".ruff_cache", "*.ipynb"
+                "__pycache__", "*.pyc", "*.pyo", ".pytest_cache", ".mypy_cache", ".ruff_cache",
+                "*.ipynb", "*.md", "*.markdown",
             ),
         )
         records.append(CopyRecord(f"rxn_bridge_code:{name}", dst.as_posix(), "directory", _dir_size(dst), None))
@@ -315,28 +514,72 @@ def collect_storage_evidence(
 
 
 def collect_fooddb(paths: dict[str, Any], destination_root: Path) -> tuple[dict[str, str | None], list[CopyRecord]]:
+    """Collect the FoodDB runtime backend actually needed by v0.1.7.
+
+    ``FoodDBAdapter`` prefers ``fooddb_db_path`` when a serving DuckDB exists and
+    only falls back to the three curated Parquet tables when that database is
+    unavailable.  The collector mirrors that runtime contract: stale/missing
+    optional Parquet paths must not make an otherwise reproducible DuckDB-backed
+    bundle fail.
+    """
     mapping = {
         "fooddb_db_path": "serving.duckdb",
         "fooddb_food_lookup_path": "curated_food_lookup.parquet",
         "fooddb_compound_lookup_path": "curated_compound_lookup.parquet",
         "fooddb_edges_path": "curated_food_compound_content.parquet",
     }
-    out: dict[str, str | None] = {}
+    parquet_keys = (
+        "fooddb_food_lookup_path",
+        "fooddb_compound_lookup_path",
+        "fooddb_edges_path",
+    )
+    out: dict[str, str | None] = {key: None for key in mapping}
     records: list[CopyRecord] = []
     target = destination_root / "fooddb"
-    for key, filename in mapping.items():
+
+    configured: dict[str, Path | None] = {}
+    for key in mapping:
         raw = paths.get(key)
-        if raw in (None, ""):
-            out[key] = None
-            continue
-        src = Path(str(raw)).expanduser().resolve()
-        if not src.exists():
-            raise FileNotFoundError(f"Configured FoodDB artifact is missing ({key}): {src}")
-        dst = target / filename
+        configured[key] = None if raw in (None, "") else Path(str(raw)).expanduser().resolve()
+
+    db_src = configured["fooddb_db_path"]
+    if db_src is not None and db_src.exists():
+        dst = target / mapping["fooddb_db_path"]
+        records.append(copy_path(db_src, dst, logical_name="fooddb:fooddb_db_path"))
+        out["fooddb_db_path"] = dst.as_posix()
+
+        # Copy any available Parquet fallbacks as useful redundancy, but do not
+        # require them when the primary DuckDB backend is present.
+        for key in parquet_keys:
+            src = configured[key]
+            if src is None or not src.exists():
+                continue
+            dst = target / mapping[key]
+            records.append(copy_path(src, dst, logical_name=f"fooddb:{key}"))
+            out[key] = dst.as_posix()
+        return out, records
+
+    # No usable DuckDB: the adapter requires the complete three-table Parquet
+    # fallback.  A configured-but-missing DuckDB is therefore harmless only when
+    # all fallback tables are actually available.
+    missing = [key for key in parquet_keys if configured[key] is None or not configured[key].exists()]
+    if missing:
+        detail = ", ".join(
+            f"{key}={configured[key] if configured[key] is not None else '<not configured>'}"
+            for key in missing
+        )
+        db_detail = db_src if db_src is not None else "<not configured>"
+        raise FileNotFoundError(
+            "FoodDB reproduction requires an existing serving DuckDB or all three curated Parquet tables. "
+            f"DuckDB: {db_detail}; missing fallback artifacts: {detail}"
+        )
+
+    for key in parquet_keys:
+        src = configured[key]
+        assert src is not None
+        dst = target / mapping[key]
         records.append(copy_path(src, dst, logical_name=f"fooddb:{key}"))
         out[key] = dst.as_posix()
-    if not out.get("fooddb_db_path") and not all(out.get(k) for k in ("fooddb_food_lookup_path", "fooddb_compound_lookup_path", "fooddb_edges_path")):
-        raise ValueError("FoodDB reproduction requires serving.duckdb or all three curated Parquet tables")
     return out, records
 
 
@@ -446,33 +689,42 @@ def make_dataset_card() -> str:
     return f"""---
 pretty_name: Project Blends v0.1.7 reproducibility artifacts
 license: other
+tags:
+  - chemistry
+  - phytochemistry
+  - gc-ms
+  - cheminformatics
+  - reproducibility
 ---
 
 # Project Blends v0.1.7 reproducibility artifacts
 
-This dataset repository is an immutable runtime-artifact bundle for the public
-`project_blends_compute_service` codebase. It is intended to reproduce frozen run
-`{LOCKED_RUN_ID}` without machine-specific external paths.
+This dataset repository is the portable external-runtime closure for frozen Project Blends run
+`{LOCKED_RUN_ID}`. Download a pinned Hugging Face revision and use the repository bootstrap
+script to verify SHA-256 values and write a machine-local `config/path_manifest.local.json`.
 
-The bundle contains runtime inputs only: curated storage evidence, the mapped reaction-template
-runtime artifact, the precomputed DESS serving artifact, the exact COCONUT taxonomy model files,
-FoodDB serving/curated tables, and the small upstream `rxn_bridge` provider code snapshot required
-by the frozen service's dynamic imports.
+## Runtime scope
 
-It intentionally does **not** include raw instrument files, xTB/ORCA binaries, FoodChem ML,
-training caches, or the rejected USPTO multistep artifact.
+Included: mapped reaction-template runtime artifacts, the precomputed DESS serving artifact, the
+exact COCONUT taxonomy inference models/metadata, `storage_reaction_evidence {EXPECTED_STORAGE_VERSION}`,
+FoodDB serving data, and the small upstream runtime-code snapshot required by dynamic imports.
 
-## Integrity
+Excluded: raw GC-MS instrument exports, training datasets/caches/checkpoints not needed for inference,
+xTB/ORCA/Psi4, FoodChem ML, and the screened-but-unused USPTO multistep artifact.
 
-Every distributed file is listed in `REPRODUCIBILITY_MANIFEST.json` with SHA-256. Reproducers
-should download a pinned Hugging Face revision and run the Project Blends bootstrap script, which
-verifies all hashes before writing `config/path_manifest.local.json`.
+## Mixed licensing
 
-## Redistribution notice
+There is **no single blanket license for this bundle**. The dataset-card license is therefore `other`.
+Read `ARTIFACT_LICENSES.json` and `LICENSES/` before reuse or redistribution. In particular, the
+FoodDB-derived serving artifact is non-commercial (CC BY-NC 4.0 according to the current FooDB
+site) and requires source acknowledgment; the DESS-derived artifact must retain the DESRES notice,
+conditions, and disclaimer. COCONUT data is CC0 1.0.
 
-The bundle assembler does not determine third-party redistribution rights. Before making this
-repository public, the publisher must verify the licenses/terms that apply to each upstream data/model
-artifact. See `REDISTRIBUTION_REVIEW.md` in the bundle.
+## Integrity and provenance
+
+Every distributed file is listed in `REPRODUCIBILITY_MANIFEST.json` with SHA-256.
+`REPRODUCIBILITY_MANIFEST.sha256` protects that manifest itself. The publication reference run is
+`{LOCKED_RUN_ID}` and the service version is `{LOCKED_SERVICE_VERSION}`.
 """
 
 
